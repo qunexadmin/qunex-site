@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qunex Marketing+ | Complete Marketing Operations Platform</title>
+    <title>Qunex Marketing+ | Unified Marketing Intelligence Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -484,6 +484,7 @@
     </style>
 </head>
 <body class="gradient-bg">
+    <!-- Navigation -->
     <nav id="main-nav" class="fixed top-0 w-full z-50 bg-qunex-dark/30 backdrop-blur-lg transition-all duration-300 border-b border-qunex-border/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
@@ -526,105 +527,38 @@
             </div>
         </div>
     </nav>
+
+    <!-- Hero Section -->
     <section id="platform" class="pt-32 pb-20 md:pt-36 relative overflow-hidden section-enter">
         <canvas id="particles"></canvas>
         <div class="absolute inset-0 grid-pattern opacity-20"></div>
         <div class="hero-gradient"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center">
-                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 bg-qunex-panel px-4 py-2 rounded-full mb-6 border border-qunex-border/30 mx-auto lg:mx-0 animate-fade-in">
-                        <div class="status-dot"></div>
-                        <span class="text-sm font-medium text-gray-300 font-mono">MARKETING OPERATIONS</span>
-                    </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white animate-fade-in">
-                        Unified Marketing <span class="gradient-text">Intelligence Platform</span>
-                    </h1>
-                    <p class="text-lg md:text-xl mb-8 text-gray-300 max-w-lg mx-auto lg:mx-0 animate-fade-in">
-                        Streamline your marketing with AI-driven automation, unified analytics, and seamless integrations.
-                    </p>
-                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start animate-fade-in">
-                        <button class="bg-white hover:bg-gray-200 text-qunex-dark px-7 py-3 rounded-lg font-medium hover-lift shadow-md btn-hover-effect ripple-effect">
-                            Start Free Trial
-                        </button>
-                        <button class="border border-qunex-border text-white px-7 py-3 rounded-lg font-medium hover:bg-qunex-panel/30 hover-lift shadow-md btn-hover-effect ripple-effect">
-                            Watch Demo
-                        </button>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 hidden md:block animate-float">
-                    <div class="panel-card rounded-xl p-6 hover:shadow-xl transition-all duration-300">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-lg font-semibold text-white">Campaign Overview</h3>
-                            <span class="text-xs bg-qunex-gray text-gray-400 px-3 py-1 rounded-full">Last 30d</span>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 mb-6">
-                            <div class="panel-card p-4 rounded-lg">
-                                <div class="text-sm text-gray-400">ROAS</div>
-                                <div class="text-xl font-bold text-white">4.2x</div>
-                                <div class="text-sm text-green-400">↑ 12%</div>
-                            </div>
-                            <div class="panel-card p-4 rounded-lg">
-                                <div class="text-sm text-gray-400">CPA</div>
-                                <div class="text-xl font-bold text-white">$24</div>
-                                <div class="text-sm text-red-400">↓ 8%</div>
-                            </div>
-                            <div class="panel-card p-4 rounded-lg">
-                                <div class="text-sm text-gray-400">Revenue</div>
-                                <div class="text-xl font-bold text-white">$142K</div>
-                                <div class="text-sm text-green-400">↑ 23%</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-sm text-gray-400 mb-3">
-                                <span>Channel Performance</span>
-                                <span>% of Budget</span>
-                            </div>
-                            <div class="space-y-3">
-                                <div>
-                                    <div class="flex justify-between text-sm mb-1">
-                                        <span class="text-white">Paid Search</span>
-                                        <span class="text-white">42%</span>
-                                    </div>
-                                    <div class="data-bar">
-                                        <div class="data-bar-fill" style="width: 42%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-sm mb-1">
-                                        <span class="text-white">Social Media</span>
-                                        <span class="text-white">28%</span>
-                                    </div>
-                                    <div class="data-bar">
-                                        <div class="data-bar-fill" style="width: 28%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-sm mb-1">
-                                        <span class="text-white">Email</span>
-                                        <span class="text-white">15%</span>
-                                    </div>
-                                    <div class="data-bar">
-                                        <div class="data-bar-fill" style="width: 15%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-qunex-border/20">
-                            <div class="text-sm text-gray-400">Updated recently</div>
-                            <button class="text-sm text-gray-300 hover:text-white flex items-center">
-                                <span>Full Report</span>
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 bg-qunex-panel px-4 py-2 rounded-full mb-8 border border-qunex-border/30 animate-fade-in">
+                <div class="status-dot"></div>
+                <span class="text-sm font-medium text-gray-300 font-mono">MARKETING OPERATIONS</span>
             </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white animate-fade-in">
+                Unified Marketing <span class="gradient-text">Intelligence Platform</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-300 max-w-3xl mx-auto animate-fade-in">
+                Connect all your marketing channels, track real-time performance, and get AI-powered insights in one unified dashboard.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center animate-fade-in">
+                <button class="bg-white hover:bg-gray-200 text-qunex-dark px-8 py-3 rounded-lg font-medium hover-lift shadow-md btn-hover-effect ripple-effect">
+                    Start Free Trial
+                </button>
+                <button class="border border-qunex-border text-white px-8 py-3 rounded-lg font-medium hover:bg-qunex-panel/30 hover-lift shadow-md btn-hover-effect ripple-effect">
+                    Watch Demo
+                </button>
+            </div>
+            <p class="text-sm text-gray-400 mt-6 animate-fade-in">Setup in under 10 minutes • No credit card required • 15+ integrations</p>
         </div>
     </section>
+
     <div class="section-divider"></div>
+
+    <!-- Solutions Section -->
     <section id="solutions" class="py-16 section-enter">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -640,8 +574,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Unified Analytics</h3>
-                    <p class="text-gray-400 mb-6">Real-time insights and predictive analytics across all channels.</p>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Cross-Platform Analytics</h3>
+                    <p class="text-gray-400 mb-6">Track performance across all social media, advertising, and e-commerce platforms in real-time.</p>
                     <div class="flex items-center text-sm text-gray-300 group">
                         <span class="group-hover:text-white transition-colors">Explore</span>
                         <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -652,11 +586,11 @@
                 <div class="panel-card p-8 rounded-xl hover-lift shadow-lg transition-all duration-300 hover:shadow-xl animate-stagger-2">
                     <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Campaign Management</h3>
-                    <p class="text-gray-400 mb-6">Orchestrate campaigns with automated workflows and budget tracking.</p>
+                    <h3 class="text-2xl font-semibold text-white mb-4">AI-Powered Optimization</h3>
+                    <p class="text-gray-400 mb-6">Get intelligent recommendations for campaigns, budgets, and content with predictive analytics.</p>
                     <div class="flex items-center text-sm text-gray-300 group">
                         <span class="group-hover:text-white transition-colors">Explore</span>
                         <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -670,8 +604,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Budget Control</h3>
-                    <p class="text-gray-400 mb-6">Optimize spend with real-time tracking and reporting.</p>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Real-Time Budget Control</h3>
+                    <p class="text-gray-400 mb-6">Monitor spend across all channels with automated alerts and ROI tracking.</p>
                     <div class="flex items-center text-sm text-gray-300 group">
                         <span class="group-hover:text-white transition-colors">Explore</span>
                         <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -682,8 +616,48 @@
             </div>
         </div>
     </section>
+
     <div class="section-divider"></div>
-    <section id="analytics" class="py-16 bg-qunex-panel section-enter">
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-qunex-panel section-enter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in">How It <span class="gradient-text">Works</span></h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto animate-fade-in">
+                    Get started in three simple steps
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center animate-stagger-1">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Connect</h3>
+                    <p class="text-gray-400">Link your marketing platforms with one-click integrations. Meta, Google, TikTok, Shopify, and more.</p>
+                </div>
+                <div class="text-center animate-stagger-2">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Analyze</h3>
+                    <p class="text-gray-400">Get real-time insights across all channels with AI-powered analytics and performance tracking.</p>
+                </div>
+                <div class="text-center animate-stagger-3">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Optimize</h3>
+                    <p class="text-gray-400">Receive intelligent recommendations and automate campaign optimizations for better ROI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="py-16 bg-qunex-dark section-enter">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
@@ -775,8 +749,11 @@
             </div>
         </div>
     </section>
+
     <div class="section-divider"></div>
-    <section id="integrations" class="py-16 bg-qunex-dark section-enter">
+
+    <!-- Features Section -->
+    <section id="integrations" class="py-16 bg-qunex-panel section-enter">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in">Seamless <span class="gradient-text">Integrations</span></h2>
@@ -833,8 +810,11 @@
             </div>
         </div>
     </section>
+
     <div class="section-divider"></div>
-    <section class="py-16 bg-qunex-panel section-enter">
+
+    <!-- Results Section -->
+    <section class="py-16 bg-qunex-dark section-enter">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in">Measurable <span class="gradient-text">Results</span></h2>
@@ -844,26 +824,29 @@
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center panel-card p-8 rounded-xl metric-card animate-stagger-1">
-                    <div class="text-4xl font-bold text-white mb-3">40%</div>
-                    <div class="text-gray-400">ROAS Increase</div>
+                    <div class="text-4xl font-bold text-white mb-3">5hrs</div>
+                    <div class="text-gray-400">Saved Weekly</div>
                 </div>
                 <div class="text-center panel-card p-8 rounded-xl metric-card animate-stagger-2">
-                    <div class="text-4xl font-bold text-white mb-3">30%</div>
-                    <div class="text-gray-400">Cost Reduction</div>
+                    <div class="text-4xl font-bold text-white mb-3">15+</div>
+                    <div class="text-gray-400">Platform Integrations</div>
                 </div>
                 <div class="text-center panel-card p-8 rounded-xl metric-card animate-stagger-3">
-                    <div class="text-4xl font-bold text-white mb-3">3x</div>
-                    <div class="text-gray-400">Faster Scaling</div>
+                    <div class="text-4xl font-bold text-white mb-3">10min</div>
+                    <div class="text-gray-400">Setup Time</div>
                 </div>
                 <div class="text-center panel-card p-8 rounded-xl metric-card animate-stagger-1">
-                    <div class="text-4xl font-bold text-white mb-3">60%</div>
-                    <div class="text-gray-400">Team Productivity</div>
+                    <div class="text-4xl font-bold text-white mb-3">Real-time</div>
+                    <div class="text-gray-400">Data Updates</div>
                 </div>
             </div>
         </div>
     </section>
+
     <div class="section-divider"></div>
-    <section id="integrations" class="py-16 bg-qunex-dark section-enter">
+
+    <!-- Enterprise Integrations Section -->
+    <section class="py-16 bg-qunex-panel section-enter">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in">Enterprise <span class="gradient-text">Integrations</span></h2>
@@ -876,72 +859,72 @@
                 <div class="integration-grid">
                     <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Facebook & Instagram Ads">
                         <div class="integration-icon-container bg-white/10">
-                            <i class="fas fa-infinity text-white"></i>
+                            <i class="fab fa-meta text-white text-2xl"></i>
                         </div>
                         <span class="text-base font-medium text-gray-300">Meta</span>
                         <div class="integration-status"></div>
                     </div>
                     <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Google Ads & Analytics">
                         <div class="integration-icon-container bg-white/10">
-                            <i class="fab fa-google text-white"></i>
+                            <i class="fab fa-google text-white text-2xl"></i>
                         </div>
                         <span class="text-base font-medium text-gray-300">Google</span>
                         <div class="integration-status"></div>
                     </div>
                     <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Shopify E-commerce">
                         <div class="integration-icon-container bg-white/10">
-                            <i class="fab fa-shopify text-white"></i>
+                            <i class="fab fa-shopify text-white text-2xl"></i>
                         </div>
                         <span class="text-base font-medium text-gray-300">Shopify</span>
                         <div class="integration-status"></div>
                     </div>
                     <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="WooCommerce Integration">
                         <div class="integration-icon-container bg-white/10">
-                            <i class="fab fa-wordpress text-white"></i>
+                            <i class="fab fa-wordpress text-white text-2xl"></i>
                         </div>
                         <span class="text-base font-medium text-gray-300">WooCommerce</span>
                         <div class="integration-status"></div>
                     </div>
-                    <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Reddit Ads Integration">
-                        <div class="integration-icon-container bg-white/10">
-                            <i class="fab fa-reddit text-white"></i>
-                        </div>
-                        <span class="text-base font-medium text-gray-300">Reddit</span>
-                        <div class="integration-status"></div>
-                    </div>
-                    <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Slack Notifications">
-                        <div class="integration-icon-container bg-white/10">
-                            <i class="fab fa-slack text-white"></i>
-                        </div>
-                        <span class="text-base font-medium text-gray-300">Slack</span>
-                        <div class="integration-status"></div>
-                    </div>
                     <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="LinkedIn Ads">
                         <div class="integration-icon-container bg-white/10">
-                            <i class="fab fa-linkedin text-white"></i>
+                            <i class="fab fa-linkedin text-white text-2xl"></i>
                         </div>
                         <span class="text-base font-medium text-gray-300">LinkedIn</span>
                         <div class="integration-status"></div>
                     </div>
                     <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="TikTok Ads">
                         <div class="integration-icon-container bg-white/10">
-                            <i class="fab fa-tiktok text-white"></i>
+                            <i class="fab fa-tiktok text-white text-2xl"></i>
                         </div>
                         <span class="text-base font-medium text-gray-300">TikTok</span>
                         <div class="integration-status"></div>
                     </div>
-                    <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Notion Documentation">
+                    <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Magento E-commerce">
                         <div class="integration-icon-container bg-white/10">
-                            <i class="fas fa-book text-white"></i>
+                            <i class="fas fa-store text-white text-2xl"></i>
                         </div>
-                        <span class="text-base font-medium text-gray-300">Notion</span>
+                        <span class="text-base font-medium text-gray-300">Magento</span>
                         <div class="integration-status"></div>
                     </div>
-                    <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Microsoft Teams">
+                    <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Power BI Integration">
                         <div class="integration-icon-container bg-white/10">
-                            <i class="fab fa-microsoft text-white"></i>
+                            <i class="fas fa-chart-bar text-white text-2xl"></i>
                         </div>
-                        <span class="text-base font-medium text-gray-300">Teams</span>
+                        <span class="text-base font-medium text-gray-300">Power BI</span>
+                        <div class="integration-status"></div>
+                    </div>
+                    <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Tableau Analytics">
+                        <div class="integration-icon-container bg-white/10">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <span class="text-base font-medium text-gray-300">Tableau</span>
+                        <div class="integration-status"></div>
+                    </div>
+                    <div class="panel-card p-6 rounded-xl integration-card hover:shadow-lg min-w-[180px] flex flex-col items-center justify-center h-[180px] glow" data-tooltip="Google Analytics">
+                        <div class="integration-icon-container bg-white/10">
+                            <i class="fas fa-analytics text-white text-2xl"></i>
+                        </div>
+                        <span class="text-base font-medium text-gray-300">Analytics</span>
                         <div class="integration-status"></div>
                     </div>
                 </div>
@@ -958,7 +941,10 @@
             </div>
         </div>
     </section>
+
     <div class="section-divider"></div>
+
+    <!-- CTA Section -->
     <section class="py-24 relative section-enter">
         <div class="absolute inset-0 grid-pattern opacity-10"></div>
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
@@ -979,6 +965,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer class="bg-qunex-darker border-t border-qunex-border/20 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -1040,6 +1028,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- Sticky CTA -->
     <div id="sticky-cta" class="sticky-cta">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
             <div>
@@ -1051,6 +1041,8 @@
             </button>
         </div>
     </div>
+
+    <!-- JavaScript -->
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -1058,6 +1050,7 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('open');
         });
+
         // Close mobile menu when clicking on a link
         const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
         mobileMenuLinks.forEach(link => {
@@ -1065,6 +1058,7 @@
                 mobileMenu.classList.remove('open');
             });
         });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1079,6 +1073,7 @@
                 }
             });
         });
+
         // Glassmorphic header effect on scroll
         const header = document.getElementById('main-nav');
         window.addEventListener('scroll', () => {
@@ -1088,25 +1083,32 @@
                 header.classList.remove('header-glass');
             }
         });
+
         // Integration section scroll buttons
         const scrollLeftBtn = document.getElementById('scroll-left-btn');
         const scrollRightBtn = document.getElementById('scroll-right-btn');
         const integrationGrid = document.querySelector('.integration-grid');
-        scrollLeftBtn.addEventListener('click', () => {
-            integrationGrid.scrollBy({
-                left: -200,
-                behavior: 'smooth'
+        
+        if (scrollLeftBtn && scrollRightBtn && integrationGrid) {
+            scrollLeftBtn.addEventListener('click', () => {
+                integrationGrid.scrollBy({
+                    left: -200,
+                    behavior: 'smooth'
+                });
             });
-        });
-        scrollRightBtn.addEventListener('click', () => {
-            integrationGrid.scrollBy({
-                left: 200,
-                behavior: 'smooth'
+
+            scrollRightBtn.addEventListener('click', () => {
+                integrationGrid.scrollBy({
+                    left: 200,
+                    behavior: 'smooth'
+                });
             });
-        });
+        }
+
         // Sticky CTA behavior
         const stickyCTA = document.getElementById('sticky-cta');
         let lastScrollPosition = window.pageYOffset;
+        
         window.addEventListener('scroll', () => {
             const currentScrollPosition = window.pageYOffset;
             if (currentScrollPosition > 500) {
@@ -1120,6 +1122,7 @@
             }
             lastScrollPosition = currentScrollPosition;
         });
+
         // Ripple effect for buttons
         const buttons = document.querySelectorAll('.ripple-effect');
         buttons.forEach(button => {
@@ -1138,6 +1141,7 @@
                 }, 600);
             });
         });
+
         // Integration card tooltips
         const integrationCards = document.querySelectorAll('.integration-card');
         integrationCards.forEach(card => {
@@ -1146,6 +1150,7 @@
                 card.setAttribute('aria-label', tooltip);
             });
         });
+
         // Animate elements when they come into view
         const animateOnScroll = () => {
             const elements = document.querySelectorAll('.animate-fade-in, .animate-stagger-1, .animate-stagger-2, .animate-stagger-3, .section-enter');
@@ -1158,15 +1163,24 @@
                 }
             });
         };
+        
         window.addEventListener('scroll', animateOnScroll);
         animateOnScroll();
+
         // Particle effect for hero section
         const canvas = document.getElementById('particles');
         const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = document.getElementById('platform').offsetHeight;
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = document.getElementById('platform').offsetHeight;
+        }
+        
+        resizeCanvas();
+        
         const particlesArray = [];
         const numberOfParticles = 50;
+
         class Particle {
             constructor() {
                 this.x = Math.random() * canvas.width;
@@ -1175,12 +1189,14 @@
                 this.speedX = Math.random() * 0.5 - 0.25;
                 this.speedY = Math.random() * 0.5 - 0.25;
             }
+
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
                 if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
             }
+
             draw() {
                 ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
                 ctx.beginPath();
@@ -1188,11 +1204,14 @@
                 ctx.fill();
             }
         }
+
         function initParticles() {
+            particlesArray.length = 0;
             for (let i = 0; i < numberOfParticles; i++) {
                 particlesArray.push(new Particle());
             }
         }
+
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particlesArray.forEach(particle => {
@@ -1201,11 +1220,13 @@
             });
             requestAnimationFrame(animateParticles);
         }
+
         initParticles();
         animateParticles();
+
         window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = document.getElementById('platform').offsetHeight;
+            resizeCanvas();
+            initParticles();
         });
     </script>
 </body>

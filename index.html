@@ -18,13 +18,12 @@
                         'qunex-dark': '#1e293b',
                         'qunex-gray': '#64748b',
                         'qunex-light-gray': '#f1f5f9',
-                        'dark-gray-green': '#1a4a3a', // New color for Book Demo button
+                        'dark-gray-green': '#1a4a3a',
                     },
                     fontFamily: {
                         'sans': ['Inter', 'sans-serif'],
                     },
                     animation: {
-                        'float': 'float 6s ease-in-out infinite',
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'glow-pulse': 'glowPulse 2s ease-in-out infinite',
                         'gradientShift': 'gradientShift 15s ease infinite',
@@ -67,16 +66,12 @@
             scroll-behavior: smooth;
             line-height: 1.6;
         }
-
-        /* Enhanced background with subtle pattern from loading page */
         .hero-gradient {
             background: radial-gradient(ellipse at top right, rgba(34, 197, 94, 0.08), transparent 60%),
                         radial-gradient(ellipse at bottom left, rgba(59, 130, 246, 0.05), transparent 60%);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
         }
-
-        /* Logo styling */
         .qunex-logo {
             width: 60px;
             height: 60px;
@@ -84,13 +79,10 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
-            animation: float 6s ease-in-out infinite;
         }
         .qunex-logo:hover {
             transform: rotate(15deg) scale(1.1);
         }
-
-        /* Buttons with correct green colors */
         .btn-primary {
             background: linear-gradient(135deg, #39FF14, #2ECC40);
             color: white;
@@ -115,7 +107,7 @@
             box-shadow: 0 10px 25px rgba(57, 255, 20, 0.15);
         }
         .btn-secondary {
-            background: #1a4a3a; /* Dark grey/green */
+            background: #1a4a3a;
             color: white;
             border: none;
             padding: 14px 32px;
@@ -137,8 +129,6 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(26, 74, 58, 0.2);
         }
-
-        /* Navigation */
         .nav-link {
             color: #64748b;
             font-weight: 500;
@@ -164,8 +154,6 @@
         .nav-link:hover::after {
             width: 100%;
         }
-
-        /* Cards */
         .section-card {
             background: white;
             border: 1px solid #e2e8f0;
@@ -179,8 +167,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
             border-color: #cbd5e1;
         }
-
-        /* Hero background */
         .hero-bg {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             position: relative;
@@ -197,8 +183,6 @@
             animation: pulse-slow 8s infinite;
             z-index: 0;
         }
-
-        /* Integration icons */
         .integration-icon {
             width: 52px;
             height: 52px;
@@ -236,8 +220,6 @@
         .integration-icon:hover::after {
             opacity: 1;
         }
-
-        /* Feature icons */
         .feature-icon {
             background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
             border: 1px solid #bae6fd;
@@ -247,13 +229,9 @@
             transform: translateY(-3px) rotate(5deg);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-
-        /* Progress bars */
         .progress-bar {
             transition: width 1.5s ease-in-out;
         }
-
-        /* Animations */
         .animate-in {
             opacity: 0;
             transform: translateY(20px);
@@ -263,8 +241,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Mobile Menu */
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -298,8 +274,6 @@
             opacity: 1;
             visibility: visible;
         }
-
-        /* Back to Top Button */
         #back-to-top {
             background: #39FF14;
             color: white;
@@ -314,8 +288,6 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(57, 255, 20, 0.3);
         }
-
-        /* Loader */
         .loader {
             border: 4px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
@@ -325,8 +297,6 @@
             animation: spin 1s linear infinite;
             margin: 20px auto;
         }
-
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -346,7 +316,6 @@
                 font-size: 0.95rem;
             }
         }
-
         @media (max-width: 640px) {
             .hero-title {
                 font-size: 2rem;
@@ -361,8 +330,6 @@
                 transform: none;
             }
         }
-
-        /* Disable animations when user prefers reduced motion */
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
@@ -431,7 +398,6 @@
             </div>
         </div>
     </nav>
-
     <!-- Mobile Menu -->
     <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
     <div id="mobile-menu" class="mobile-menu">
@@ -489,12 +455,10 @@
             <a href="#" class="btn-primary w-full text-center">Start Free Trial</a>
         </div>
     </div>
-
     <!-- Back to Top Button -->
     <button id="back-to-top" class="fixed bottom-6 right-6 bg-neon-green text-white p-3 rounded-full shadow-lg hidden">
         <i class="fas fa-arrow-up"></i>
     </button>
-
     <main>
         <!-- Hero Section -->
         <section id="platform" class="hero-bg py-16 md:py-20 hero-gradient">
@@ -505,7 +469,6 @@
                 <p class="text-lg md:text-xl lg:text-1xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed animate-in" style="transition-delay: 0.1s">
                     All your channels. Real-time analytics. Clear next steps. One intelligent partner to accelerate your marketing success.
                 </p>
-
                 <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 md:mb-8">
                     <a href="#" class="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 animate-in" style="transition-delay: 0.2s">Start Free Trial</a>
                     <a href="#" class="btn-secondary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 animate-in" style="transition-delay: 0.3s">Book Demo</a>
@@ -513,7 +476,6 @@
                 <p class="text-xs md:text-sm text-gray-500 animate-in" style="transition-delay: 0.4s">14-day free trial • No credit card required • Enterprise support included</p>
             </div>
         </section>
-
         <!-- Platform Integration Preview -->
         <section class="py-12 md:py-16 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -555,7 +517,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Key Features -->
         <section class="py-16 md:py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -653,7 +614,6 @@
                 </div>
             </div>
         </section>
-
         <!-- How It Works -->
         <section class="py-16 md:py-20 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -680,7 +640,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Analytics Showcase -->
         <section class="py-16 md:py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -717,6 +676,12 @@
                                 </div>
                                 <span class="text-gray-700">Custom KPI tracking</span>
                             </div>
+                        </div>
+                        <!-- Pricing Section -->
+                        <div class="mt-8 md:mt-12">
+                            <p class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Simple, transparent pricing</p>
+                            <p class="text-lg md:text-xl text-gray-600 mb-4">Starting from <strong>899 AED</strong></p>
+                            <a href="#" class="btn-primary inline-block">Contact Sales</a>
                         </div>
                     </div>
                     <div class="section-card animate-in" style="transition-delay: 0.1s">
@@ -764,7 +729,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Results -->
         <section class="py-16 md:py-20 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -790,7 +754,6 @@
                 </div>
             </div>
         </section>
-
         <!-- CTA Section -->
         <section class="py-16 md:py-20 bg-gray-900">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -813,7 +776,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Footer -->
         <footer class="bg-white border-t border-gray-200 py-8 md:py-12">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -879,7 +841,6 @@
             </div>
         </footer>
     </main>
-
     <!-- JavaScript -->
     <script>
         // Mobile menu toggle
@@ -887,40 +848,34 @@
         const mobileMenuClose = document.getElementById('mobile-menu-close');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.add('active');
                 mobileMenuOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
             });
-
             mobileMenuClose.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
                 mobileMenuOverlay.classList.remove('active');
                 document.body.style.overflow = '';
             });
-
             mobileMenuOverlay.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
                 mobileMenuOverlay.classList.remove('active');
                 document.body.style.overflow = '';
             });
         }
-
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-
                 if (mobileMenu.classList.contains('active')) {
                     mobileMenu.classList.remove('active');
                     mobileMenuOverlay.classList.remove('active');
                     document.body.style.overflow = '';
                 }
-
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
@@ -929,7 +884,6 @@
                 }
             });
         });
-
         // Back to Top Button
         const backToTopButton = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
@@ -942,15 +896,12 @@
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
         // Intersection Observer for animations
         const animateElements = document.querySelectorAll('.animate-in');
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-
                     if (entry.target.querySelector('.progress-bar')) {
                         const progressBars = entry.target.querySelectorAll('.progress-bar');
                         progressBars.forEach(bar => {
@@ -968,7 +919,6 @@
             rootMargin: '0px 0px -50px 0px'
         });
         animateElements.forEach(el => observer.observe(el));
-
         // Initialize all animations when page loads
         document.addEventListener('DOMContentLoaded', () => {
             const progressBars = document.querySelectorAll('.progress-bar');
@@ -979,7 +929,6 @@
                     bar.style.width = width;
                 }, 300);
             });
-
             if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
                 document.querySelectorAll('[class*="animate-"]').forEach(el => {
                     el.style.animation = 'none';

@@ -1,599 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Qunex — Data Analytics & AI Automation Agency</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Qunex — Partner for the AI Era | Data & AI Agency Dubai</title>
+  <meta name="description" content="Qunex is a minimal, modern data & AI agency in Dubai. We build analytics, automations, and AI workflows that compound growth for SMEs, enterprises, and startups." />
+  <meta name="keywords" content="AI agency Dubai, data analytics, AI automation, machine learning, data engineering, UAE AI consultancy" />
+  <meta name="author" content="Qunex" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://qunex.tech/" />
+  <meta property="og:title" content="Qunex — Partner for the AI Era | Data & AI Agency Dubai" />
+  <meta property="og:description" content="We design quiet, high-leverage systems—analytics, automations, and AI agents—that turn data into outcomes and scale with your team." />
+  <meta property="og:image" content="https://qunex.tech/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://qunex.tech/" />
+  <meta property="twitter:title" content="Qunex — Partner for the AI Era" />
+  <meta property="twitter:description" content="Minimal, modern data & AI agency. We build systems that compound growth." />
+  <meta property="twitter:image" content="https://qunex.tech/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%2339FF14'/></svg>" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-    
-    :root {
-      --qunex-primary: #39FF14;
-      --qunex-primary-dark: #2BDD10;
-      --qunex-dark: #000000;
-      --qunex-light: #FFFFFF;
-      --qunex-gray-50: #F9FAFB;
-      --qunex-gray-100: #F3F4F6;
-      --qunex-gray-900: #111827;
-      --qunex-gradient: linear-gradient(135deg, #000000 0%, #1F2937 100%);
+    :root{
+      --q-green:#39FF14;
+      --q-black:#000000;
     }
+    html,body{font-family:Inter,system-ui,Arial,sans-serif;background:#fff;color:#0a0a0a;scroll-behavior:smooth}
+    .underline-neon{ box-shadow: inset 0 -0.5em 0 rgba(57,255,20,.14); }
     
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: white;
-      color: var(--qunex-dark);
-      line-height: 1.6;
-    }
-    
-    @media (prefers-reduced-motion: no-preference) {
-      .lift:hover {
+    /* Refined Button Animations */
+    @media (prefers-reduced-motion:no-preference){
+      .hover-raise{
+        transition: all 0.2s ease;
+        transform: translateY(0);
+      }
+      .hover-raise:hover{
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      
+      .btn-primary {
+        transition: all 0.2s ease;
+      }
+      
+      .btn-primary:hover {
+        background: #1a1a1a;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+      
+      .btn-secondary {
+        transition: all 0.2s ease;
+        position: relative;
+      }
+      
+      .btn-secondary:hover {
+        background: rgba(57,255,20,0.05);
+        border-color: rgba(57,255,20,0.3);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+      
+      .pulse-dot {
+        animation: pulse-ring 2s ease-out infinite;
+      }
+      
+      @keyframes pulse-ring {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.2); opacity: 0.7; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      
+      .card-hover {
+        transition: all 0.2s ease;
+      }
+      
+      .card-hover:hover {
         transform: translateY(-2px);
-        transition: transform 0.2s ease;
-      }
-      .fade-in {
-        animation: fade 0.35s ease both;
-      }
-      @keyframes fade {
-        from {
-          opacity: 0;
-          transform: translateY(6px);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-      .pulse-glow {
-        animation: pulse-glow 2s infinite;
-      }
-      @keyframes pulse-glow {
-        0% {
-          box-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
-        }
-        50% {
-          box-shadow: 0 0 20px rgba(57, 255, 20, 0.8);
-        }
-        100% {
-          box-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
-        }
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        border-color: rgba(57,255,20,0.2);
       }
     }
     
-    .bg-qunex-gradient {
-      background: var(--qunex-gradient);
+    .grid-bg{
+      background-image:
+        linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);
+      background-size:22px 22px;
     }
     
-    .text-qunex-primary {
-      color: var(--qunex-primary);
+    .section-muted{
+      background:#fbfbfc;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-muted::after{
+      content:"";
+      position:absolute;
+      top:-28%;
+      right:-10%;
+      width:360px;
+      height:360px;
+      border-radius:9999px;
+      background: radial-gradient(closest-side, rgba(0,0,0,0.05), transparent 70%);
+      pointer-events:none;
+      filter: blur(6px);
+    }
+
+    .bg-neon{ background-color: var(--q-green); }
+    .from-neon{ --tw-gradient-from: var(--q-green); --tw-gradient-to: rgb(57 255 20 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+    .to-ink{ --tw-gradient-to: #0a0a0a; }
+    
+    /* Mobile improvements */
+    @media (max-width: 640px) {
+      .hero-title { font-size: 2.5rem; line-height: 1.1; }
+      .section-padding { padding: 3rem 0; }
     }
     
-    .bg-qunex-primary {
-      background-color: var(--qunex-primary);
+    /* Loading animation for form */
+    .btn-loading {
+      pointer-events: none;
+      opacity: 0.7;
     }
     
-    .border-qunex-primary {
-      border-color: var(--qunex-primary);
+    .btn-loading:after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      margin-left: 8px;
+      border: 2px solid transparent;
+      border-top-color: currentColor;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      display: inline-block;
     }
     
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Stats card animation */
+    .stats-card {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
-    .stat-number {
-      font-size: 3.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #000000 0%, var(--qunex-primary) 100%);
+    .stats-card.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .counter {
+      background: linear-gradient(135deg, #39FF14 0%, #2dd10f 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-    
-    .header-scrolled {
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.98);
-    }
-    
-    .hero-grid-pattern {
-      background-image: 
-        radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.03) 2px, transparent 2px),
-        radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-
-    .black-section {
-      background: linear-gradient(135deg, #000000 0%, #1F2937 100%);
-    }
-
-    .minimal-card {
-      border: 1px solid #E5E7EB;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    .minimal-card:hover {
-      border-color: var(--qunex-primary);
-      box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    }
-    
-    /* Enhanced black and white styles */
-    .bw-section {
-      background: linear-gradient(to bottom, white 0%, #f8fafc 100%);
-    }
-    
-    .bw-card {
-      background: white;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
-    
-    .bw-card-dark {
-      background: #000000;
-      border: 1px solid #333;
-      color: white;
-    }
-    
-    .bw-pattern {
-      background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-      background-size: 20px 20px;
-    }
-    
-    .text-stroke {
-      -webkit-text-stroke: 1px black;
-      color: transparent;
-    }
-    
-    .enhanced-heading {
-      font-weight: 900;
-      letter-spacing: -0.025em;
-    }
-    
-    .mono-badge {
-      background: black;
-      color: white;
-      border: 1px solid black;
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
-    }
-    
-    .mono-button {
-      background: black;
-      color: white;
-      border: 1px solid black;
-      transition: all 0.2s ease;
-    }
-    
-    .mono-button:hover {
-      background: white;
-      color: black;
-    }
-    
-    .mono-button-outline {
-      background: white;
-      color: black;
-      border: 1px solid black;
-      transition: all 0.2s ease;
-    }
-    
-    .mono-button-outline:hover {
-      background: black;
-      color: white;
-    }
-    
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      background: black;
-      color: white;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-    }
-    
-    .divider {
-      height: 1px;
-      background: linear-gradient(to right, transparent 0%, #e5e7eb 50%, transparent 100%);
-    }
-    
-    .enhanced-list li {
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    
-    .enhanced-list li:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.65rem;
-      width: 0.5rem;
-      height: 0.5rem;
-      background: black;
-      border-radius: 50%;
+      background-clip: text;
     }
   </style>
 </head>
 <body class="antialiased">
-  <!-- Header/Navigation -->
-  <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-white border-b border-gray-200" id="main-header">
-    <div class="container mx-auto px-6 py-4">
-      <div class="flex items-center justify-between">
-        <div class="font-extrabold tracking-tight text-2xl">
-          <a href="index.html" class="flex items-center">
-            <span class="bg-black text-white px-3 py-1 rounded mr-3 flex items-center">
-              <span>QUNEX</span>
-              <span class="ml-2 w-2 h-2 bg-qunex-primary rounded-full pulse-glow"></span>
-            </span>
-            <span class="hidden sm:inline text-black font-medium">Data & AI Agency</span>
-          </a>
-        </div>
 
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="#home" class="text-sm font-medium text-gray-700 hover:text-black transition-colors relative group">
-            Home
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
-          </a>
-          <a href="#services" class="text-sm font-medium text-gray-700 hover:text-black transition-colors relative group">
-            Services
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
-          </a>
-          <a href="#process" class="text-sm font-medium text-gray-700 hover:text-black transition-colors relative group">
-            Process
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
-          </a>
-          <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-black transition-colors relative group">
-            Contact
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all group-hover:w-full"></span>
-          </a>
+  <!-- NAV -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="h-14 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2 group" aria-label="Qunex home">
+          <div class="relative">
+            <span class="h-3 w-3 rounded-full bg-neon group-hover:animate-ping absolute opacity-75"></span>
+            <span class="h-3 w-3 rounded-full bg-neon relative z-10 pulse-dot"></span>
+          </div>
+          <span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-neon to-ink bg-clip-text text-transparent">qunex</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm" role="navigation">
+          <a href="#services" class="hover:underline focus:outline-none focus:underline">Services</a>
+          <a href="#approach" class="hover:underline focus:outline-none focus:underline">Approach</a>
+          <a href="#contact" class="hover:underline focus:outline-none focus:underline">Contact</a>
         </nav>
-
-        <div class="flex items-center space-x-4">
-          <a href="#contact" class="mono-button px-6 py-2 rounded-lg text-sm font-medium hover:scale-105 shadow-md lift flex items-center">
-            <span>Get Started</span>
-            <i class="fas fa-arrow-right ml-2 text-xs"></i>
-          </a>
-          <button class="md:hidden text-xl text-gray-700 hover:text-black transition-colors" id="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded border border-black px-3 py-1.5 text-sm btn-secondary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+          <span>Start a project</span><i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+        <button id="menuBtn" class="md:hidden text-xl focus:outline-none focus:ring-2 focus:ring-black rounded p-1" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </div>
     
-    <!-- Mobile menu -->
-    <div class="hidden md:hidden bg-white border-t shadow-lg" id="mobile-menu">
-      <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-        <a href="#home" class="text-sm font-medium text-gray-700 hover:text-black transition-colors py-2 flex items-center">
-          <i class="fas fa-home mr-3 w-5 text-center"></i>
-          Home
-        </a>
-        <a href="#services" class="text-sm font-medium text-gray-700 hover:text-black transition-colors py-2 flex items-center">
-          <i class="fas fa-cogs mr-3 w-5 text-center"></i>
-          Services
-        </a>
-        <a href="#process" class="text-sm font-medium text-gray-700 hover:text-black transition-colors py-2 flex items-center">
-          <i class="fas fa-list-ol mr-3 w-5 text-center"></i>
-          Process
-        </a>
-        <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-black transition-colors py-2 flex items-center">
-          <i class="fas fa-envelope mr-3 w-5 text-center"></i>
-          Contact
-        </a>
+    <div id="mnav" class="hidden md:hidden border-t border-black/5 bg-white/95 backdrop-blur">
+      <div class="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#services" class="py-2 hover:underline focus:outline-none focus:underline">Services</a>
+        <a href="#approach" class="py-2 hover:underline focus:outline-none focus:underline">Approach</a>
+        <a href="#contact" class="py-2 hover:underline focus:outline-none focus:underline">Contact</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="relative overflow-hidden pt-32 pb-20 bg-white bw-pattern">
-    <div aria-hidden="true" class="pointer-events-none absolute -top-24 right-[-10%] h-72 w-72 rounded-full blur-3xl opacity-10" style="background:#39FF14"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute top-1/3 left-[-5%] h-48 w-48 rounded-full blur-3xl opacity-5" style="background:#000000"></div>
+  <!-- HERO -->
+  <section class="pt-28 md:pt-32 pb-12 grid-bg" role="banner">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 rounded-full border border-black/10 px-3 py-1 text-[0.72rem] tracking-wider bg-white">
+          <span class="h-2 w-2 rounded-full bg-neon pulse-dot"></span><span>Minimal. Measurable. AI-first.</span>
+        </span>
+        <h1 class="mt-6 text-4xl md:text-6xl font-black leading-[1.05] tracking-tight hero-title">
+          Your <span class="underline-neon">Partner for the AI Era</span>
+        </h1>
+        <p class="mt-5 text-lg text-black/70 max-w-2xl">
+          We design quiet, high-leverage systems—analytics, automations, and AI agents—that turn data into outcomes and scale with your team.
+        </p>
 
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="grid gap-12 md:grid-cols-12 items-center">
-        <div class="md:col-span-7">
-			<div class="bg-gray-100 text-black inline-flex items-center px-4 py-2 rounded-full mb-6">
-  <span class="w-2 h-2 bg-qunex-primary rounded-full mr-2 pulse-glow"></span>
-  AI-Powered Data Solutions for Growth
-</div>
-          
-          <h1 class="text-4xl md:text-5xl lg:text-6xl enhanced-heading tracking-tight leading-[1.05] fade-in">
-            Transform Data Into <span class="text-qunex-primary relative">
-              <span class="relative z-10">Revenue Growth</span>
-              <span class="absolute -bottom-2 left-0 w-full h-4 bg-qunex-primary/20 -z-10"></span>
-            </span>
-          </h1>
-          
-          <p class="mt-6 text-lg text-gray-700 max-w-lg fade-in leading-relaxed">
-            We build intelligent systems that automatically optimize your marketing spend, predict customer behavior, and scale your operations with AI automation.
-          </p>
-
-          <div class="mt-10 flex flex-col sm:flex-row gap-4 fade-in">
-            <a href="#contact" class="lift inline-flex items-center justify-center rounded-lg mono-button px-8 py-4 font-semibold hover:scale-105 shadow-lg relative overflow-hidden group">
-              <span class="relative z-10">Get Your Free AI Audit</span>
-              <span class="absolute inset-0 bg-qunex-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-            </a>
-            
-            <a href="#services" class="lift inline-flex items-center justify-center rounded-lg mono-button-outline px-8 py-4 font-semibold transition-all group">
-              <span class="relative z-10">Explore Our Solutions</span>
-              <i class="fas fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition-transform"></i>
-            </a>
-          </div>
-          
-          <div class="mt-10 flex items-center text-sm text-gray-600 fade-in">
-            <div class="flex -space-x-3 mr-4">
-              <div class="w-10 h-10 rounded-full bg-black border-2 border-white"></div>
-              <div class="w-10 h-10 rounded-full bg-gray-800 border-2 border-white"></div>
-              <div class="w-10 h-10 rounded-full bg-gray-600 border-2 border-white"></div>
-            </div>
-            <span>Trusted by 250+ innovative companies</span>
-          </div>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#contact" class="inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black" aria-describedby="cta-description">
+            Talk to us
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center rounded border border-black px-6 py-3 text-sm font-semibold btn-secondary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+            See capabilities
+          </a>
         </div>
 
-        <div class="md:col-span-5 fade-in">
-          <div class="bw-card rounded-2xl p-8 shadow-lg relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-24 h-24 bg-black opacity-5 -translate-y-1/2 translate-x-1/2 rounded-full"></div>
-            
-            <h3 class="text-xl font-bold text-black flex items-center">
-              <span class="w-3 h-3 bg-qunex-primary rounded-full mr-3"></span>
-              The Qunex Advantage
-            </h3>
-            
-            <ul class="mt-6 space-y-4 enhanced-list">
-              <li>Unified analytics connecting all channels</li>
-              <li>Predictive AI for forecasting & automation</li>
-              <li>Custom workflows that scale with business</li>
-              <li>Enterprise-grade data processing</li>
-              <li>Real-time insights with instant alerts</li>
-            </ul>
+        <div class="mt-10 flex items-center gap-6 text-xs text-black/60" aria-label="Social proof">
+          <span class="uppercase tracking-wider">Trusted across sectors</span>
+          <span class="h-px w-16 bg-black/10"></span>
+          <div class="flex items-center gap-4 opacity-70 flex-wrap">
+            <span>SMEs</span>
+            <span>Enterprises</span>
+            <span>Startups</span>
+            <span>Agencies</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Stats Section -->
-  <section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-black enhanced-heading">Proven Results</h2>
-        <p class="text-gray-600 mt-3 text-lg">Our AI-driven approach delivers measurable impact</p>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div class="fade-in">
-          <div class="stat-number">300%</div>
-          <p class="text-sm text-gray-600 mt-2 font-medium">Average ROI Increase</p>
-        </div>
-        <div class="fade-in">
-          <div class="stat-number">85%</div>
-          <p class="text-sm text-gray-600 mt-2 font-medium">Cost Reduction</p>
-        </div>
-        <div class="fade-in">
-          <div class="stat-number">200+</div>
-          <p class="text-sm text-gray-600 mt-2 font-medium">AI Models Deployed</p>
-        </div>
-        <div class="fade-in">
-          <div class="stat-number">48h</div>
-          <p class="text-sm text-gray-600 mt-2 font-medium">Average Setup Time</p>
-        </div>
+  <!-- STRIP -->
+  <section class="py-6 border-y border-black/5 bg-white" aria-label="Key features">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-neon flex-shrink-0"></span><span>Unified data layer</span></div>
+        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-neon flex-shrink-0"></span><span>AI workflow automation</span></div>
+        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-neon flex-shrink-0"></span><span>Actionable dashboards</span></div>
+        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-neon flex-shrink-0"></span><span>Privacy by design</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-20 bw-section">
-    <div class="container mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-black enhanced-heading">Our <span class="text-qunex-primary">Core Services</span></h2>
-        <p class="text-gray-600 mt-2 text-base">End-to-end data and AI solutions that transform how you grow your business.</p>
+  <!-- SERVICES -->
+  <section id="services" class="section-padding py-20 section-muted" aria-labelledby="services-heading">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <h2 id="services-heading" class="text-2xl md:text-3xl font-extrabold tracking-tight">What we do</h2>
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 text-sm underline hover-raise focus:outline-none focus:ring-2 focus:ring-black rounded">
+          Get a free AI audit <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bw-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg">
-          <div class="feature-icon">
-            <i class="fas fa-chart-line"></i>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">Advanced Analytics</h3>
+            <i class="fa-solid fa-chart-line text-black/60"></i>
           </div>
-          <h3 class="text-xl font-bold mt-5 text-black">Advanced Analytics</h3>
-          <p class="text-gray-600 mt-2 text-base">Turn data chaos into clear insights with enterprise-grade analytics.</p>
-          <ul class="mt-4 space-y-2 text-sm enhanced-list">
-            <li>Multi-channel attribution</li>
-            <li>Customer journey mapping</li>
-            <li>Revenue forecasting</li>
+          <p class="mt-3 text-sm text-black/70">Clean, consistent metrics and executive dashboards that drive decisions.</p>
+          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
+            <li>• Acquisition & attribution</li>
+            <li>• Revenue & cohort analysis</li>
+            <li>• Executive scorecards</li>
           </ul>
         </div>
 
-        <div class="bw-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg">
-          <div class="feature-icon">
-            <i class="fas fa-robot"></i>
+        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">AI Automation</h3>
+            <i class="fa-solid fa-robot text-black/60"></i>
           </div>
-          <h3 class="text-xl font-bold mt-5 text-black">AI Automation</h3>
-          <p class="text-gray-600 mt-2 text-base">Eliminate repetitive tasks and scale operations with intelligent automation.</p>
-          <ul class="mt-4 space-y-2 text-sm enhanced-list">
-            <li>Campaign optimization</li>
-            <li>Lead scoring & routing</li>
-            <li>Dynamic pricing</li>
+          <p class="mt-3 text-sm text-black/70">Agents and workflows that reduce manual ops and increase throughput.</p>
+          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
+            <li>• Campaign optimization</li>
+            <li>• Lead scoring & routing</li>
+            <li>• Alerts & anomaly detection</li>
           </ul>
         </div>
 
-        <div class="bw-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg">
-          <div class="feature-icon">
-            <i class="fas fa-brain"></i>
+        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">Data Engineering</h3>
+            <i class="fa-solid fa-database text-black/60"></i>
           </div>
-          <h3 class="text-xl font-bold mt-5 text-black">Machine Learning</h3>
-          <p class="text-gray-600 mt-2 text-base">Build predictive models that anticipate customer behavior and opportunities.</p>
-          <ul class="mt-4 space-y-2 text-sm enhanced-list">
-            <li>Lifetime value prediction</li>
-            <li>Churn prevention</li>
-            <li>Personalization engines</li>
+          <p class="mt-3 text-sm text-black/70">Solid pipelines and a warehouse that scales without noise.</p>
+          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
+            <li>• ELT/ETL & modeling</li>
+            <li>• API & app integrations</li>
+            <li>• Governance & quality</li>
           </ul>
         </div>
 
-        <div class="bw-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg">
-          <div class="feature-icon">
-            <i class="fas fa-database"></i>
+        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">ML & Prediction</h3>
+            <i class="fa-solid fa-brain text-black/60"></i>
           </div>
-          <h3 class="text-xl font-bold mt-5 text-black">Data Engineering</h3>
-          <p class="text-gray-600 mt-2 text-base">Build robust, scalable data infrastructure that grows with your business.</p>
-          <ul class="mt-4 space-y-2 text-sm enhanced-list">
-            <li>Data warehousing</li>
-            <li>Pipeline development</li>
-            <li>API integrations</li>
+          <p class="mt-3 text-sm text-black/70">Practical models that impact revenue, not just accuracy.</p>
+          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
+            <li>• LTV & churn models</li>
+            <li>• Next-best-action</li>
+            <li>• Forecasting</li>
           </ul>
         </div>
 
-        <div class="bw-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg">
-          <div class="feature-icon">
-            <i class="fas fa-sync-alt"></i>
+        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">Integrations</h3>
+            <i class="fa-solid fa-plug text-black/60"></i>
           </div>
-          <h3 class="text-xl font-bold mt-5 text-black">Integration Services</h3>
-          <p class="text-gray-600 mt-2 text-base">Connect your entire tech stack for unified data flow and insights.</p>
-          <ul class="mt-4 space-y-2 text-sm enhanced-list">
-            <li>Marketing connections</li>
-            <li>CRM integration</li>
-            <li>E-commerce syncing</li>
+          <p class="mt-3 text-sm text-black/70">Meta, Google, LinkedIn, TikTok, CRM, SAP, Shopify, Zenoti & more.</p>
+          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
+            <li>• Marketing & ads APIs</li>
+            <li>• Finance & HR systems</li>
+            <li>• Data activation</li>
           </ul>
         </div>
 
-        <div class="bw-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg">
-          <div class="feature-icon">
-            <i class="fas fa-user-graduate"></i>
+        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">Training & Support</h3>
+            <i class="fa-solid fa-user-graduate text-black/60"></i>
           </div>
-          <h3 class="text-xl font-bold mt-5 text-black">Training & Support</h3>
-          <p class="text-gray-600 mt-2 text-base">Empower your team to maximize your data investments.</p>
-          <ul class="mt-4 space-y-2 text-sm enhanced-list">
-            <li>Team training</li>
-            <li>24/7 support</li>
-            <li>Performance optimization</li>
+          <p class="mt-3 text-sm text-black/70">Enable your team to run fast and stay independent.</p>
+          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
+            <li>• Workshops & playbooks</li>
+            <li>• Runbooks & SLAs</li>
+            <li>• On-call assistance</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Process Section -->
-  <section id="process" class="py-20 bg-black text-white">
-    <div class="container mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold enhanced-heading">Our <span class="text-qunex-primary">Proven Process</span></h2>
-        <p class="text-gray-300 mt-4 text-lg">A systematic approach to transforming your data into competitive advantage.</p>
+  <!-- APPROACH -->
+  <section id="approach" class="py-18 md:py-20 bg-black text-white" aria-labelledby="approach-heading">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex items-end justify-between">
+        <h2 id="approach-heading" class="text-2xl md:text-3xl font-extrabold tracking-tight">How we work</h2>
+      </div>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-lg border border-white/20 p-6 hover:border-white/50 transition-colors duration-300" role="article">
+          <div class="text-xs text-white/70">Step 01</div>
+          <h3 class="mt-2 font-semibold">Discovery</h3>
+          <p class="mt-2 text-sm text-white/70">Audit data, goals, and constraints. Define success metrics.</p>
+        </div>
+        <div class="rounded-lg border border-white/20 p-6 hover:border-white/50 transition-colors duration-300" role="article">
+          <div class="text-xs text-white/70">Step 02</div>
+          <h3 class="mt-2 font-semibold">Blueprint</h3>
+          <p class="mt-2 text-sm text-white/70">Architecture, milestones, and quick wins that compound.</p>
+        </div>
+        <div class="rounded-lg border border-white/20 p-6 hover:border-white/50 transition-colors duration-300" role="article">
+          <div class="text-xs text-white/70">Step 03</div>
+          <h3 class="mt-2 font-semibold">Build</h3>
+          <p class="mt-2 text-sm text-white/70">Implement pipelines, dashboards, and AI automations.</p>
+        </div>
+        <div class="rounded-lg border border-white/20 p-6 hover:border-white/50 transition-colors duration-300" role="article">
+          <div class="text-xs text-white/70">Step 04</div>
+          <h3 class="mt-2 font-semibold">Operate</h3>
+          <p class="mt-2 text-sm text-white/70">Measure, iterate, and scale with guardrails.</p>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
-        <div class="text-center">
-          <div class="w-20 h-20 rounded-full bg-qunex-primary text-black flex items-center justify-center text-2xl font-bold mx-auto">1</div>
-          <h3 class="text-xl font-bold mt-6">Discovery & Audit</h3>
-          <p class="text-gray-300 mt-3">Comprehensive analysis of your data landscape, identifying opportunities and quick wins.</p>
-          <div class="mt-4 text-sm text-qunex-primary font-semibold">3-5 days</div>
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1 text-xs text-white/80">
+          <span class="w-2 h-2 rounded-full bg-neon pulse-dot"></span> 48-hour starter plan
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1 text-xs text-white/80">
+          SOC-aware & privacy-first
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1 text-xs text-white/80">
+          UAE-friendly data residency
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVEN RESULTS -->
+  <section class="py-20 bg-white" aria-labelledby="results-heading">
+    <div class="mx-auto max-w-6xl px-4 text-center">
+      <h2 id="results-heading" class="text-3xl md:text-4xl font-extrabold tracking-tight">Proven Results</h2>
+      <p class="mt-4 text-black/70 max-w-2xl mx-auto">Our AI-driven approach delivers measurable impact</p>
+      
+      <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div class="stats-card" role="article">
+          <div class="text-4xl md:text-5xl lg:text-6xl font-black text-green-600 mb-2 counter" data-target="300">0%</div>
+          <div class="text-sm md:text-base text-black/70 font-medium">Average ROI Increase</div>
         </div>
-        <div class="text-center">
-          <div class="w-20 h-20 rounded-full bg-white text-black flex items-center justify-center text-2xl font-bold mx-auto">2</div>
-          <h3 class="text-xl font-bold mt-6">Strategy & Architecture</h3>
-          <p class="text-gray-300 mt-3">Custom solution design that scales with your business and integrates with existing systems.</p>
-          <div class="mt-4 text-sm text-qunex-primary font-semibold">1-2 weeks</div>
+        
+        <div class="stats-card" role="article">
+          <div class="text-4xl md:text-5xl lg:text-6xl font-black text-green-600 mb-2 counter" data-target="85">0%</div>
+          <div class="text-sm md:text-base text-black/70 font-medium">Cost Reduction</div>
         </div>
-        <div class="text-center">
-          <div class="w-20 h-20 rounded-full bg-qunex-primary text-black flex items-center justify-center text-2xl font-bold mx-auto">3</div>
-          <h3 class="text-xl font-bold mt-6">Build & Deploy</h3>
-          <p class="text-gray-300 mt-3">Build, test, and deploy your data infrastructure and AI models with quality assurance.</p>
-          <div class="mt-4 text-sm text-qunex-primary font-semibold">2-6 weeks</div>
+        
+        <div class="stats-card" role="article">
+          <div class="text-4xl md:text-5xl lg:text-6xl font-black text-green-600 mb-2 counter" data-target="200">0+</div>
+          <div class="text-sm md:text-base text-black/70 font-medium">AI Models Deployed</div>
         </div>
-        <div class="text-center">
-          <div class="w-20 h-20 rounded-full bg-white text-black flex items-center justify-center text-2xl font-bold mx-auto">4</div>
-          <h3 class="text-xl font-bold mt-6">Optimize & Scale</h3>
-          <p class="text-gray-300 mt-3">Continuous monitoring, optimization, and scaling as your business grows.</p>
-          <div class="mt-4 text-sm text-qunex-primary font-semibold">Ongoing</div>
+        
+        <div class="stats-card" role="article">
+          <div class="text-4xl md:text-5xl lg:text-6xl font-black text-green-600 mb-2 counter" data-target="48">0h</div>
+          <div class="text-sm md:text-base text-black/70 font-medium">Average Setup Time</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-black enhanced-heading">Ready to Transform Your Business?</h2>
-      <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-lg">Join companies using AI and advanced analytics to drive growth. Get a free consultation and see how we can impact your bottom line.</p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#contact" class="mono-button px-8 py-4 text-sm font-semibold hover:scale-105 shadow-lg lift">Schedule Your Free AI Audit</a>
-        <a href="mailto:hello@qunex.tech" class="mono-button-outline px-8 py-4 text-sm font-semibold">Email Us Directly</a>
-      </div>
-      <div class="mt-8 text-sm text-gray-500">
-        <p>No commitment required • Results in 48 hours • Free roadmap</p>
+  <!-- CTA -->
+  <section class="py-16" role="banner">
+    <div class="mx-auto max-w-6xl px-4 text-center">
+      <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Quiet systems. Loud results.</h3>
+      <p class="mt-4 text-black/70 max-w-2xl mx-auto">Tell us your outcomes, we'll design the shortest path with data & AI.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#contact" class="inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Book an intro</a>
+        <a href="#services" class="inline-flex items-center justify-center rounded border border-black px-6 py-3 text-sm font-semibold btn-secondary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Capabilities</a>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-black enhanced-heading">Get In <span class="text-qunex-primary">Touch</span></h2>
-        <p class="text-gray-600 mt-3 text-base">Ready to unlock the power of your data? Let's start the conversation.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="section-padding py-20 border-t border-black/5 section-muted" aria-labelledby="contact-heading">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="max-w-2xl">
+        <h2 id="contact-heading" class="text-2xl md:text-3xl font-extrabold tracking-tight">Start the conversation</h2>
+        <p class="mt-3 text-black/70">We'll reply within one business day with next steps.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div>
-          <form class="space-y-5">
-            <div>
-              <label for="name" class="block text-sm font-medium text-black mb-2">Your Name</label>
-              <input type="text" id="name" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent bg-white text-sm" placeholder="John Doe">
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <form id="contactForm" class="space-y-4" novalidate>
+          <div>
+            <label for="name" class="text-sm font-medium block mb-1">Name *</label>
+            <input id="name" name="name" required class="mt-1 w-full border border-black/10 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200" placeholder="Your name" aria-describedby="name-error">
+            <span id="name-error" class="text-red-600 text-xs hidden" role="alert"></span>
+          </div>
+          <div>
+            <label for="email" class="text-sm font-medium block mb-1">Email *</label>
+            <input type="email" id="email" name="email" required class="mt-1 w-full border border-black/10 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200" placeholder="you@company.com" aria-describedby="email-error">
+            <span id="email-error" class="text-red-600 text-xs hidden" role="alert"></span>
+          </div>
+          <div>
+            <label for="message" class="text-sm font-medium block mb-1">What do you want to achieve? *</label>
+            <textarea id="message" name="message" rows="4" required class="mt-1 w-full border border-black/10 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200 resize-vertical" placeholder="Tell us about the current state, constraints, and ideal outcome..." aria-describedby="message-error"></textarea>
+            <span id="message-error" class="text-red-600 text-xs hidden" role="alert"></span>
+          </div>
+          <button type="submit" id="submitBtn" class="w-full md:w-auto inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-all duration-200" aria-describedby="form-status">
+            Send message
+          </button>
+          <div id="form-status" class="text-sm mt-2" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="rounded-lg border border-black/10 bg-white p-6">
+          <div class="text-sm">
+            <div class="flex items-center gap-3 mb-3">
+              <i class="fa-regular fa-envelope text-black/60" aria-hidden="true"></i>
+              <a class="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-black rounded" href="mailto:hello@qunex.tech">hello@qunex.tech</a>
             </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-black mb-2">Email Address</label>
-              <input type="email" id="email" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent bg-white text-sm" placeholder="john@company.com">
+            <div class="flex items-center gap-3 mb-3">
+              <i class="fa-brands fa-whatsapp text-black/60" aria-hidden="true"></i>
+              <span>+971 • Available on WhatsApp</span>
             </div>
-            <div>
-              <label for="company" class="block text-sm font-medium text-black mb-2">Company</label>
-              <input type="text" id="company" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent bg-white text-sm" placeholder="Your Company">
+            <div class="flex items-center gap-3 mb-6">
+              <i class="fa-solid fa-location-dot text-black/60" aria-hidden="true"></i>
+              <span>Dubai, UAE</span>
             </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-black mb-2">Project Details</label>
-              <textarea id="message" rows="3" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent bg-white text-sm" placeholder="Tell us about your current challenges and goals..."></textarea>
-            </div>
-            <button type="submit" class="w-full mono-button py-3 rounded-lg text-sm font-medium shadow-lg lift">Send Message</button>
-          </form>
-        </div>
-        <div>
-          <div class="bw-card rounded-xl p-8 h-full">
-            <h3 class="text-xl font-bold text-black">Why Choose Qunex?</h3>
-            <div class="mt-6 space-y-6">
-              <div class="flex items-start">
-                <div class="feature-icon">
-                  <i class="fas fa-rocket"></i>
-                </div>
-                <div class="ml-4">
-                  <h4 class="font-semibold text-black text-base">Rapid Implementation</h4>
-                  <p class="text-gray-600 text-sm mt-1">From data to insights in 48 hours</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="feature-icon">
-                  <i class="fas fa-shield-alt"></i>
-                </div>
-                <div class="ml-4">
-                  <h4 class="font-semibold text-black text-base">Enterprise Security</h4>
-                  <p class="text-gray-600 text-sm mt-1">Bank-level security & compliance</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="feature-icon">
-                  <i class="fas fa-users"></i>
-                </div>
-                <div class="ml-4">
-                  <h4 class="font-semibold text-black text-base">Expert Team</h4>
-                  <p class="text-gray-600 text-sm mt-1">Former data scientists from top tech companies</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="feature-icon">
-                  <i class="fas fa-headset"></i>
-                </div>
-                <div class="ml-4">
-                  <h4 class="font-semibold text-black text-base">24/7 Support</h4>
-                  <p class="text-gray-600 text-sm mt-1">Dedicated support team</p>
-                </div>
-              </div>
+            <div class="text-xs text-black/60 border-t border-black/5 pt-4">
+              <strong>Typical first engagement:</strong> 48-hour audit → 2-week blueprint → 4-8 weeks build.
             </div>
           </div>
         </div>
@@ -601,118 +487,202 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-black text-white py-12">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <h3 class="text-lg font-bold flex items-center">
-            QUNEX
-            <span class="ml-2 w-1.5 h-1.5 bg-qunex-primary rounded-full pulse-glow"></span>
-          </h3>
-          <p class="text-gray-400 mt-2 text-sm">Data Analytics & AI Automation Agency</p>
-          <div class="flex space-x-3 mt-4">
-            <a href="#" class="text-gray-400 hover:text-white transition w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center hover:border-qunex-primary text-xs">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center hover:border-qunex-primary text-xs">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
+  <!-- FOOTER -->
+  <footer class="py-10 border-t border-black/5 bg-white" role="contentinfo">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-black rounded" aria-label="Qunex home">
+        <div class="relative">
+          <span class="h-3 w-3 rounded-full bg-neon group-hover:animate-ping absolute opacity-75"></span>
+          <span class="h-3 w-3 rounded-full bg-neon relative z-10 pulse-dot"></span>
         </div>
-        <div>
-          <h4 class="font-semibold mb-3 text-white text-sm">Services</h4>
-          <ul class="space-y-2 text-gray-400 text-sm">
-            <li><a href="#services" class="hover:text-white transition">Advanced Analytics</a></li>
-            <li><a href="#services" class="hover:text-white transition">AI Automation</a></li>
-            <li><a href="#services" class="hover:text-white transition">Machine Learning</a></li>
-            <li><a href="#services" class="hover:text-white transition">Data Engineering</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-3 text-white text-sm">Company</h4>
-          <ul class="space-y-2 text-gray-400 text-sm">
-            <li><a href="#" class="hover:text-white transition">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
-            <li><a href="#" class="hover:text-white transition">Blog</a></li>
-            <li><a href="#" class="hover:text-white transition">Careers</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-3 text-white text-sm">Contact</h4>
-          <ul class="space-y-2 text-gray-400 text-sm">
-            <li>hello@qunex.tech</li>
-            <li>+1 (555) 123-4567</li>
-            <li>San Francisco, CA</li>
-            <li>24h response time</li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 mt-8 pt-6 text-sm text-gray-400 text-center">
-        <p>© 2024 Qunex. All rights reserved.</p>
-      </div>
+        <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-neon to-ink bg-clip-text text-transparent">qunex</span>
+      </a>
+      <div class="text-sm text-black/60">© <span id="year"></span> Qunex. All rights reserved.</div>
+      <nav class="flex items-center gap-3 text-sm" role="navigation">
+        <a class="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-black rounded" href="#services">Services</a>
+        <a class="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-black rounded" href="#approach">Approach</a>
+        <a class="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-black rounded" href="#contact">Contact</a>
+      </nav>
     </div>
   </footer>
 
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Qunex",
+    "url": "https://qunex.tech",
+    "logo": "https://qunex.tech/logo.png",
+    "description": "Minimal, modern data & AI agency in Dubai. We build analytics, automations, and AI workflows that compound growth.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "UAE"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+971",
+      "contactType": "customer service",
+      "email": "hello@qunex.tech"
+    },
+    "sameAs": [],
+    "offers": {
+      "@type": "Service",
+      "name": "AI and Data Analytics Services",
+      "description": "Advanced Analytics, AI Automation, Data Engineering, ML & Prediction, Integrations, Training & Support"
+    }
+  }
+  </script>
+
   <script>
-    // Mobile menu functionality
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        const icon = mobileMenuBtn.querySelector('i');
-        if (icon.classList.contains('fa-bars')) {
-          icon.classList.remove('fa-bars');
-          icon.classList.add('fa-times');
-        } else {
-          icon.classList.remove('fa-times');
-          icon.classList.add('fa-bars');
-        }
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile navigation
+    const menuBtn = document.getElementById('menuBtn');
+    const mnav = document.getElementById('mnav');
+    if(menuBtn){
+      menuBtn.addEventListener('click', ()=> {
+        const isOpen = !mnav.classList.contains('hidden');
+        mnav.classList.toggle('hidden');
+        const i = menuBtn.querySelector('i');
+        i.classList.toggle('fa-bars');
+        i.classList.toggle('fa-xmark');
+        
+        // Update aria-expanded
+        menuBtn.setAttribute('aria-expanded', !isOpen);
       });
     }
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-          
-          // Close mobile menu if open
-          if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+    // Enhanced smooth scrolling with offset for fixed header
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          const target = document.querySelector(id);
+          if(target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            mnav?.classList.add('hidden');
+            if(menuBtn) {
+              menuBtn.setAttribute('aria-expanded', 'false');
+              const i = menuBtn.querySelector('i');
+              i.classList.add('fa-bars');
+              i.classList.remove('fa-xmark');
+            }
           }
         }
       });
     });
 
-    // Header scroll effect
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('header-scrolled');
-        header.classList.add('py-2');
-        header.classList.remove('py-4');
-      } else {
-        header.classList.remove('header-scrolled');
-        header.classList.remove('py-2');
-        header.classList.add('py-4');
+    // Enhanced form validation and submission
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('form-status');
+
+    // Real-time validation
+    const inputs = form.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('blur', validateField);
+      input.addEventListener('input', clearError);
+    });
+
+    function validateField(e) {
+      const field = e.target;
+      const errorSpan = document.getElementById(`${field.name}-error`);
+      let isValid = true;
+
+      // Clear previous styling
+      field.classList.remove('border-red-500', 'border-green-500');
+      errorSpan.classList.add('hidden');
+
+      if (field.hasAttribute('required') && !field.value.trim()) {
+        showError(field, errorSpan, 'This field is required');
+        isValid = false;
+      } else if (field.type === 'email' && field.value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(field.value)) {
+          showError(field, errorSpan, 'Please enter a valid email address');
+          isValid = false;
+        }
+      }
+
+      if (isValid && field.value.trim()) {
+        field.classList.add('border-green-500');
+      }
+    }
+
+    function showError(field, errorSpan, message) {
+      field.classList.add('border-red-500');
+      errorSpan.textContent = message;
+      errorSpan.classList.remove('hidden');
+    }
+
+    function clearError(e) {
+      const field = e.target;
+      const errorSpan = document.getElementById(`${field.name}-error`);
+      field.classList.remove('border-red-500');
+      errorSpan.classList.add('hidden');
+    }
+
+    // Form submission with loading state
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Validate all fields
+      let isFormValid = true;
+      inputs.forEach(input => {
+        const event = { target: input };
+        validateField(event);
+        if (input.classList.contains('border-red-500') || (input.hasAttribute('required') && !input.value.trim())) {
+          isFormValid = false;
+        }
+      });
+
+      if (!isFormValid) {
+        formStatus.textContent = 'Please fix the errors above';
+        formStatus.className = 'text-red-600 text-sm mt-2';
+        return;
+      }
+
+      // Show loading state
+      submitBtn.classList.add('btn-loading');
+      submitBtn.textContent = 'Sending';
+      formStatus.textContent = 'Sending your message...';
+      formStatus.className = 'text-blue-600 text-sm mt-2';
+
+      // Simulate form submission (replace with actual endpoint)
+      try {
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API call
+        
+        // Success state
+        formStatus.textContent = 'Message sent successfully! We\'ll get back to you within one business day.';
+        formStatus.className = 'text-green-600 text-sm mt-2';
+        form.reset();
+        inputs.forEach(input => input.classList.remove('border-green-500', 'border-red-500'));
+        
+      } catch (error) {
+        // Error state
+        formStatus.textContent = 'Something went wrong. Please try again or contact us directly at hello@qunex.tech';
+        formStatus.className = 'text-red-600 text-sm mt-2';
+      } finally {
+        // Reset button state
+        submitBtn.classList.remove('btn-loading');
+        submitBtn.textContent = 'Send message';
       }
     });
 
-    // Intersection Observer for fade-in animations
+    // Intersection Observer for fade-in animations on scroll
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -727,13 +697,76 @@
       });
     }, observerOptions);
 
-    // Observe all fade-in elements
-    document.querySelectorAll('.fade-in').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(el);
+    // Apply fade-in animation to cards and stats
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.card-hover, [role="article"]:not(.stats-card)');
+      cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        observer.observe(card);
+      });
+
+      // Stats section animation with counter
+      const statsCards = document.querySelectorAll('.stats-card');
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('animate');
+              startCounter(entry.target.querySelector('.counter'));
+            }, index * 200);
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      statsCards.forEach(card => {
+        statsObserver.observe(card);
+      });
+    });
+
+    // Animated counter function
+    function startCounter(element) {
+      const target = parseInt(element.dataset.target);
+      const isPercentage = element.textContent.includes('%');
+      const isHours = element.textContent.includes('h');
+      const isPlus = element.textContent.includes('+');
+      
+      let current = 0;
+      const increment = target / 50; // Animate over ~2 seconds (50 steps)
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        
+        let displayValue = Math.floor(current);
+        if (isPercentage) {
+          element.textContent = displayValue + '%';
+        } else if (isHours) {
+          element.textContent = displayValue + 'h';
+        } else if (isPlus) {
+          element.textContent = displayValue + '+';
+        } else {
+          element.textContent = displayValue;
+        }
+      }, 40);
+    }
+
+    // Add subtle loading state for CTA buttons
+    document.querySelectorAll('a[href="#contact"]').forEach(button => {
+      button.addEventListener('click', () => {
+        // Add very subtle loading feedback
+        button.style.transform = 'scale(0.99)';
+        setTimeout(() => {
+          button.style.transform = '';
+        }, 100);
+      });
     });
   </script>
+
 </body>
 </html>

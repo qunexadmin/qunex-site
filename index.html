@@ -222,9 +222,9 @@
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="#contact" class="inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black" aria-describedby="cta-description">
-            Talk to us
-          </a>
+          <button onclick="window.location.href='index1.html'" class="inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black" aria-describedby="cta-description">
+            Book intro
+          </button>
           <a href="#services" class="inline-flex items-center justify-center rounded border border-black px-6 py-3 text-sm font-semibold btn-secondary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
             See capabilities
           </a>
@@ -427,7 +427,7 @@
       <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Quiet systems. Loud results.</h3>
       <p class="mt-4 text-black/70 max-w-2xl mx-auto">Tell us your outcomes, we'll design the shortest path with data & AI.</p>
       <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#contact" class="inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Book an intro</a>
+        <button onclick="window.location.href='index1.html'" class="inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Book intro</button>
         <a href="#services" class="inline-flex items-center justify-center rounded border border-black px-6 py-3 text-sm font-semibold btn-secondary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Capabilities</a>
       </div>
     </div>
@@ -635,7 +635,7 @@
       errorSpan.classList.add('hidden');
     }
 
-    // Form submission with loading state
+    // Form submission with loading state and redirect to index1.html
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       
@@ -666,17 +666,20 @@
         await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API call
         
         // Success state
-        formStatus.textContent = 'Message sent successfully! We\'ll get back to you within one business day.';
+        formStatus.textContent = 'Message sent successfully! Redirecting...';
         formStatus.className = 'text-green-600 text-sm mt-2';
-        form.reset();
-        inputs.forEach(input => input.classList.remove('border-green-500', 'border-red-500'));
+        
+        // Redirect to index1.html after a short delay
+        setTimeout(() => {
+          window.location.href = 'index1.html';
+        }, 1500);
         
       } catch (error) {
         // Error state
         formStatus.textContent = 'Something went wrong. Please try again or contact us directly at hello@qunex.tech';
         formStatus.className = 'text-red-600 text-sm mt-2';
-      } finally {
-        // Reset button state
+        
+        // Reset button state on error
         submitBtn.classList.remove('btn-loading');
         submitBtn.textContent = 'Send message';
       }

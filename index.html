@@ -7,10 +7,49 @@
   <meta name="description" content="qunex is a minimal, modern data & AI agency in Dubai. We build analytics, automations, and AI workflows that compound growth for SMEs, enterprises, and startups." />
   <meta name="keywords" content="AI agency Dubai, data analytics, AI automation, machine learning, data engineering, UAE AI consultancy" />
   <meta name="author" content="qunex" />
+  <meta name="robots" content="index, follow" />
   
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://qunex.com/" />
+  <meta property="og:title" content="qunex — Partner for the AI Era | Data & AI Agency Dubai" />
+  <meta property="og:description" content="qunex is a minimal, modern data & AI agency in Dubai. We build analytics, automations, and AI workflows that compound growth for SMEs, enterprises, and startups." />
+  <meta property="og:image" content="https://qunex.com/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://qunex.com/" />
+  <meta property="twitter:title" content="qunex — Partner for the AI Era | Data & AI Agency Dubai" />
+  <meta property="twitter:description" content="qunex is a minimal, modern data & AI agency in Dubai. We build analytics, automations, and AI workflows that compound growth for SMEs, enterprises, and startups." />
+  <meta property="twitter:image" content="https://qunex.com/og-image.jpg" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "qunex",
+    "url": "https://qunex.com",
+    "logo": "https://qunex.com/logo.png",
+    "description": "Data & AI Agency based in Dubai building analytics, automations, and AI workflows",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "UAE"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/qunex",
+      "https://twitter.com/qunex",
+      "https://github.com/qunex"
+    ]
+  }
+  </script>
+  
+  <!-- Preload critical resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
@@ -45,9 +84,9 @@
       font-family: 'JetBrains Mono', 'SF Mono', monospace; 
     }
 
-    /* Main gradient backgrounds - Black and green mix */
+    /* Main gradient backgrounds - Toned down */
     .gradient-hero {
-      background: linear-gradient(135deg, #000000 0%, var(--q-green-end) 100%);
+      background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #0f172a 100%);
       min-height: 100vh;
       position: relative;
       padding: 160px 0 80px 0;
@@ -141,11 +180,88 @@
       font-weight: 500;
       transition: all 0.2s ease;
       padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--q-green-start);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
     }
 
     .nav-link:hover {
       color: var(--q-green-start);
       text-shadow: 0 0 4px rgba(57, 255, 20, 0.2);
+    }
+
+    .nav-link.active {
+      color: var(--q-green-start);
+    }
+
+    /* Mobile menu */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+      padding: 100px 30px 30px;
+      transition: right 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu.open {
+      right: 0;
+    }
+
+    .mobile-menu .nav-link {
+      font-size: 1.2rem;
+      padding: 10px 0;
+    }
+
+    .menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .menu-overlay.open {
+      opacity: 1;
+      visibility: visible;
     }
 
     /* Button styles */
@@ -163,6 +279,26 @@
       border: none;
       text-decoration: none;
       letter-spacing: -0.01em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%);
+      transform-origin: 50% 50%;
+    }
+
+    .btn:focus:not(:active)::after {
+      animation: ripple 1s ease-out;
     }
 
     .btn-primary {
@@ -291,6 +427,7 @@
 
     .system-item:hover .system-icon-simple {
       background: #f1f5f9;
+      transform: translateY(-3px);
     }
 
     .system-content {
@@ -379,6 +516,22 @@
       margin-bottom: 8px;
     }
 
+    .form-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .error-message {
+      color: #f87171;
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .form-input.error {
+      border-color: #f87171;
+    }
+
     /* Animations */
     @keyframes fadeInUp {
       from {
@@ -388,6 +541,21 @@
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+
+    @keyframes ripple {
+      0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+      }
+      20% {
+        transform: scale(25, 25);
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(40, 40);
       }
     }
 
@@ -566,9 +734,71 @@
       color: var(--q-green-start) !important;
     }
 
-    /* Footer responsive and hover effects */
-    footer a:hover {
-      color: var(--q-green-start) !important;
+    /* Loading animation */
+    .loading-spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 10px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Cookie consent */
+    .cookie-consent {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      z-index: 1000;
+      transform: translateY(150%);
+      transition: transform 0.5s ease;
+      max-width: 500px;
+    }
+
+    .cookie-consent.show {
+      transform: translateY(0);
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--q-green-start);
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+      box-shadow: 0 4px 20px rgba(57, 255, 20, 0.3);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-5px);
     }
 
     /* Responsive fixes - Mobile header improvements */
@@ -654,6 +884,10 @@
         display: none;
       }
 
+      .mobile-menu-btn {
+        display: block;
+      }
+
       .btn.btn-glass {
         padding: 10px 20px;
         font-size: 13px;
@@ -690,126 +924,12 @@
         text-align: center;
         gap: 16px;
       }
-    }
 
-    /* Loading animation */
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .btn-loading {
-      position: relative;
-      color: transparent;
-    }
-
-    .btn-loading::after {
-      content: '';
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      top: 50%;
-      left: 50%;
-      margin-left: -8px;
-      margin-top: -8px;
-      border: 2px solid transparent;
-      border-top: 2px solid currentColor;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      color: inherit;
-    }
-
-    /* Responsive fixes */
-    @media (max-width: 768px) {
-      .section {
-        padding: 80px 0;
-      }
-
-      #services {
-        padding-top: 100px !important;
-      }
-      
-      .grid-2, .grid-3, .grid-4, .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .systems-list {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .system-item {
-        gap: 16px;
-      }
-
-      .system-icon-simple {
-        width: 40px;
-        height: 40px;
-      }
-
-      .system-icon-simple i {
-        font-size: 18px;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
-      }
-      
-      .glass-card, .white-card {
-        padding: 24px;
-      }
-      
-      .btn {
-        padding: 12px 28px;
-        font-size: 14px;
-      }
-
-      .hero-buttons, .contact-buttons {
-        justify-content: center;
-        gap: 16px;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 24px;
-      }
-
-      .footer-links {
-        justify-content: center;
-        gap: 24px;
-      }
-
-      .nav .container .flex-between {
-        flex-wrap: wrap;
-        gap: 16px;
-        justify-content: space-between;
-      }
-
-      .logo-container {
-        order: 1;
-      }
-
-      .nav .flex.gap-8 {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        margin-top: 12px;
-      }
-
-      .btn.btn-glass {
-        order: 2;
-      }
-
-      .stats-container {
-        margin-top: 60px;
-        padding-top: 40px;
-      }
-
-      .stat-number {
-        font-size: 2.5rem;
+      /* Cookie consent mobile */
+      .cookie-consent {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
       }
     }
 
@@ -864,9 +984,26 @@
           <span>Start Project</span>
           <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 12px;"></i>
         </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#approach" class="nav-link">Approach</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <button class="btn btn-glass" style="margin-top: 20px;">
+      <span>Start Project</span>
+      <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 12px;"></i>
+    </button>
+  </div>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
 
   <!-- Hero Section -->
   <section class="gradient-hero">
@@ -1141,17 +1278,19 @@
 
         <div class="glass-card" style="padding: 24px;">
           <form id="contactForm">
-            <div class="mb-4">
+            <div class="form-group">
               <label class="form-label">Organization</label>
               <input type="text" class="form-input" placeholder="Your company name" required>
+              <div class="error-message">Please enter your organization name</div>
             </div>
             
-            <div class="mb-4">
+            <div class="form-group">
               <label class="form-label">Email</label>
               <input type="email" class="form-input" placeholder="contact@yourcompany.com" required>
+              <div class="error-message">Please enter a valid email address</div>
             </div>
             
-            <div class="mb-4">
+            <div class="form-group">
               <label class="form-label">Project Type</label>
               <select class="form-input" required>
                 <option value="">Select project type</option>
@@ -1161,14 +1300,16 @@
                 <option>Automation & Workflow Optimization</option>
                 <option>Full Digital Transformation</option>
               </select>
+              <div class="error-message">Please select a project type</div>
             </div>
             
-            <div class="mb-4">
+            <div class="form-group">
               <label class="form-label">Project Details</label>
               <textarea class="form-input" rows="2" placeholder="Describe your objectives, current challenges, and success metrics..." required style="resize: vertical; min-height: 60px;"></textarea>
+              <div class="error-message">Please provide project details</div>
             </div>
             
-            <button type="submit" class="btn btn-secondary" style="width: 100%;">
+            <button type="submit" class="btn btn-secondary" style="width: 100%;" id="submitBtn">
               Send Message
             </button>
           </form>
@@ -1266,7 +1407,62 @@
     </div>
   </footer>
 
+  <!-- Back to top button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent" id="cookieConsent">
+    <p style="color: white; margin-bottom: 15px;">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+    <button class="btn btn-secondary" id="acceptCookies" style="padding: 8px 20px; font-size: 14px;">
+      Accept
+    </button>
+  </div>
+
   <script>
+    // Enhanced navigation functionality
+    const nav = document.querySelector('.nav');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const backToTop = document.getElementById('backToTop');
+    const cookieConsent = document.getElementById('cookieConsent');
+    const acceptCookies = document.getElementById('acceptCookies');
+    
+    // Check if cookies are accepted
+    if (!localStorage.getItem('cookiesAccepted')) {
+      setTimeout(() => {
+        cookieConsent.classList.add('show');
+      }, 2000);
+    }
+    
+    // Accept cookies
+    acceptCookies.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'true');
+      cookieConsent.classList.remove('show');
+    });
+    
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('open');
+      menuOverlay.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    }
+    
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    menuOverlay.addEventListener('click', toggleMobileMenu);
+    
+    // Close mobile menu when clicking on links
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('open')) {
+          toggleMobileMenu();
+        }
+      });
+    });
+    
     // Smooth scrolling for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -1286,8 +1482,6 @@
     });
 
     // Navigation scroll effect - FIXED
-    const nav = document.querySelector('.nav');
-    
     window.addEventListener('scroll', () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       
@@ -1297,10 +1491,45 @@
       } else {
         nav.classList.remove('nav-scrolled');
       }
+      
+      // Back to top button
+      if (scrollTop > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+      
+      // Active nav link highlighting
+      const sections = document.querySelectorAll('section[id]');
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+    
+    // Back to top functionality
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
 
     // Intersection Observer for animations
-    const observeElements = document.querySelectorAll('.glass-card, .white-card, .animate-fade-up');
+    const observeElements = document.querySelectorAll('.glass-card, .white-card, .animate-fade-up, .system-item');
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
@@ -1374,18 +1603,47 @@
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
+      // Basic form validation
+      let isValid = true;
+      const inputs = this.querySelectorAll('input, select, textarea');
+      
+      inputs.forEach(input => {
+        const formGroup = input.closest('.form-group');
+        const errorMessage = formGroup.querySelector('.error-message');
+        
+        if (!input.value.trim()) {
+          isValid = false;
+          input.classList.add('error');
+          errorMessage.style.display = 'block';
+        } else {
+          input.classList.remove('error');
+          errorMessage.style.display = 'none';
+        }
+        
+        // Email validation
+        if (input.type === 'email' && input.value.trim()) {
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(input.value)) {
+            isValid = false;
+            input.classList.add('error');
+            errorMessage.textContent = 'Please enter a valid email address';
+            errorMessage.style.display = 'block';
+          }
+        }
+      });
+      
+      if (!isValid) return;
+      
       const submitBtn = e.target.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
       
       // Loading state with animation
-      submitBtn.classList.add('btn-loading');
-      submitBtn.textContent = 'Sending...';
+      submitBtn.innerHTML = '<span class="loading-spinner"></span> Sending...';
       submitBtn.disabled = true;
       
       // Simulate form submission
       setTimeout(() => {
-        submitBtn.classList.remove('btn-loading');
-        submitBtn.textContent = 'Message Sent ✓';
+        submitBtn.innerHTML = 'Message Sent ✓';
         submitBtn.style.background = 'rgba(16, 185, 129, 0.9)';
         
         setTimeout(() => {

@@ -3,773 +3,1404 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Qunex — Partner for the AI Era | Data & AI Agency Dubai</title>
-  <meta name="description" content="Qunex is a minimal, modern data & AI agency in Dubai. We build analytics, automations, and AI workflows that compound growth for SMEs, enterprises, and startups." />
+  <title>qunex — Partner for the AI Era | Data & AI Agency Dubai</title>
+  <meta name="description" content="qunex is a minimal, modern data & AI agency in Dubai. We build analytics, automations, and AI workflows that compound growth for SMEs, enterprises, and startups." />
   <meta name="keywords" content="AI agency Dubai, data analytics, AI automation, machine learning, data engineering, UAE AI consultancy" />
-  <meta name="author" content="Qunex" />
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://qunex.tech/" />
-  <meta property="og:title" content="Qunex — Partner for the AI Era | Data & AI Agency Dubai" />
-  <meta property="og:description" content="We design quiet, high-leverage systems—analytics, automations, and AI agents—that turn data into outcomes and scale with your team." />
-  <meta property="og:image" content="https://qunex.tech/og-image.jpg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://qunex.tech/" />
-  <meta property="twitter:title" content="Qunex — Partner for the AI Era" />
-  <meta property="twitter:description" content="Minimal, modern data & AI agency. We build systems that compound growth." />
-  <meta property="twitter:image" content="https://qunex.tech/og-image.jpg" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%2339FF14'/></svg>" />
+  <meta name="author" content="qunex" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
   <style>
-    :root{
-      --q-green:#39FF14;
-      --q-black:#000000;
+    :root {
+      --q-green-start: #39FF14;
+      --q-green-mid: #2dd10f;
+      --q-green-end: #1fb503;
+      --q-dark-start: #0a2f1a;
+      --q-dark-end: #000000;
+      --q-light: #ffffff;
+      --q-gray-light: #f8f9fa;
+      --q-gray-mid: #6b7280;
     }
-    html,body{font-family:Inter,system-ui,Arial,sans-serif;background:#fff;color:#0a0a0a;scroll-behavior:smooth}
-    .underline-neon{ box-shadow: inset 0 -0.5em 0 rgba(57,255,20,.14); }
-    
-    /* Refined Button Animations */
-    @media (prefers-reduced-motion:no-preference){
-      .hover-raise{
-        transition: all 0.2s ease;
-        transform: translateY(0);
-      }
-      .hover-raise:hover{
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      }
-      
-      .btn-primary {
-        transition: all 0.2s ease;
-      }
-      
-      .btn-primary:hover {
-        background: #1a1a1a;
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      }
-      
-      .btn-secondary {
-        transition: all 0.2s ease;
-        position: relative;
-      }
-      
-      .btn-secondary:hover {
-        background: rgba(57,255,20,0.05);
-        border-color: rgba(57,255,20,0.3);
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      }
-      
-      .pulse-dot {
-        animation: pulse-ring 2s ease-out infinite;
-      }
-      
-      @keyframes pulse-ring {
-        0% { transform: scale(1); opacity: 1; }
-        50% { transform: scale(1.2); opacity: 0.7; }
-        100% { transform: scale(1); opacity: 1; }
-      }
-      
-      .card-hover {
-        transition: all 0.2s ease;
-      }
-      
-      .card-hover:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        border-color: rgba(57,255,20,0.2);
-      }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    
-    .grid-bg{
-      background-image:
-        linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);
-      background-size:22px 22px;
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    
-    .section-muted{
-      background:#fbfbfc;
+
+    .font-mono { 
+      font-family: 'JetBrains Mono', 'SF Mono', monospace; 
+    }
+
+    /* Main gradient backgrounds */
+    .gradient-hero {
+      background: radial-gradient(ellipse at top left, var(--q-green-start) 0%, var(--q-green-mid) 30%, var(--q-dark-start) 70%, var(--q-dark-end) 100%);
+      min-height: 100vh;
+      position: relative;
+      padding: 160px 0 80px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .gradient-section {
+      background: linear-gradient(135deg, var(--q-green-start) 0%, var(--q-green-mid) 50%, var(--q-dark-start) 100%);
+    }
+
+    .gradient-dark {
+      background: linear-gradient(135deg, var(--q-dark-end) 0%, var(--q-dark-start) 50%, var(--q-green-end) 100%);
+    }
+
+    /* Typography */
+    .hero-title {
+      font-size: clamp(2.8rem, 7vw, 6rem);
+      font-weight: 800;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      color: white;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    /* Logo styling */
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: white;
+      text-transform: lowercase;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--q-green-start);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    }
+
+    /* Navigation - More minimal */
+    .nav {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000 !important;
+      background: rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .nav-scrolled {
+      background: rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      padding: 8px 0;
+    }
+
+    .nav-link:hover {
+      color: var(--q-green-start);
+      text-shadow: 0 0 4px rgba(57, 255, 20, 0.2);
+    }
+
+    /* Button styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-primary {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(20px);
+    }
+
+    .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--q-dark-end);
+      font-weight: 700;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Card styles */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 24px;
+      padding: 32px;
+      backdrop-filter: blur(20px);
+      transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
     }
-    .section-muted::after{
-      content:"";
-      position:absolute;
-      top:-28%;
-      right:-10%;
-      width:360px;
-      height:360px;
-      border-radius:9999px;
-      background: radial-gradient(closest-side, rgba(0,0,0,0.05), transparent 70%);
-      pointer-events:none;
-      filter: blur(6px);
+
+    .glass-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     }
 
-    .bg-neon{ background-color: var(--q-green); }
-    .from-neon{ --tw-gradient-from: var(--q-green); --tw-gradient-to: rgb(57 255 20 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
-    .to-ink{ --tw-gradient-to: #0a0a0a; }
-    
-    /* Mobile improvements */
-    @media (max-width: 640px) {
-      .hero-title { font-size: 2.5rem; line-height: 1.1; }
-      .section-padding { padding: 3rem 0; }
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
-    
-    /* Loading animation for form */
+
+    .glass-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Streamlined Core Systems Section - More minimal */
+    .core-systems-header {
+      max-width: 800px;
+      margin-bottom: 56px;
+    }
+
+    .core-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .core-subtitle {
+      font-size: 1rem;
+      color: #6b7280;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .systems-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 64px;
+      max-width: 1000px;
+    }
+
+    .system-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .system-icon-simple {
+      width: 40px;
+      height: 40px;
+      background: #f8fafc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .system-icon-simple i {
+      color: #64748b;
+      font-size: 18px;
+    }
+
+    .system-item:hover .system-icon-simple {
+      background: #f1f5f9;
+    }
+
+    .system-content {
+      flex: 1;
+    }
+
+    .system-name {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .system-description {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Icon containers - Fixed */
+    .icon-container {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .icon-container-dark {
+      background: var(--q-dark-end);
+    }
+
+    .icon-container i {
+      color: var(--q-green-start);
+      font-size: 18px;
+    }
+
+    /* Form styles */
+    .form-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: white;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+    }
+
+    .form-input option {
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding: 8px;
+    }
+
+    .form-input select {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    .form-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 8px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* Stats - Fixed alignment */
+    .stats-container {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 8px;
+      line-height: 1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.3;
+    }
+
+    /* Process steps */
+    .process-number {
+      width: 64px;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 20px;
+      font-weight: 900;
+      color: white;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .process-number:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Utility classes */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    /* Services section specific padding */
+    #services {
+      padding-top: 60px !important;
+      padding-bottom: 60px !important;
+    }
+
+    .section-sm {
+      padding: 60px 0;
+    }
+
+    .text-center { text-align: center; }
+    .text-left { text-align: left; }
+
+    .mb-4 { margin-bottom: 16px; }
+    .mb-6 { margin-bottom: 20px; }
+    .mb-8 { margin-bottom: 24px; }
+    .mb-12 { margin-bottom: 32px; }
+    .mb-16 { margin-bottom: 48px; }
+    .mb-20 { margin-bottom: 60px; }
+
+    .grid {
+      display: grid;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      align-items: start;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flex-between {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .gap-6 { gap: 24px; }
+    .gap-8 { gap: 32px; }
+
+    /* Contact section alignment fixes */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Hero buttons alignment */
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    /* Footer responsive and hover effects */
+    footer a:hover {
+      color: var(--q-green-start) !important;
+    }
+
+    @media (max-width: 768px) {
+      footer > .container > div:first-child {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      footer .logo-container {
+        justify-content: center;
+      }
+
+      footer > .container > div:last-child {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+      }
+    }
+
+    /* Loading animation */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
     .btn-loading {
-      pointer-events: none;
-      opacity: 0.7;
+      position: relative;
+      color: transparent;
     }
-    
-    .btn-loading:after {
-      content: "";
+
+    .btn-loading::after {
+      content: '';
+      position: absolute;
       width: 16px;
       height: 16px;
-      margin-left: 8px;
+      top: 50%;
+      left: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
       border: 2px solid transparent;
-      border-top-color: currentColor;
+      border-top: 2px solid currentColor;
       border-radius: 50%;
       animation: spin 1s linear infinite;
-      display: inline-block;
-    }
-    
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+      color: inherit;
     }
 
-    /* Stats card animation */
-    .stats-card {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Responsive fixes */
+    @media (max-width: 768px) {
+      .section {
+        padding: 80px 0;
+      }
+
+      #services {
+        padding-top: 100px !important;
+      }
+      
+      .grid-2, .grid-3, .grid-4, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .systems-list {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .system-item {
+        gap: 16px;
+      }
+
+      .system-icon-simple {
+        width: 40px;
+        height: 40px;
+      }
+
+      .system-icon-simple i {
+        font-size: 18px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+      
+      .glass-card, .white-card {
+        padding: 24px;
+      }
+      
+      .btn {
+        padding: 12px 28px;
+        font-size: 14px;
+      }
+
+      .hero-buttons, .contact-buttons {
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+      }
+
+      .footer-links {
+        justify-content: center;
+        gap: 24px;
+      }
+
+      .nav .container .flex-between {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-between;
+      }
+
+      .logo-container {
+        order: 1;
+      }
+
+      .nav .flex.gap-8 {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 12px;
+      }
+
+      .btn.btn-glass {
+        order: 2;
+      }
+
+      .stats-container {
+        margin-top: 60px;
+        padding-top: 40px;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+      }
     }
-    
-    .stats-card.animate {
-      opacity: 1;
-      transform: translateY(0);
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .grid-3, .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        gap: 40px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+      }
     }
-    
-    .counter {
-      background: linear-gradient(135deg, #39FF14 0%, #2dd10f 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--q-green-start);
+      border-radius: 3px;
     }
   </style>
 </head>
-<body class="antialiased">
 
-  <!-- NAV -->
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur-md">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="h-14 flex items-center justify-between">
-        <a href="#" class="flex items-center gap-2 group" aria-label="Qunex home">
-          <div class="relative">
-            <span class="h-3 w-3 rounded-full bg-neon group-hover:animate-ping absolute opacity-75"></span>
-            <span class="h-3 w-3 rounded-full bg-neon relative z-10 pulse-dot"></span>
-          </div>
-          <span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-neon to-ink bg-clip-text text-transparent">qunex</span>
-        </a>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div class="flex-between" style="height: 80px;">
+        <div class="logo-container">
+          <div class="logo-dot"></div>
+          <span class="logo">qunex</span>
+        </div>
+        
+        <div class="flex gap-8" style="align-items: center;">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#approach" class="nav-link">Approach</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
 
-        <nav class="hidden md:flex items-center gap-8 text-sm" role="navigation">
-          <a href="#services" class="hover:underline focus:outline-none focus:underline">Services</a>
-          <a href="#approach" class="hover:underline focus:outline-none focus:underline">Approach</a>
-          <a href="#contact" class="hover:underline focus:outline-none focus:underline">Contact</a>
-        </nav>
-        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded border border-black px-3 py-1.5 text-sm btn-secondary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
-          <span>Start a project</span><i class="fa-solid fa-arrow-right text-xs"></i>
-        </a>
-        <button id="menuBtn" class="md:hidden text-xl focus:outline-none focus:ring-2 focus:ring-black rounded p-1" aria-label="Toggle menu" aria-expanded="false">
-          <i class="fa-solid fa-bars"></i>
+        <button class="btn btn-glass">
+          <span>Start Project</span>
+          <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 12px;"></i>
         </button>
       </div>
     </div>
-    
-    <div id="mnav" class="hidden md:hidden border-t border-black/5 bg-white/95 backdrop-blur">
-      <div class="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3 text-sm">
-        <a href="#services" class="py-2 hover:underline focus:outline-none focus:underline">Services</a>
-        <a href="#approach" class="py-2 hover:underline focus:outline-none focus:underline">Approach</a>
-        <a href="#contact" class="py-2 hover:underline focus:outline-none focus:underline">Contact</a>
-      </div>
-    </div>
-  </header>
+  </nav>
 
-  <!-- HERO -->
-  <section class="pt-28 md:pt-32 pb-12 grid-bg" role="banner">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="max-w-3xl">
-        <span class="inline-flex items-center gap-2 rounded-full border border-black/10 px-3 py-1 text-[0.72rem] tracking-wider bg-white">
-          <span class="h-2 w-2 rounded-full bg-neon pulse-dot"></span><span>Minimal. Measurable. AI-first.</span>
-        </span>
-        <h1 class="mt-6 text-4xl md:text-6xl font-black leading-[1.05] tracking-tight hero-title">
-          Your <span class="underline-neon">Partner for the AI Era.</span>
+  <!-- Hero Section -->
+  <section class="gradient-hero">
+    <div class="container">
+      <div class="text-center animate-fade-up" style="max-width: 900px; margin: 0 auto;">
+        <h1 class="hero-title mb-6">
+          The Future of<br />
+          Intelligence is Here
         </h1>
-        <p class="mt-5 text-lg text-black/70 max-w-2xl">
-          We design quiet, high-leverage systems—analytics, automations, and AI agents—that turn data into outcomes and scale with your team.
+        
+        <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 36px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Architect autonomous systems that transform raw data into strategic advantage. 
+          From predictive algorithms to self-optimizing workflows.
         </p>
 
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <button onclick="window.location.href='index1.html'" class="inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black" aria-describedby="cta-description">
-            Book intro
+        <div class="hero-buttons">
+          <button class="btn btn-secondary">
+            Book Consultation
           </button>
-          <a href="#services" class="inline-flex items-center justify-center rounded border border-black px-6 py-3 text-sm font-semibold btn-secondary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
-            See capabilities
-          </a>
-        </div>
-
-        <div class="mt-10 flex items-center gap-6 text-xs text-black/60" aria-label="Social proof">
-          <span class="uppercase tracking-wider">Trusted across sectors</span>
-          <span class="h-px w-16 bg-black/10"></span>
-          <div class="flex items-center gap-4 opacity-70 flex-wrap">
-            <span>SMEs</span>
-            <span>Enterprises</span>
-            <span>Startups</span>
-            <span>Agencies</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STRIP -->
-  <section class="py-6 border-y border-black/5 bg-white" aria-label="Key features">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-neon flex-shrink-0"></span><span>Unified data layer</span></div>
-        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-neon flex-shrink-0"></span><span>AI workflow automation</span></div>
-        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-neon flex-shrink-0"></span><span>Actionable dashboards</span></div>
-        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-neon flex-shrink-0"></span><span>Privacy by design</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section-padding py-20 section-muted" aria-labelledby="services-heading">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="flex items-end justify-between gap-6 flex-wrap">
-        <h2 id="services-heading" class="text-2xl md:text-3xl font-extrabold tracking-tight">What we do</h2>
-        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 text-sm underline hover-raise focus:outline-none focus:ring-2 focus:ring-black rounded">
-          Get a free AI audit <i class="fa-solid fa-arrow-right text-xs"></i>
-        </a>
-      </div>
-
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold">Advanced Analytics</h3>
-            <i class="fa-solid fa-chart-line text-black/60"></i>
-          </div>
-          <p class="mt-3 text-sm text-black/70">Clean, consistent metrics and executive dashboards that drive decisions.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
-            <li>• Acquisition & attribution</li>
-            <li>• Revenue & cohort analysis</li>
-            <li>• Executive scorecards</li>
-          </ul>
-        </div>
-
-        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold">AI Automation</h3>
-            <i class="fa-solid fa-robot text-black/60"></i>
-          </div>
-          <p class="mt-3 text-sm text-black/70">Agents and workflows that reduce manual ops and increase throughput.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
-            <li>• Campaign optimization</li>
-            <li>• Lead scoring & routing</li>
-            <li>• Alerts & anomaly detection</li>
-          </ul>
-        </div>
-
-        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold">Data Engineering</h3>
-            <i class="fa-solid fa-database text-black/60"></i>
-          </div>
-          <p class="mt-3 text-sm text-black/70">Solid pipelines and a warehouse that scales without noise.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
-            <li>• ELT/ETL & modeling</li>
-            <li>• API & app integrations</li>
-            <li>• Governance & quality</li>
-          </ul>
-        </div>
-
-        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold">ML & Prediction</h3>
-            <i class="fa-solid fa-brain text-black/60"></i>
-          </div>
-          <p class="mt-3 text-sm text-black/70">Practical models that impact revenue, not just accuracy.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
-            <li>• LTV & churn models</li>
-            <li>• Next-best-action</li>
-            <li>• Forecasting</li>
-          </ul>
-        </div>
-
-        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold">Integrations</h3>
-            <i class="fa-solid fa-plug text-black/60"></i>
-          </div>
-          <p class="mt-3 text-sm text-black/70">Meta, Google, LinkedIn, TikTok, CRM, SAP, Shopify, Zenoti & more.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
-            <li>• Marketing & ads APIs</li>
-            <li>• Finance & HR systems</li>
-            <li>• Data activation</li>
-          </ul>
-        </div>
-
-        <div class="rounded-lg border border-black/10 bg-white p-6 card-hover" role="article">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold">Training & Support</h3>
-            <i class="fa-solid fa-user-graduate text-black/60"></i>
-          </div>
-          <p class="mt-3 text-sm text-black/70">Enable your team to run fast and stay independent.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/80" role="list">
-            <li>• Workshops & playbooks</li>
-            <li>• Runbooks & SLAs</li>
-            <li>• On-call assistance</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- APPROACH -->
-  <section id="approach" class="py-18 md:py-20 bg-black text-white" aria-labelledby="approach-heading">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="flex items-end justify-between">
-        <h2 id="approach-heading" class="text-2xl md:text-3xl font-extrabold tracking-tight">How we work</h2>
-      </div>
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="rounded-lg border border-white/20 p-6 hover:border-white/50 transition-colors duration-300" role="article">
-          <div class="text-xs text-white/70">Step 01</div>
-          <h3 class="mt-2 font-semibold">Discovery</h3>
-          <p class="mt-2 text-sm text-white/70">Audit data, goals, and constraints. Define success metrics.</p>
-        </div>
-        <div class="rounded-lg border border-white/20 p-6 hover:border-white/50 transition-colors duration-300" role="article">
-          <div class="text-xs text-white/70">Step 02</div>
-          <h3 class="mt-2 font-semibold">Blueprint</h3>
-          <p class="mt-2 text-sm text-white/70">Architecture, milestones, and quick wins that compound.</p>
-        </div>
-        <div class="rounded-lg border border-white/20 p-6 hover:border-white/50 transition-colors duration-300" role="article">
-          <div class="text-xs text-white/70">Step 03</div>
-          <h3 class="mt-2 font-semibold">Build</h3>
-          <p class="mt-2 text-sm text-white/70">Implement pipelines, dashboards, and AI automations.</p>
-        </div>
-        <div class="rounded-lg border border-white/20 p-6 hover:border-white/50 transition-colors duration-300" role="article">
-          <div class="text-xs text-white/70">Step 04</div>
-          <h3 class="mt-2 font-semibold">Operate</h3>
-          <p class="mt-2 text-sm text-white/70">Measure, iterate, and scale with guardrails.</p>
-        </div>
-      </div>
-
-      <div class="mt-10 flex flex-wrap items-center gap-4">
-        <span class="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1 text-xs text-white/80">
-          <span class="w-2 h-2 rounded-full bg-neon pulse-dot"></span> 48-hour starter plan
-        </span>
-        <span class="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1 text-xs text-white/80">
-          SOC-aware & privacy-first
-        </span>
-        <span class="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1 text-xs text-white/80">
-          UAE-friendly data residency
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROVEN RESULTS -->
-  <section class="py-20 bg-white" aria-labelledby="results-heading">
-    <div class="mx-auto max-w-6xl px-4 text-center">
-      <h2 id="results-heading" class="text-3xl md:text-4xl font-extrabold tracking-tight">Proven Results</h2>
-      <p class="mt-4 text-black/70 max-w-2xl mx-auto">Our AI-driven approach delivers measurable impact</p>
-      
-      <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-        <div class="stats-card" role="article">
-          <div class="text-4xl md:text-5xl lg:text-6xl font-black text-green-600 mb-2 counter" data-target="300">0%</div>
-          <div class="text-sm md:text-base text-black/70 font-medium">Average ROI Increase</div>
-        </div>
-        
-        <div class="stats-card" role="article">
-          <div class="text-4xl md:text-5xl lg:text-6xl font-black text-green-600 mb-2 counter" data-target="85">0%</div>
-          <div class="text-sm md:text-base text-black/70 font-medium">Cost Reduction</div>
-        </div>
-        
-        <div class="stats-card" role="article">
-          <div class="text-4xl md:text-5xl lg:text-6xl font-black text-green-600 mb-2 counter" data-target="200">0+</div>
-          <div class="text-sm md:text-base text-black/70 font-medium">AI Models Deployed</div>
-        </div>
-        
-        <div class="stats-card" role="article">
-          <div class="text-4xl md:text-5xl lg:text-6xl font-black text-green-600 mb-2 counter" data-target="48">0h</div>
-          <div class="text-sm md:text-base text-black/70 font-medium">Average Setup Time</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16" role="banner">
-    <div class="mx-auto max-w-6xl px-4 text-center">
-      <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Quiet systems. Loud results.</h3>
-      <p class="mt-4 text-black/70 max-w-2xl mx-auto">Tell us your outcomes, we'll design the shortest path with data & AI.</p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-        <button onclick="window.location.href='index1.html'" class="inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Book intro</button>
-        <a href="#services" class="inline-flex items-center justify-center rounded border border-black px-6 py-3 text-sm font-semibold btn-secondary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Capabilities</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section-padding py-20 border-t border-black/5 section-muted" aria-labelledby="contact-heading">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="max-w-2xl">
-        <h2 id="contact-heading" class="text-2xl md:text-3xl font-extrabold tracking-tight">Start the conversation</h2>
-        <p class="mt-3 text-black/70">We'll reply within one business day with next steps.</p>
-      </div>
-
-      <div class="mt-8 grid md:grid-cols-2 gap-8">
-        <form id="contactForm" class="space-y-4" novalidate>
-          <div>
-            <label for="name" class="text-sm font-medium block mb-1">Name *</label>
-            <input id="name" name="name" required class="mt-1 w-full border border-black/10 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200" placeholder="Your name" aria-describedby="name-error">
-            <span id="name-error" class="text-red-600 text-xs hidden" role="alert"></span>
-          </div>
-          <div>
-            <label for="email" class="text-sm font-medium block mb-1">Email *</label>
-            <input type="email" id="email" name="email" required class="mt-1 w-full border border-black/10 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200" placeholder="you@company.com" aria-describedby="email-error">
-            <span id="email-error" class="text-red-600 text-xs hidden" role="alert"></span>
-          </div>
-          <div>
-            <label for="message" class="text-sm font-medium block mb-1">What do you want to achieve? *</label>
-            <textarea id="message" name="message" rows="4" required class="mt-1 w-full border border-black/10 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200 resize-vertical" placeholder="Tell us about the current state, constraints, and ideal outcome..." aria-describedby="message-error"></textarea>
-            <span id="message-error" class="text-red-600 text-xs hidden" role="alert"></span>
-          </div>
-          <button type="submit" id="submitBtn" class="w-full md:w-auto inline-flex items-center justify-center rounded bg-black text-white px-6 py-3 text-sm font-semibold btn-primary hover-raise focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-all duration-200" aria-describedby="form-status">
-            Send message
+          <button class="btn btn-primary">
+            View Capabilities
           </button>
-          <div id="form-status" class="text-sm mt-2" role="status" aria-live="polite"></div>
-        </form>
+        </div>
 
-        <div class="rounded-lg border border-black/10 bg-white p-6">
-          <div class="text-sm">
-            <div class="flex items-center gap-3 mb-3">
-              <i class="fa-regular fa-envelope text-black/60" aria-hidden="true"></i>
-              <a class="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-black rounded" href="mailto:hello@qunex.tech">hello@qunex.tech</a>
+        <!-- Stats -->
+        <div class="stats-container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" data-counter="500">500+</div>
+              <div class="stat-label">AI Models Deployed</div>
             </div>
-            <div class="flex items-center gap-3 mb-3">
-              <i class="fa-brands fa-whatsapp text-black/60" aria-hidden="true"></i>
-              <span>+971 • Available on WhatsApp</span>
+            <div class="stat-item">
+              <div class="stat-number" data-counter="99.9">99.9%</div>
+              <div class="stat-label">System Uptime</div>
             </div>
-            <div class="flex items-center gap-3 mb-6">
-              <i class="fa-solid fa-location-dot text-black/60" aria-hidden="true"></i>
-              <span>Dubai, UAE</span>
+            <div class="stat-item">
+              <div class="stat-number" data-counter="48">48H</div>
+              <div class="stat-label">Average Setup Time</div>
             </div>
-            <div class="text-xs text-black/60 border-t border-black/5 pt-4">
-              <strong>Typical first engagement:</strong> 48-hour audit → 2-week blueprint → 4-8 weeks build.
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Autonomous Operation</div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
+   <!-- Services Section -->
+  <section id="services" class="section" style="background: #f9fafb;">
+    <div class="container">
+      <div class="core-systems-header">
+        <h2 class="core-title">Core Systems</h2>
+        <p class="core-subtitle">Enterprise-grade AI infrastructure designed for scale and autonomous operation.</p>
+      </div>
 
-  <!-- FOOTER -->
-  <footer class="py-10 border-t border-black/5 bg-white" role="contentinfo">
-    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-      <a href="#" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-black rounded" aria-label="Qunex home">
-        <div class="relative">
-          <span class="h-3 w-3 rounded-full bg-neon group-hover:animate-ping absolute opacity-75"></span>
-          <span class="h-3 w-3 rounded-full bg-neon relative z-10 pulse-dot"></span>
+      <div class="systems-list">
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Predictive Engines</h3>
+            <p class="system-description">Advanced machine learning models that forecast market trends and customer behavior with precision-driven insights.</p>
+          </div>
         </div>
-        <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-neon to-ink bg-clip-text text-transparent">qunex</span>
-      </a>
-      <div class="text-sm text-black/60">© <span id="year"></span> Qunex. All rights reserved.</div>
-      <nav class="flex items-center gap-3 text-sm" role="navigation">
-        <a class="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-black rounded" href="#services">Services</a>
-        <a class="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-black rounded" href="#approach">Approach</a>
-        <a class="underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-black rounded" href="#contact">Contact</a>
-      </nav>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Workflow Automation</h3>
+            <p class="system-description">Intelligent process automation that continuously adapts and optimizes itself for maximum operational efficiency.</p>
+          </div>
+        </div>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Data Architecture</h3>
+            <p class="system-description">Scalable cloud infrastructure that processes massive datasets with real-time capabilities and enterprise reliability.</p>
+          </div>
+        </div>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Intelligence Dashboards</h3>
+            <p class="system-description">Executive command centers that transform complex data streams into clear, actionable business intelligence.</p>
+          </div>
+        </div>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Security Protocols</h3>
+            <p class="system-description">Enterprise-grade security systems with AI-powered threat detection and automated response capabilities.</p>
+          </div>
+        </div>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Deployment & Scale</h3>
+            <p class="system-description">Cloud-native deployment with intelligent auto-scaling and global distribution network optimization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Approach Section -->
+  <section id="approach" class="gradient-section section">
+    <div class="container">
+      <div class="text-center mb-20">
+        <h2 class="section-title mb-8" style="color: white;">
+          Our Methodology
+        </h2>
+        <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); max-width: 600px; margin: 0 auto;">
+          Our systematic approach to building AI systems that scale and adapt to your evolving needs.
+        </p>
+      </div>
+
+      <div class="grid-4">
+        <div class="text-center">
+          <div class="process-number">01</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: white;">
+            Analyze
+          </h3>
+          <p style="color: rgba(255, 255, 255, 0.8); font-size: 14px; line-height: 1.6;">
+            Deep system analysis and requirement mapping. Identify optimization opportunities.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="process-number">02</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: white;">
+            Architect
+          </h3>
+          <p style="color: rgba(255, 255, 255, 0.8); font-size: 14px; line-height: 1.6;">
+            Design scalable AI architecture with fault tolerance and performance optimization.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="process-number">03</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: white;">
+            Deploy
+          </h3>
+          <p style="color: rgba(255, 255, 255, 0.8); font-size: 14px; line-height: 1.6;">
+            Rapid deployment with continuous integration and zero-downtime rollouts.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="process-number">04</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: white;">
+            Optimize
+          </h3>
+          <p style="color: rgba(255, 255, 255, 0.8); font-size: 14px; line-height: 1.6;">
+            Continuous monitoring and optimization. AI systems that learn autonomously.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section - Redesigned -->
+  <section class="section" style="background: #f9fafb;">
+    <div class="container">
+      <div style="max-width: 600px; margin-bottom: 56px;">
+        <h2 style="font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; color: #111827; margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.02em;">
+          Built for Enterprise Scale
+        </h2>
+        <p style="font-size: 1rem; color: #6b7280; line-height: 1.6;">
+          Trusted by leading companies to deliver AI solutions that scale with confidence.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <div style="width: 40px; height: 40px; background: #f8fafc; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-award" style="color: #64748b; font-size: 18px;"></i>
+            </div>
+            <h3 style="font-size: 1.125rem; font-weight: 600; color: #111827; margin: 0;">Enterprise Ready</h3>
+          </div>
+          <p style="color: #6b7280; font-size: 14px; line-height: 1.6; margin: 0;">
+            SOC 2 compliant infrastructure with enterprise-grade security and 99.9% uptime SLA guarantee.
+          </p>
+        </div>
+
+        <div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <div style="width: 40px; height: 40px; background: #f8fafc; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-chart-line" style="color: #64748b; font-size: 18px;"></i>
+            </div>
+            <h3 style="font-size: 1.125rem; font-weight: 600; color: #111827; margin: 0;">Proven Results</h3>
+          </div>
+          <p style="color: #6b7280; font-size: 14px; line-height: 1.6; margin: 0;">
+            Our clients achieve an average 300% ROI within 6 months through optimized AI workflows.
+          </p>
+        </div>
+
+        <div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <div style="width: 40px; height: 40px; background: #f8fafc; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-users" style="color: #64748b; font-size: 18px;"></i>
+            </div>
+            <h3 style="font-size: 1.125rem; font-weight: 600; color: #111827; margin: 0;">Expert Support</h3>
+          </div>
+          <p style="color: #6b7280; font-size: 14px; line-height: 1.6; margin: 0;">
+            Dedicated team of AI engineers and data scientists providing 24/7 technical support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="gradient-dark section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-content">
+          <h2 class="section-title mb-8" style="color: white;">
+            Ready to Get Started?
+          </h2>
+          <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 40px; line-height: 1.7;">
+            Let's architect your competitive advantage with next-generation AI systems.
+          </p>
+          
+          <div style="margin-bottom: 40px;">
+            <div class="flex mb-4" style="align-items: center; gap: 12px;">
+              <div style="width: 4px; height: 4px; background: var(--q-green-start); border-radius: 50%;"></div>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">
+                Dubai, UAE • Global Operations
+              </span>
+            </div>
+            <div class="flex mb-4" style="align-items: center; gap: 12px;">
+              <div style="width: 4px; height: 4px; background: var(--q-green-start); border-radius: 50%;"></div>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">
+                48H Response Time Guaranteed
+              </span>
+            </div>
+            <div class="flex mb-4" style="align-items: center; gap: 12px;">
+              <div style="width: 4px; height: 4px; background: var(--q-green-start); border-radius: 50%;"></div>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">
+                Enterprise-Grade Security
+              </span>
+            </div>
+          </div>
+
+          <div class="contact-buttons">
+            <button class="btn btn-secondary">
+              Book Consultation
+            </button>
+            <button class="btn btn-primary">
+              View Case Studies
+            </button>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 24px;">
+          <form id="contactForm">
+            <div class="mb-4">
+              <label class="form-label">Organization</label>
+              <input type="text" class="form-input" placeholder="Your company name" required>
+            </div>
+            
+            <div class="mb-4">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" placeholder="contact@yourcompany.com" required>
+            </div>
+            
+            <div class="mb-4">
+              <label class="form-label">Project Type</label>
+              <select class="form-input" required>
+                <option value="">Select project type</option>
+                <option>AI System Development</option>
+                <option>Data Architecture Overhaul</option>
+                <option>Predictive Analytics Implementation</option>
+                <option>Automation & Workflow Optimization</option>
+                <option>Full Digital Transformation</option>
+              </select>
+            </div>
+            
+            <div class="mb-4">
+              <label class="form-label">Project Details</label>
+              <textarea class="form-input" rows="2" placeholder="Describe your objectives, current challenges, and success metrics..." required style="resize: vertical; min-height: 60px;"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary" style="width: 100%;">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #111827; padding: 60px 0 32px 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 40px;">
+        
+        <!-- Company Info -->
+        <div>
+          <div class="logo-container" style="margin-bottom: 20px;">
+            <div class="logo-dot"></div>
+            <span class="logo">qunex</span>
+          </div>
+          <p style="color: #9ca3af; line-height: 1.6; margin-bottom: 20px; max-width: 280px;">
+            Transforming businesses with enterprise-grade AI systems and intelligent automation. Based in Dubai, serving clients globally.
+          </p>
+          <div style="display: flex; gap: 16px;">
+            <a href="#" style="color: #6b7280; font-size: 20px; transition: color 0.2s;">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" style="color: #6b7280; font-size: 20px; transition: color 0.2s;">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="color: #6b7280; font-size: 20px; transition: color 0.2s;">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 style="color: white; font-weight: 600; margin-bottom: 16px; font-size: 16px;">Services</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 10px;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s;">AI Development</a>
+            </li>
+            <li style="margin-bottom: 10px;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s;">Data Analytics</a>
+            </li>
+            <li style="margin-bottom: 10px;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s;">Process Automation</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 style="color: white; font-weight: 600; margin-bottom: 16px; font-size: 16px;">Company</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 10px;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s;">About Us</a>
+            </li>
+            <li style="margin-bottom: 10px;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s;">Case Studies</a>
+            </li>
+            <li style="margin-bottom: 10px;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s;">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div>
+          <h4 style="color: white; font-weight: 600; margin-bottom: 16px; font-size: 16px;">Support</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 10px;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s;">Documentation</a>
+            </li>
+            <li style="margin-bottom: 10px;">
+              <a href="#" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s;">Help Center</a>
+            </li>
+            <li style="margin-bottom: 10px;">
+              <a href="#contact" style="color: #9ca3af; text-decoration: none; font-size: 14px; transition: color 0.2s;">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div style="border-top: 1px solid #374151; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div style="font-size: 14px; color: #6b7280;">
+          © 2025 qunex. All rights reserved. | Dubai, UAE
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="font-size: 14px; color: #6b7280; text-decoration: none;">Privacy</a>
+          <a href="#" style="font-size: 14px; color: #6b7280; text-decoration: none;">Terms</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Qunex",
-    "url": "https://qunex.tech",
-    "logo": "https://qunex.tech/logo.png",
-    "description": "Minimal, modern data & AI agency in Dubai. We build analytics, automations, and AI workflows that compound growth.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Dubai",
-      "addressCountry": "UAE"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+971",
-      "contactType": "customer service",
-      "email": "hello@qunex.tech"
-    },
-    "sameAs": [],
-    "offers": {
-      "@type": "Service",
-      "name": "AI and Data Analytics Services",
-      "description": "Advanced Analytics, AI Automation, Data Engineering, ML & Prediction, Integrations, Training & Support"
-    }
-  }
-  </script>
-
   <script>
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile navigation
-    const menuBtn = document.getElementById('menuBtn');
-    const mnav = document.getElementById('mnav');
-    if(menuBtn){
-      menuBtn.addEventListener('click', ()=> {
-        const isOpen = !mnav.classList.contains('hidden');
-        mnav.classList.toggle('hidden');
-        const i = menuBtn.querySelector('i');
-        i.classList.toggle('fa-bars');
-        i.classList.toggle('fa-xmark');
-        
-        // Update aria-expanded
-        menuBtn.setAttribute('aria-expanded', !isOpen);
-      });
-    }
-
-    // Enhanced smooth scrolling with offset for fixed header
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        if(id.length>1){
-          e.preventDefault();
-          const target = document.querySelector(id);
-          if(target) {
-            const headerOffset = 80;
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-            
-            // Close mobile menu if open
-            mnav?.classList.add('hidden');
-            if(menuBtn) {
-              menuBtn.setAttribute('aria-expanded', 'false');
-              const i = menuBtn.querySelector('i');
-              i.classList.add('fa-bars');
-              i.classList.remove('fa-xmark');
-            }
-          }
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerOffset = 100;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
         }
       });
     });
 
-    // Enhanced form validation and submission
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const formStatus = document.getElementById('form-status');
-
-    // Real-time validation
-    const inputs = form.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-      input.addEventListener('blur', validateField);
-      input.addEventListener('input', clearError);
-    });
-
-    function validateField(e) {
-      const field = e.target;
-      const errorSpan = document.getElementById(`${field.name}-error`);
-      let isValid = true;
-
-      // Clear previous styling
-      field.classList.remove('border-red-500', 'border-green-500');
-      errorSpan.classList.add('hidden');
-
-      if (field.hasAttribute('required') && !field.value.trim()) {
-        showError(field, errorSpan, 'This field is required');
-        isValid = false;
-      } else if (field.type === 'email' && field.value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(field.value)) {
-          showError(field, errorSpan, 'Please enter a valid email address');
-          isValid = false;
-        }
-      }
-
-      if (isValid && field.value.trim()) {
-        field.classList.add('border-green-500');
-      }
-    }
-
-    function showError(field, errorSpan, message) {
-      field.classList.add('border-red-500');
-      errorSpan.textContent = message;
-      errorSpan.classList.remove('hidden');
-    }
-
-    function clearError(e) {
-      const field = e.target;
-      const errorSpan = document.getElementById(`${field.name}-error`);
-      field.classList.remove('border-red-500');
-      errorSpan.classList.add('hidden');
-    }
-
-    // Form submission with loading state and redirect to index1.html
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    // Navigation scroll effect - FIXED
+    const nav = document.querySelector('.nav');
+    
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       
-      // Validate all fields
-      let isFormValid = true;
-      inputs.forEach(input => {
-        const event = { target: input };
-        validateField(event);
-        if (input.classList.contains('border-red-500') || (input.hasAttribute('required') && !input.value.trim())) {
-          isFormValid = false;
-        }
-      });
-
-      if (!isFormValid) {
-        formStatus.textContent = 'Please fix the errors above';
-        formStatus.className = 'text-red-600 text-sm mt-2';
-        return;
-      }
-
-      // Show loading state
-      submitBtn.classList.add('btn-loading');
-      submitBtn.textContent = 'Sending';
-      formStatus.textContent = 'Sending your message...';
-      formStatus.className = 'text-blue-600 text-sm mt-2';
-
-      // Simulate form submission (replace with actual endpoint)
-      try {
-        await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API call
-        
-        // Success state
-        formStatus.textContent = 'Message sent successfully! Redirecting...';
-        formStatus.className = 'text-green-600 text-sm mt-2';
-        
-        // Redirect to index1.html after a short delay
-        setTimeout(() => {
-          window.location.href = 'index1.html';
-        }, 1500);
-        
-      } catch (error) {
-        // Error state
-        formStatus.textContent = 'Something went wrong. Please try again or contact us directly at hello@qunex.tech';
-        formStatus.className = 'text-red-600 text-sm mt-2';
-        
-        // Reset button state on error
-        submitBtn.classList.remove('btn-loading');
-        submitBtn.textContent = 'Send message';
+      // Add background when scrolled, but NEVER hide the nav
+      if (scrollTop > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
       }
     });
 
-    // Intersection Observer for fade-in animations on scroll
-    const observerOptions = {
+    // Intersection Observer for animations
+    const observeElements = document.querySelectorAll('.glass-card, .white-card, .animate-fade-up');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 100);
+        }
+      });
+    }, {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
-    };
+    });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
+    observeElements.forEach(el => {
+      if (!el.classList.contains('animate-fade-up')) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      }
+      observer.observe(el);
+    });
+
+    // Counter animation for stats
+    function animateCounters() {
+      const counters = document.querySelectorAll('[data-counter]');
+      
+      counters.forEach(counter => {
+        const target = parseFloat(counter.dataset.counter);
+        const text = counter.textContent;
+        let current = 0;
+        const increment = target / 60;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          
+          if (text.includes('%')) {
+            counter.textContent = current.toFixed(1) + '%';
+          } else if (text.includes('+')) {
+            counter.textContent = Math.floor(current) + '+';
+          } else if (text.includes('H')) {
+            counter.textContent = Math.floor(current) + 'H';
+          } else {
+            counter.textContent = Math.floor(current);
+          }
+        }, 30);
       });
-    }, observerOptions);
+    }
 
-    // Apply fade-in animation to cards and stats
-    document.addEventListener('DOMContentLoaded', () => {
-      const cards = document.querySelectorAll('.card-hover, [role="article"]:not(.stats-card)');
-      cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(card);
-      });
-
-      // Stats section animation with counter
-      const statsCards = document.querySelectorAll('.stats-card');
+    // Trigger counter animation when hero section is visible
+    const heroSection = document.querySelector('.gradient-hero');
+    if (heroSection) {
       const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('animate');
-              startCounter(entry.target.querySelector('.counter'));
-            }, index * 200);
+            setTimeout(animateCounters, 1000);
             statsObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.5 });
-
-      statsCards.forEach(card => {
-        statsObserver.observe(card);
-      });
-    });
-
-    // Animated counter function
-    function startCounter(element) {
-      const target = parseInt(element.dataset.target);
-      const isPercentage = element.textContent.includes('%');
-      const isHours = element.textContent.includes('h');
-      const isPlus = element.textContent.includes('+');
+      }, { threshold: 0.3 });
       
-      let current = 0;
-      const increment = target / 50; // Animate over ~2 seconds (50 steps)
-      
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        
-        let displayValue = Math.floor(current);
-        if (isPercentage) {
-          element.textContent = displayValue + '%';
-        } else if (isHours) {
-          element.textContent = displayValue + 'h';
-        } else if (isPlus) {
-          element.textContent = displayValue + '+';
-        } else {
-          element.textContent = displayValue;
-        }
-      }, 40);
+      statsObserver.observe(heroSection);
     }
 
-    // Add subtle loading state for CTA buttons
-    document.querySelectorAll('a[href="#contact"]').forEach(button => {
-      button.addEventListener('click', () => {
-        // Add very subtle loading feedback
-        button.style.transform = 'scale(0.99)';
+    // Enhanced form handling with better UX
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      
+      // Loading state with animation
+      submitBtn.classList.add('btn-loading');
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      
+      // Simulate form submission
+      setTimeout(() => {
+        submitBtn.classList.remove('btn-loading');
+        submitBtn.textContent = 'Message Sent ✓';
+        submitBtn.style.background = 'rgba(16, 185, 129, 0.9)';
+        
         setTimeout(() => {
-          button.style.transform = '';
-        }, 100);
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = '';
+          submitBtn.disabled = false;
+          e.target.reset();
+        }, 2000);
+      }, 1500);
+    });
+
+    // Enhanced button interactions with better feedback
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        if (!this.disabled) {
+          this.style.transform = 'translateY(-2px) scale(1.02)';
+        }
+      });
+      
+      button.addEventListener('mouseleave', function() {
+        if (!this.disabled) {
+          this.style.transform = '';
+        }
+      });
+      
+      button.addEventListener('mousedown', function() {
+        if (!this.disabled) {
+          this.style.transform = 'translateY(0) scale(0.98)';
+        }
+      });
+      
+      button.addEventListener('mouseup', function() {
+        if (!this.disabled) {
+          this.style.transform = 'translateY(-2px) scale(1.02)';
+        }
       });
     });
-  </script>
 
+    // Dynamic gradient movement with throttling
+    let mouseTicking = false;
+    document.addEventListener('mousemove', (e) => {
+      if (!mouseTicking) {
+        requestAnimationFrame(() => {
+          const heroSection = document.querySelector('.gradient-hero');
+          if (heroSection) {
+            const x = (e.clientX / window.innerWidth) * 100;
+            const y = (e.clientY / window.innerHeight) * 100;
+            
+            heroSection.style.background = `
+              radial-gradient(ellipse at ${x}% ${y}%, #39FF14 0%, #2dd10f 25%, #0a2f1a 60%, #000000 100%)
+            `;
+          }
+          mouseTicking = false;
+        });
+        mouseTicking = true;
+      }
+    });
+
+    // Footer link hover effects
+    document.querySelectorAll('footer a').forEach(link => {
+      link.addEventListener('mouseenter', function() {
+        this.style.color = '#39FF14';
+      });
+      
+      link.addEventListener('mouseleave', function() {
+        this.style.color = '#9ca3af';
+      });
+    });
+
+    // Enhanced glass card hover effects
+    document.querySelectorAll('.glass-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-4px) scale(1.02)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = '';
+      });
+    });
+
+    // Form input enhancements with better feedback
+    document.querySelectorAll('.form-input').forEach(input => {
+      input.addEventListener('focus', function() {
+        this.style.transform = 'scale(1.02)';
+        this.parentElement.style.transform = 'translateY(-2px)';
+      });
+      
+      input.addEventListener('blur', function() {
+        this.style.transform = '';
+        this.parentElement.style.transform = '';
+      });
+
+      // Real-time validation feedback
+      input.addEventListener('input', function() {
+        if (this.validity.valid) {
+          this.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+        } else {
+          this.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+        }
+      });
+    });
+
+    // Keyboard navigation support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    });
+
+    document.addEventListener('mousedown', () => {
+      document.body.classList.remove('keyboard-navigation');
+    });
+
+    // Add focus styles for keyboard navigation
+    const style = document.createElement('style');
+    style.textContent = `
+      .keyboard-navigation .btn:focus,
+      .keyboard-navigation .nav-link:focus,
+      .keyboard-navigation .form-input:focus {
+        outline: 2px solid var(--q-green-start);
+        outline-offset: 2px;
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Initialize everything when DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      // Add loading class to body initially
+      document.body.classList.add('loading');
+      
+      // Remove loading class after a short delay
+      setTimeout(() => {
+        document.body.classList.remove('loading');
+      }, 100);
+    });
+  </script>
 </body>
 </html>

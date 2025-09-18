@@ -45,9 +45,9 @@
       font-family: 'JetBrains Mono', 'SF Mono', monospace; 
     }
 
-    /* Main gradient backgrounds - Toned down */
+    /* Main gradient backgrounds - Black and green mix */
     .gradient-hero {
-      background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #0f172a 100%);
+      background: linear-gradient(135deg, #000000 0%, var(--q-green-end) 100%);
       min-height: 100vh;
       position: relative;
       padding: 160px 0 80px 0;
@@ -559,6 +559,11 @@
       align-items: center;
       flex-wrap: wrap;
       margin-bottom: 60px;
+    }
+
+    /* Footer responsive and hover effects */
+    footer a:hover {
+      color: var(--q-green-start) !important;
     }
 
     /* Footer responsive and hover effects */

@@ -85,14 +85,14 @@
     }
 
     /* Main gradient backgrounds - Toned down */
-    .gradient-hero {
-      background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #0f172a 100%);
-      min-height: 100vh;
-      position: relative;
-      padding: 160px 0 80px 0;
-      display: flex;
-      align-items: center;
-    }
+   .gradient-hero {
+  background: linear-gradient(135deg, var(--q-dark-end) 0%, var(--q-dark-start) 50%, var(--q-green-end) 100%);
+  min-height: 100vh;
+  position: relative;
+  padding: 160px 0 80px 0;
+  display: flex;
+  align-items: center;
+}
 
     .gradient-section {
       background: linear-gradient(135deg, #374151 0%, #1f2937 50%, #111827 100%);
@@ -1682,25 +1682,7 @@
       });
     });
 
-    // Dynamic gradient movement with throttling
-    let mouseTicking = false;
-    document.addEventListener('mousemove', (e) => {
-      if (!mouseTicking) {
-        requestAnimationFrame(() => {
-          const heroSection = document.querySelector('.gradient-hero');
-          if (heroSection) {
-            const x = (e.clientX / window.innerWidth) * 100;
-            const y = (e.clientY / window.innerHeight) * 100;
-            
-            heroSection.style.background = `
-              radial-gradient(ellipse at ${x}% ${y}%, #39FF14 0%, #2dd10f 25%, #0a2f1a 60%, #000000 100%)
-            `;
-          }
-          mouseTicking = false;
-        });
-        mouseTicking = true;
-      }
-    });
+
 
     // Footer link hover effects
     document.querySelectorAll('footer a').forEach(link => {

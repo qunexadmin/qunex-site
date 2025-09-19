@@ -1,830 +1,1870 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MVN9ZTPV');</script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T3NHF199L0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T3NHF199L0');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>qunex — Drive Revenue, Not Just Traffic</title>
+  <title>qunex — Drive Revenue, Not Just Traffic | AI-First Marketing Agency</title>
   <meta name="description" content="qunex is an AI-first marketing agency. We plan, create, and scale growth across channels with a minimal, measurable approach." />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <meta name="keywords" content="AI marketing agency Dubai, digital marketing, performance marketing, growth marketing, marketing automation" />
+  
   <!-- Open Graph -->
   <meta property="og:title" content="qunex — AI-first marketing that drives revenue" />
-  <meta property="og:description" content="We craft data-driven growth systems powered by our proprietary AI platform, Qunex+." />
+  <meta property="og:description" content="We craft data-driven growth systems powered by our proprietary AI platform, qunex+." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://qunex.tech/og-image.jpg" />
   <meta property="og:url" content="https://qunex.tech" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { 
-            neon: '#39FF14', 
-            neonHover: '#2BDE0A',
-            ink: '#0b1220', 
-            ash: '#111827',
-            lightAsh: '#f3f4f6'
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          animation: {
-            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'float': 'float 6s ease-in-out infinite',
-            'gradient': 'gradient 15s ease infinite',
-            'typewriter': 'typewriter 2s steps(11) forwards, blink 1s infinite',
-          },
-          keyframes: {
-            float: {'0%,100%':{transform:'translateY(0)'}, '50%':{transform:'translateY(-10px)'}},
-            gradient: {
-              '0%, 100%': { 'background-position': '0% 50%' },
-              '50%': { 'background-position': '100% 50%' },
-            },
-            typewriter: {
-              'to': { 'left': '100%' }
-            },
-            blink: {
-              '0%': { 'opacity': '0' },
-              '0.1%': { 'opacity': '1' },
-              '50%': { 'opacity': '1' },
-              '50.1%': { 'opacity': '0' },
-              '100%': { 'opacity': '0' }
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
   <style>
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-    .container { max-width: 1120px; }
-    .gradient-bg {
-      background: linear-gradient(120deg, rgba(57, 255, 20, 0.08) 0%, rgba(255, 255, 255, 0) 50%);
+    :root {
+      --q-green-start: #39FF14;
+      --q-green-mid: #2dd10f;
+      --q-green-end: #1fb503;
+      --q-dark-start: #0a2f1a;
+      --q-dark-end: #000000;
+      --q-light: #ffffff;
+      --q-gray-light: #f8f9fa;
+      --q-gray-mid: #6b7280;
     }
-    .hero-pattern {
-      background-color: #ffffff;
-      background-image: radial-gradient(#39FF14 0.7px, #ffffff 0.7px);
-      background-size: 22px 22px; /* lighter density for perf */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
-    .stats-number {
-      background: linear-gradient(135deg, #39FF14 0%, #0b1220 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+
+    .font-mono { 
+      font-family: 'JetBrains Mono', 'SF Mono', monospace; 
     }
-    
-    /* Particle animation */
-    #particles-js {
+
+    /* Main gradient backgrounds */
+    .gradient-hero {
+      background: linear-gradient(135deg, var(--q-dark-end) 0%, var(--q-dark-start) 50%, var(--q-green-end) 100%);
+      min-height: 100vh;
+      position: relative;
+      padding: 140px 0 80px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .gradient-section {
+      background: linear-gradient(135deg, #374151 0%, #1f2937 50%, #111827 100%);
+    }
+
+    .qunex-section {
+      background: linear-gradient(135deg, var(--q-dark-end) 0%, var(--q-dark-start) 50%, #000000 100%);
+      position: relative;
+    }
+
+    .qunex-section::before {
+      content: '';
       position: absolute;
-      width: 100%;
-      height: 100%;
       top: 0;
       left: 0;
-      z-index: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at top right, rgba(57, 255, 20, 0.08) 0%, transparent 60%);
+      pointer-events: none;
     }
-    
-    /* Animated gradient background */
-    .animated-gradient {
-      background: linear-gradient(-45deg, #f3f4f6, #ffffff, #e5f8e0, #d1f7c8);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
+
+    .gradient-dark {
+      background: linear-gradient(135deg, var(--q-dark-end) 0%, var(--q-dark-start) 50%, var(--q-green-end) 100%);
     }
-    
-    /* Typewriter effect */
-    .typewriter-container {
+
+    /* Typography */
+    .hero-title {
+      font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: white;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    /* Logo styling */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: white;
+      text-transform: lowercase;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .q-letter {
       position: relative;
       display: inline-block;
     }
-    .typewriter-text {
+
+    .logo-edge-dot {
+      position: absolute;
+      top: 50%;
+      left: -3px;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 7px;
+      background: var(--q-green-start);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+    }
+
+    .logo-text {
+      color: white;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000 !important;
+      background: rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+      padding: 0 16px;
+    }
+
+    .nav-scrolled {
+      background: rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .nav .container {
+      padding: 0;
+    }
+
+    .nav .container .flex-between {
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--q-green-start);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: var(--q-green-start);
+      text-shadow: 0 0 4px rgba(57, 255, 20, 0.2);
+    }
+
+    .nav-link.active {
+      color: var(--q-green-start);
+    }
+
+    /* Mobile menu */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+      padding: 100px 30px 30px;
+      transition: right 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu.open {
+      right: 0;
+    }
+
+    .mobile-menu .nav-link {
+      font-size: 1.2rem;
+      padding: 10px 0;
+    }
+
+    .menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .menu-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Button styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      position: relative;
       overflow: hidden;
-      border-right: 2px solid #39FF14;
-      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(20px);
+    }
+
+    .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--q-dark-end);
+      font-weight: 700;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Card styles */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 24px;
+      padding: 32px;
+      backdrop-filter: blur(20px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .white-card {
+      background: white;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 24px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .white-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: rgba(57, 255, 20, 0.3);
+    }
+
+    /* Services section */
+    .core-systems-header {
+      max-width: 800px;
+      margin-bottom: 56px;
+    }
+
+    .core-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .core-subtitle {
+      font-size: 1rem;
+      color: #6b7280;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .systems-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 64px;
+      max-width: 1000px;
+    }
+
+    .system-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .system-icon-simple {
+      width: 40px;
+      height: 40px;
+      background: #f8fafc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .system-icon-simple i {
+      color: #64748b;
+      font-size: 18px;
+    }
+
+    .system-item:hover .system-icon-simple {
+      background: #f1f5f9;
+      transform: translateY(-3px);
+    }
+
+    .system-content {
+      flex: 1;
+    }
+
+    .system-name {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .system-description {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Form styles */
+    .form-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: white;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+    }
+
+    .form-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 8px;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Stats */
+    .stats-container {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      max-width: 800px;
       margin: 0 auto;
-      letter-spacing: 0.05em;
     }
-    
-    /* Custom scrollbar */
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+      line-height: 1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.3;
+    }
+
+    /* Process steps */
+    .process-number {
+      width: 64px;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 20px;
+      font-weight: 900;
+      color: white;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .process-number:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Chat widget */
+    .chat-widget {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1000;
+    }
+
+    .chat-toggle {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background: var(--q-green-start);
+      border: none;
+      border-radius: 50%;
+      color: #000;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(57, 255, 20, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      font-size: 20px;
+      z-index: 1000;
+    }
+
+    .chat-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.4);
+    }
+
+    .chat-window {
+      position: fixed;
+      bottom: 90px;
+      right: 24px;
+      width: 350px;
+      height: 450px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+      z-index: 999;
+    }
+
+    .chat-window.open {
+      display: flex;
+    }
+
+    .chat-header {
+      background: var(--q-dark-start);
+      color: white;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 12px 12px 0 0;
+    }
+
+
+    .chat-header h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .chat-close {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 4px;
+    }
+
+
+    .chat-messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .chat-message {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .chat-message.user {
+      flex-direction: row-reverse;
+    }
+
+
+    .message-bubble {
+      max-width: 80%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .message-bubble.ai {
+      background: #f3f4f6;
+      color: #374151;
+    }
+
+    .message-bubble.user {
+      background: var(--q-green-start);
+      color: #000;
+    }
+
+    .chat-input-container {
+      padding: 16px 20px;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      gap: 8px;
+    }
+
+    .chat-input {
+      flex: 1;
+      border: 1px solid #d1d5db;
+      border-radius: 20px;
+      padding: 10px 16px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .chat-input:focus {
+      border-color: var(--q-green-start);
+    }
+
+    .chat-send {
+      background: var(--q-green-start);
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      color: #000;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+
+    /* Utility classes */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    #services {
+      padding-top: 60px !important;
+      padding-bottom: 60px !important;
+    }
+
+    .text-center { text-align: center; }
+    .mb-4 { margin-bottom: 16px; }
+    .mb-6 { margin-bottom: 20px; }
+    .mb-8 { margin-bottom: 24px; }
+    .mb-12 { margin-bottom: 32px; }
+    .mb-16 { margin-bottom: 48px; }
+    .mb-20 { margin-bottom: 60px; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      align-items: start;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flex-between {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .gap-6 { gap: 24px; }
+    .gap-8 { gap: 32px; }
+
+    /* Contact section alignment */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Hero buttons alignment */
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .section {
+        padding: 80px 0;
+      }
+
+      #services {
+        padding-top: 100px !important;
+      }
+      
+      .grid-2, .grid-3, .grid-4, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .systems-list {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+      
+      .glass-card, .white-card {
+        padding: 24px;
+      }
+      
+      .btn {
+        padding: 12px 28px;
+        font-size: 14px;
+      }
+
+      .hero-buttons, .contact-buttons {
+        justify-content: center;
+        gap: 16px;
+      }
+
+      /* Mobile navigation */
+      .nav {
+        padding: 0 20px;
+      }
+
+      .nav .container .flex-between {
+        height: 64px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-container {
+        flex: 0 0 auto;
+      }
+
+      .nav .flex.gap-8 {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .btn.btn-glass {
+        padding: 10px 20px;
+        font-size: 13px;
+        flex: 0 0 auto;
+      }
+
+      .gradient-hero {
+        padding: 92px 0 56px 0;
+      }
+
+      .stats-container {
+        margin-top: 60px;
+        padding-top: 40px;
+      }
+
+      .stat-number {
+        font-size: 1.8rem;
+      }
+
+      .chat-window {
+        width: calc(100vw - 24px);
+        right: 12px;
+        bottom: 70px;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .grid-3, .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        gap: 40px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+      }
+    }
+
+    /* Scrollbar */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
     }
+
     ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      background: rgba(0, 0, 0, 0.1);
     }
+
     ::-webkit-scrollbar-thumb {
-      background: #39FF14;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #2BDE0A;
+      background: var(--q-green-start);
+      border-radius: 3px;
     }
   </style>
-
-  <!-- Schema.org basic org snippet -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "qunex",
-    "url": "https://qunex.tech",
-    "logo": "https://qunex.tech/logo.png"
-  }
-  </script>
 </head>
-<body class="bg-white text-ink">
-  <!-- Particle Background -->
-  <div id="particles-js"></div>
-  
-  <!-- AI Chat Widget -->
-  <div class="fixed bottom-6 right-6 z-50">
-    <button id="chatToggle" class="w-14 h-14 rounded-full bg-neon shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-      </svg>
-    </button>
-    <div id="chatWindow" class="hidden absolute bottom-16 right-0 w-80 h-96 bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col">
-      <div class="p-4 border-b border-gray-200 bg-ink text-white rounded-t-lg flex justify-between items-center">
-        <h3 class="font-semibold">Qunex AI Assistant</h3>
-        <button id="closeChat" class="text-white hover:text-neon">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVN9ZTPV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div class="flex-between" style="height: 80px;">
+        <div class="logo-container">
+          <span class="q-letter">
+            q
+            <div class="logo-edge-dot"></div>
+          </span>
+          <span class="logo-text">unex</span>
+        </div>
+        
+        <div class="flex gap-8" style="align-items: center;">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="platform.html" class="nav-link">Qunex+</a>
+          <a href="#approach" class="nav-link">Approach</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </div>
+
+        <button class="btn btn-glass" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+          <span>Book Strategy Call</span>
+          <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 12px;"></i>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
-      <div id="chatMessages" class="flex-1 p-4 overflow-y-auto">
-        <div class="mb-4 flex">
-          <div class="bg-gray-100 rounded-lg p-3 max-w-xs">
-            <p class="text-sm">Hi there! I'm Qunex AI Assistant. How can I help you today?</p>
-          </div>
-        </div>
-      </div>
-      <div class="p-3 border-t border-gray-200">
-        <div class="flex items-center">
-          <input type="text" id="chatInput" placeholder="Type your question..." class="flex-1 border border-gray-300 rounded-l-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-neon">
-          <button id="sendMessage" class="bg-neon text-ink px-4 py-2 rounded-r-lg font-medium hover:bg-neonHover transition-colors">
-            Send
-          </button>
-        </div>
-      </div>
     </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="platform.html" class="nav-link">Qunex+</a>
+    <a href="#approach" class="nav-link">Approach</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <button class="btn btn-glass" style="margin-top: 20px;" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <span>Book Strategy Call</span>
+      <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 12px;"></i>
+    </button>
   </div>
 
-  <!-- NAV -->
-  <header class="sticky top-0 z-40 border-b border-black/5 bg-white/90 backdrop-blur">
-    <div class="container mx-auto px-5 h-16 flex items-center justify-between" role="navigation" aria-label="Main">
-      <a href="#" class="flex items-center gap-2 group" aria-label="qunex home">
-        <div class="relative">
-          <span class="h-3 w-3 rounded-full bg-neon group-hover:animate-ping absolute opacity-75"></span>
-          <span class="h-3 w-3 rounded-full bg-neon relative z-10"></span>
-        </div>
-        <span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-neon to-ink bg-clip-text text-transparent">qunex</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-7 text-sm text-black/70">
-        <a class="hover:text-black transition-colors" href="#services">Services</a>
-        <a class="hover:text-black transition-colors" href="platform.html">Qunex+</a>
-        <a class="hover:text-black transition-colors" href="#approach">Approach</a>
-        <a class="hover:text-black transition-colors" href="#faq">FAQ</a>
-      </nav>
-      <a href="#contact" class="hidden md:inline-flex items-center rounded-full bg-neon px-4 py-2 text-sm font-semibold text-ink hover:bg-neonHover transition-all hover:scale-105">Book strategy call</a>
-      <button class="md:hidden" id="menuBtn" aria-label="Open menu">
-        <svg width="28" height="28" fill="none" stroke="currentColor" class="text-black/80"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h20M4 14h20M4 21h20"/></svg>
-      </button>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-black/5 bg-white">
-      <div class="container mx-auto px-5 py-4 space-y-3 text-black/80">
-        <a class="block py-2 hover:text-black transition-colors" href="#services">Services</a>
-        <a class="block py-2 hover:text-black transition-colors" href="platform.html">Qunex+</a>
-        <a class="block py-2 hover:text-black transition-colors" href="#approach">Approach</a>
-        <a class="block py-2 hover:text-black transition-colors" href="#faq">FAQ</a>
-        <a class="mt-2 inline-flex items-center rounded-full bg-neon px-4 py-2 text-sm font-semibold text-ink hover:bg-neonHover" href="#contact">Book strategy call</a>
-      </div>
-    </div>
-  </header>
+  <div class="menu-overlay" id="menuOverlay"></div>
 
-  <!-- HERO -->
-  <section class="border-b border-black/5 hero-pattern relative overflow-hidden">
-  <div class="container mx-auto px-5 pt-12 pb-20 sm:pt-14 lg:pt-16 lg:pb-24 relative z-10">
-
-      <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
-        <div class="inline-flex items-center rounded-full bg-neon/10 px-3 py-1 text-xs font-medium text-ink">
-          <span class="h-2 w-2 rounded-full bg-neon mr-2 animate-pulse"></span>
-          AI-first marketing agency
+  <!-- Hero Section -->
+  <section class="gradient-hero">
+    <div class="container">
+      <div class="text-center animate-fade-up" style="max-width: 900px; margin: 0 auto;">
+        <div style="display: inline-flex; align-items: center; background: rgba(57, 255, 20, 0.1); border-radius: 50px; padding: 8px 16px; margin-bottom: 24px;">
+          <div style="width: 8px; height: 8px; background: var(--q-green-start); border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite;"></div>
+          <span style="font-size: 12px; font-weight: 600; color: white; letter-spacing: 0.1em; text-transform: uppercase;">AI-First Marketing Agency</span>
         </div>
-        <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-          Drive Revenue, <span class="text-neon typewriter-container"><span class="typewriter-text">Not Just Traffic</span></span>
+        
+        <h1 class="hero-title mb-6">
+          Your Growth Partner<br />
+          for the AI Era
         </h1>
-        <div class="mt-3 inline-block">
-          <span class="text-sm font-semibold text-black/60 tracking-wide uppercase">Your Partner for the AI Era</span>
-        </div>
-        <p class="mt-5 max-w-2xl text-lg text-black/70">
+        
+        <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 36px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
           We craft data-driven digital marketing strategies that generate qualified leads and maximize your ROI. Powered by qunex+.
         </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-white font-semibold hover:opacity-90 transition-all hover:scale-105 shadow-md" aria-label="Get your free proposal">
+
+        <div class="hero-buttons">
+          <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
             Get Your Free Proposal
-          </a>
-          <a href="platform.html" class="inline-flex items-center justify-center rounded-full border border-black/10 px-6 py-3 font-semibold hover:bg-black/5 transition-colors group" aria-label="Discover Qunex+">
-            Discover Qunex+
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
+          </button>
+          <button class="btn btn-primary" onclick="window.open('platform.html', '_blank')">
+            Discover qunex+
+            <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 12px;"></i>
+          </button>
         </div>
-        <div class="mt-10 flex items-center space-x-8">
-          <div class="flex items-center">
-            <div class="flex -space-x-2">
-              <div class="h-8 w-8 rounded-full border-2 border-white bg-gray-300"></div>
-              <div class="h-8 w-8 rounded-full border-2 border-white bg-gray-400"></div>
-              <div class="h-8 w-8 rounded-full border-2 border-white bg-gray-500"></div>
+
+        <!-- Stats -->
+        <div class="stats-container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">AI-First</div>
+              <div class="stat-label">Marketing Approach</div>
             </div>
-            <p class="ml-3 text-sm text-black/60"><span class="font-semibold text-black">Launch partners</span> ready to scale</p>
+            <div class="stat-item">
+              <div class="stat-number" data-counter="35">35%</div>
+              <div class="stat-label">Proven ROI Uplift</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Campaign Monitoring</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">90-Day</div>
+              <div class="stat-label">Growth Guarantee</div>
+            </div>
           </div>
-          <div class="hidden sm:block">
-            <p class="text-sm text-black/60">Built by <span class="font-semibold text-black">ex-Meta & Google</span> performance experts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services" class="section" style="background: #f9fafb;">
+    <div class="container">
+      <div class="core-systems-header">
+        <h2 class="core-title">Full-Funnel Marketing Solutions</h2>
+        <p class="core-subtitle">We handle everything from top-of-funnel awareness to retention, all powered by our qunex+ intelligence platform.</p>
+      </div>
+
+      <div class="systems-list">
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Paid Media Management</h3>
+            <p class="system-description">Meta, Google, TikTok. Budget allocation, creative testing, and ROAS automation with real-time optimization.</p>
+          </div>
+        </div>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Content & Social Strategy</h3>
+            <p class="system-description">Systemized ideas, UGC templates, and performance storytelling tailored for each platform's algorithm.</p>
+          </div>
+        </div>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Lifecycle & Analytics</h3>
+            <p class="system-description">Email/SMS journeys, tracking hygiene, and clean dashboards for data-driven decisions across the customer journey.</p>
+          </div>
+        </div>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">AI-Powered Optimization</h3>
+            <p class="system-description">Machine learning algorithms that continuously optimize campaigns, predict performance, and identify growth opportunities.</p>
+          </div>
+        </div>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Conversion Rate Optimization</h3>
+            <p class="system-description">A/B testing frameworks, landing page optimization, and funnel analysis to maximize conversion rates and revenue.</p>
+          </div>
+        </div>
+
+        <div class="system-item">
+          <div class="system-icon-simple">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="system-content">
+            <h3 class="system-name">Growth Strategy & Scale</h3>
+            <p class="system-description">Strategic planning, market expansion, and scaling systems designed for sustainable long-term growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- qunex+ Platform Section -->
+  <section class="qunex-section section">
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="grid-2" style="align-items: center;">
+        <div>
+          <div style="display: inline-flex; align-items: center; background: rgba(57, 255, 20, 0.1); border-radius: 50px; padding: 8px 16px; margin-bottom: 24px;">
+            <div style="width: 8px; height: 8px; background: var(--q-green-start); border-radius: 50%; margin-right: 8px;"></div>
+            <span style="font-size: 12px; font-weight: 600; color: white; letter-spacing: 0.1em; text-transform: uppercase;">Our Proprietary Technology</span>
+          </div>
+          
+          <h2 style="font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; color: white; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.02em;">
+            Intelligence Powered by 
+            <span style="color: white;">qunex+</span>
+          </h2>
+          
+          <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; margin-bottom: 32px; line-height: 1.6;">
+            Our in-house AI platform processes millions of data points to predict performance, automate optimizations, and uncover hidden opportunities across all your marketing channels.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 32px;">
+            <div style="display: flex; align-items: start; gap: 12px;">
+              <div style="width: 20px; height: 20px; background: rgba(57, 255, 20, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px; flex-shrink: 0;">
+                <i class="fas fa-check" style="color: var(--q-green-start); font-size: 10px;"></i>
+              </div>
+              <div>
+                <h4 style="color: white; font-weight: 600; margin-bottom: 4px;">Predictive Budget Allocation</h4>
+                <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; margin: 0;">AI-driven recommendations for optimal spend across channels</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: start; gap: 12px;">
+              <div style="width: 20px; height: 20px; background: rgba(57, 255, 20, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px; flex-shrink: 0;">
+                <i class="fas fa-check" style="color: var(--q-green-start); font-size: 10px;"></i>
+              </div>
+              <div>
+                <h4 style="color: white; font-weight: 600; margin-bottom: 4px;">Creative Intelligence</h4>
+                <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; margin: 0;">Analyzes performance patterns to guide content creation</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: start; gap: 12px;">
+              <div style="width: 20px; height: 20px; background: rgba(57, 255, 20, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px; flex-shrink: 0;">
+                <i class="fas fa-check" style="color: var(--q-green-start); font-size: 10px;"></i>
+              </div>
+              <div>
+                <h4 style="color: white; font-weight: 600; margin-bottom: 4px;">ROAS Forecasting</h4>
+                <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; margin: 0;">Projects campaign performance with 92% accuracy</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-buttons">
+            <button class="btn btn-secondary" onclick="window.open('platform.html', '_blank')">
+              Explore qunex+ Platform
+            </button>
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+              Request Demo
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div class="glass-card" style="margin: 0;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+              <div style="display: flex; align-items: center;">
+                <div style="width: 8px; height: 8px; background: var(--q-green-start); border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite;"></div>
+                <span style="font-size: 12px; font-weight: 600; color: white;">qunex+ Intelligence Dashboard</span>
+              </div>
+              <div style="background: rgba(57, 255, 20, 0.1); border-radius: 20px; padding: 4px 12px;">
+                <span style="font-size: 10px; font-weight: 600; color: var(--q-green-start); text-transform: uppercase; letter-spacing: 0.1em;">Live Demo</span>
+              </div>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; margin-bottom: 16px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <div>
+                  <p style="font-size: 10px; color: rgba(255, 255, 255, 0.6); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">Predicted ROAS This Month</p>
+                  <p style="font-size: 24px; font-weight: 800; color: white; margin: 0;">4.8x</p>
+                </div>
+                <div style="text-align: right;">
+                  <p style="font-size: 10px; color: rgba(255, 255, 255, 0.6); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">Confidence Score</p>
+                  <p style="font-size: 24px; font-weight: 800; color: rgba(255, 255, 255, 0.8); margin: 0;">92%</p>
+                </div>
+              </div>
+              <div style="height: 8px; background: rgba(255, 255, 255, 0.2); border-radius: 4px; overflow: hidden;">
+                <div style="height: 100%; background: var(--q-green-start); width: 80%; border-radius: 4px;"></div>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+              <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px;">
+                <p style="font-size: 10px; color: rgba(255, 255, 255, 0.6); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">Recommended Budget Shift</p>
+                <p style="font-size: 14px; font-weight: 600; color: white; margin: 0;">+$2,400 → TikTok</p>
+              </div>
+              <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px;">
+                <p style="font-size: 10px; color: rgba(255, 255, 255, 0.6); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">Creative Fatigue Alert</p>
+                <p style="font-size: 14px; font-weight: 600; color: rgba(255, 255, 255, 0.8); margin: 0;">Ad Set #12</p>
+              </div>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <p style="font-size: 10px; color: rgba(255, 255, 255, 0.6); margin: 0; text-transform: uppercase; letter-spacing: 0.1em;">AI Opportunities</p>
+                <span style="font-size: 10px; color: rgba(255, 255, 255, 0.8);">3 New</span>
+              </div>
+              <div style="font-size: 12px; color: rgba(255, 255, 255, 0.8); line-height: 1.4;">
+                <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                  <div style="width: 4px; height: 4px; background: rgba(255, 255, 255, 0.4); border-radius: 50%; margin-right: 8px; flex-shrink: 0;"></div>
+                  <span>Audience expansion: Lookalike 95%+ similarity</span>
+                </div>
+                <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                  <div style="width: 4px; height: 4px; background: rgba(255, 255, 255, 0.4); border-radius: 50%; margin-right: 8px; flex-shrink: 0;"></div>
+                  <span>Dayparting: Increase spend Wed–Fri 7–10PM</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <div style="width: 4px; height: 4px; background: rgba(255, 255, 255, 0.4); border-radius: 50%; margin-right: 8px; flex-shrink: 0;"></div>
+                  <span>Creative: Video under 15s performs 2.3x better</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS BAR (Updated) -->
-  <section class="border-b border-black/5 bg-ash text-white py-8" aria-label="Highlights">
-    <div class="container mx-auto px-5">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div>
-          <p class="text-3xl font-bold stats-number" id="aiFirstCounter">AI-First</p>
-          <p class="text-sm text-gray-400 mt-1">Approach to Marketing</p>
+  <!-- Approach Section -->
+  <section id="approach" class="section" style="background: #f9fafb;">
+    <div class="container">
+      <div class="core-systems-header">
+        <h2 class="core-title">Our Process for Predictable Growth</h2>
+        <p class="core-subtitle">A systematic approach that delivers measurable results within your first 90 days.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="white-card text-center" style="position: relative; overflow: hidden;">
+          <!-- Subtle corner accent -->
+          <div style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, rgba(57, 255, 20, 0.1) 0%, transparent 100%);"></div>
+          <div class="process-number" style="background: #f8fafc; color: #111827; border: 1px solid #e2e8f0;">01</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: #111827;">
+            Discovery & Diagnostic
+          </h3>
+          <p style="color: #6b7280; font-size: 15px; line-height: 1.6; margin: 0;">
+            We deep dive into your goals, constraints, unit economics, and current data infrastructure to identify gaps and opportunities.
+          </p>
         </div>
-        <div>
-          <p class="text-3xl font-bold stats-number"><span id="roiCounter">0</span>%</p>
-          <p class="text-sm text-gray-400 mt-1">Proven ROI Uplift</p>
+
+        <div class="white-card text-center" style="position: relative; overflow: hidden;">
+          <!-- Subtle corner accent -->
+          <div style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, rgba(57, 255, 20, 0.1) 0%, transparent 100%);"></div>
+          <div class="process-number" style="background: #f8fafc; color: #111827; border: 1px solid #e2e8f0;">02</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: #111827;">
+            90-Day Growth Plan
+          </h3>
+          <p style="color: #6b7280; font-size: 15px; line-height: 1.6; margin: 0;">
+            We create a detailed channel strategy, KPI framework, and testing roadmap focused on quick wins and long-term scaling.
+          </p>
         </div>
-        <div>
-          <p class="text-3xl font-bold stats-number">24/7</p>
-          <p class="text-sm text-gray-400 mt-1">Campaign Monitoring</p>
-        </div>
-        <div>
-          <p class="text-3xl font-bold stats-number">90-Day</p>
-          <p class="text-sm text-gray-400 mt-1">Growth Guarantee</p>
+
+        <div class="white-card text-center" style="position: relative; overflow: hidden;">
+          <!-- Subtle corner accent -->
+          <div style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: linear-gradient(135deg, rgba(57, 255, 20, 0.1) 0%, transparent 100%);"></div>
+          <div class="process-number" style="background: #f8fafc; color: #111827; border: 1px solid #e2e8f0;">03</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: #111827;">
+            Execution & Optimization
+          </h3>
+          <p style="color: #6b7280; font-size: 15px; line-height: 1.6; margin: 0;">
+            Weekly sprints, clear reporting, and continuous optimization based on performance data and market changes.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="border-b border-black/5 gradient-bg" aria-label="Services">
-    <div class="container mx-auto px-5 py-20">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-extrabold">Full-Funnel Marketing Solutions</h2>
-        <p class="mt-4 text-black/70">We handle everything from top-of-funnel awareness to retention, all powered by our Qunex+ intelligence platform.</p>
+  <!-- FAQ Section -->
+  <section id="faq" class="section" style="background: #f9fafb; position: relative;">
+    <!-- Top gradient border -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #39FF14 0%, #2ECC40 50%, #39FF14 100%); opacity: 0.8;"></div>
+    <div class="container">
+      <div class="core-systems-header text-center">
+        <h2 class="core-title">Frequently Asked Questions</h2>
+        <p class="core-subtitle">Everything you need to know about working with us and our qunex+ platform.</p>
       </div>
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Card 1 -->
-        <div class="rounded-2xl border border-black/10 p-6 bg-white service-card transition-all duration-300 hover:border-neon/30">
-          <div class="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold">Paid Media Management</h3>
-          <p class="mt-2 text-black/70">Meta, Google, TikTok. Budget allocation, creative testing, and ROAS automation with real-time optimization.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/70">
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-black/50 mr-2"></span>Campaign strategy & structure</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-black/50 mr-2"></span>A/B testing & optimization</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-black/50 mr-2"></span>Performance monitoring</li>
-          </ul>
-        </div>
-        <!-- Card 2 -->
-        <div class="rounded-2xl border border-black/10 p-6 bg-white service-card transition-all duration-300 hover:border-neon/30">
-          <div class="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold">Content & Social Strategy</h3>
-          <p class="mt-2 text-black/70">Systemized ideas, UGC templates, and performance storytelling tailored for each platform's algorithm.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/70">
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-black/50 mr-2"></span>Content strategy & calendar</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-black/50 mr-2"></span>Platform-specific optimization</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-black/50 mr-2"></span>Community engagement</li>
-          </ul>
-        </div>
-        <!-- Card 3 -->
-        <div class="rounded-2xl border border-black/10 p-6 bg-white service-card transition-all duration-300 hover:border-neon/30">
-          <div class="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold">Lifecycle & Analytics</h3>
-          <p class="mt-2 text-black/70">Email/SMS journeys, tracking hygiene, and clean dashboards for data-driven decisions across the customer journey.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/70">
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-black/50 mr-2"></span>Customer journey mapping</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-black/50 mr-2"></span>Automated retention flows</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-black/50 mr-2"></span>Performance dashboards</li>
-          </ul>
+
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div style="background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(57, 255, 20, 0.1); overflow: hidden; position: relative;">
+          <!-- Subtle gradient overlay at top -->
+          <div style="position: absolute; top: 0; left: 0; right: 0; height: 60px; background: linear-gradient(180deg, rgba(57, 255, 20, 0.02) 0%, transparent 100%); pointer-events: none;"></div>
+          <details class="faq-item" style="padding: 28px; border-bottom: 1px solid #f1f5f9;" open>
+            <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #111827; font-weight: 600; font-size: 17px; list-style: none;">
+              <span>Can we start without long contracts?</span>
+              <i class="fas fa-plus faq-icon" style="transition: transform 0.3s ease; color: #39FF14;"></i>
+            </summary>
+            <p style="color: #6b7280; margin-top: 16px; font-size: 15px; line-height: 1.6;">
+              Yes—we begin with a standard 3-month kickoff period with clearly defined KPIs. We only extend our partnership if we're delivering measurable results and you're seeing value.
+            </p>
+          </details>
+
+          <details class="faq-item" style="padding: 28px; border-bottom: 1px solid #f1f5f9;">
+            <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #111827; font-weight: 600; font-size: 17px; list-style: none;">
+              <span>Do we get access to the qunex+ platform?</span>
+              <i class="fas fa-plus faq-icon" style="transition: transform 0.3s ease; color: #39FF14;"></i>
+            </summary>
+            <p style="color: #6b7280; margin-top: 16px; font-size: 15px; line-height: 1.6;">
+              Yes, qunex+ access is included for all active clients. You'll get your own login to view real-time performance dashboards, insights, and recommendations.
+            </p>
+          </details>
+
+          <details class="faq-item" style="padding: 28px; border-bottom: 1px solid #f1f5f9;">
+            <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #111827; font-weight: 600; font-size: 17px; list-style: none;">
+              <span>How is qunex+ different from other marketing tools?</span>
+              <i class="fas fa-plus faq-icon" style="transition: transform 0.3s ease; color: #39FF14;"></i>
+            </summary>
+            <p style="color: #6b7280; margin-top: 16px; font-size: 15px; line-height: 1.6;">
+              qunex+ forecasts performance and provides actionable recommendations—not just reports. It's built by performance marketers for performance teams.
+            </p>
+          </details>
+
+          <details class="faq-item" style="padding: 28px; border-bottom: 1px solid #f1f5f9;">
+            <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #111827; font-weight: 600; font-size: 17px; list-style: none;">
+              <span>What's your typical client engagement model?</span>
+              <i class="fas fa-plus faq-icon" style="transition: transform 0.3s ease; color: #39FF14;"></i>
+            </summary>
+            <p style="color: #6b7280; margin-top: 16px; font-size: 15px; line-height: 1.6;">
+              We operate as an extension of your team with weekly syncs, shared Slack, and monthly strategy reviews. You'll speak directly with strategists.
+            </p>
+          </details>
+
+          <details class="faq-item" style="padding: 28px;">
+            <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #111827; font-weight: 600; font-size: 17px; list-style: none;">
+              <span>Where are you based and what time zones do you support?</span>
+              <i class="fas fa-plus faq-icon" style="transition: transform 0.3s ease; color: #39FF14;"></i>
+            </summary>
+            <p style="color: #6b7280; margin-top: 16px; font-size: 15px; line-height: 1.6;">
+              We're Dubai-based with global coverage across EST, GMT, and GST time zones.
+            </p>
+          </details>
         </div>
       </div>
     </div>
   </section>
 
-<!-- QUNEX+ (Neon-polished.) -->
-<section id="qunex-plus" class="border-b border-black/5 bg-gray-50/70 py-20" aria-label="Qunex Plus">
-  <div class="container mx-auto px-5">
-    <div class="flex flex-col lg:flex-row items-center gap-12">
+  <!-- Contact Section -->
+  <section id="contact" class="gradient-dark section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-content">
+          <h2 style="font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; color: white; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.02em;">
+            Ready to Drive Measurable Growth?
+          </h2>
+          <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 40px; line-height: 1.7;">
+            Schedule your free strategy session today. We'll analyze your current approach and provide actionable insights.
+          </p>
+          
+          <div style="margin-bottom: 40px;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <div style="width: 4px; height: 4px; background: var(--q-green-start); border-radius: 50%;"></div>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">
+                Dubai, UAE • Global Operations
+              </span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <div style="width: 4px; height: 4px; background: var(--q-green-start); border-radius: 50%;"></div>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">
+                48H Response Time Guaranteed
+              </span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 4px; height: 4px; background: var(--q-green-start); border-radius: 50%;"></div>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">
+                90-Day Growth Guarantee
+              </span>
+            </div>
+          </div>
 
-      <!-- Left -->
-      <div class="lg:w-6/12">
-        <!-- Light green badge -->
-        <div class="inline-flex items-center rounded-full bg-[rgba(57,255,20,0.10)] px-3 py-1 text-xs font-medium text-ink">
-          <span class="h-2 w-2 rounded-full bg-neon mr-2"></span>
-          Our Proprietary Technology
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 40px;">
+            <h4 style="color: white; font-weight: 600; margin: 0; width: 100%;">What to expect:</h4>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <i class="fas fa-check" style="color: var(--q-green-start); font-size: 12px;"></i>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">Competitive analysis of your space</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <i class="fas fa-check" style="color: var(--q-green-start); font-size: 12px;"></i>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">Audit of current marketing performance</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <i class="fas fa-check" style="color: var(--q-green-start); font-size: 12px;"></i>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">Customized 90-day game plan</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <i class="fas fa-check" style="color: var(--q-green-start); font-size: 12px;"></i>
+              <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8);">Pricing tailored to your goals</span>
+            </div>
+          </div>
+
+          <div class="contact-buttons">
+            <button class="btn btn-secondary" onclick="document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'})">
+              Book Free Strategy Session
+            </button>
+            <button class="btn btn-primary">
+              View Case Studies
+            </button>
+          </div>
         </div>
 
-        <!-- Title with neon Qunex+ pill -->
-     <h2 class="mt-4 text-3xl font-extrabold text-ink">
-  Intelligence Powered by 
-  <a href="platform.html"
-     class="text-neon underline decoration-neon decoration-2 underline-offset-4 hover:text-neonHover transition-colors">
-    Qunex+
-  </a>
-</h2>
+        <div class="glass-card" id="contactForm">
+          <form onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-input" placeholder="Your full name" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Work Email</label>
+              <input type="email" class="form-input" placeholder="contact@yourcompany.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Company</label>
+              <input type="text" class="form-input" placeholder="Your company name" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Current Monthly Ad Spend</label>
+              <select class="form-input" required style="color: white;">
+                <option value="" style="color: #000;">Select range</option>
+                <option value="<5k" style="color: #000;">Less than $5K</option>
+                <option value="5-15k" style="color: #000;">$5K - $15K</option>
+                <option value="15-30k" style="color: #000;">$15K - $30K</option>
+                <option value="30-50k" style="color: #000;">$30K - $50K</option>
+                <option value="50k+" style="color: #000;">$50K+</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Primary Goals</label>
+              <textarea class="form-input" rows="3" placeholder="Increasing ROAS, reducing CAC, scaling revenue, improving attribution..." required style="resize: vertical; min-height: 80px;"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary" style="width: 100%;" id="submitBtn">
+              Request Free Strategy Session
+            </button>
+            
+            <p style="font-size: 12px; color: rgba(255, 255, 255, 0.6); text-align: center; margin-top: 12px;">
+              We'll get back to you within 24 hours. No automated responses.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <p class="mt-5 text-gray-700">
-          Our in-house AI platform processes millions of data points to predict performance, automate optimizations,
-          and uncover hidden opportunities across all your marketing channels.
-        </p>
-
-        <!-- Feature bullets -->
-        <div class="mt-8 space-y-4">
-          <div class="flex items-start">
-            <span class="h-5 w-5 rounded-full bg-[rgba(57,255,20,0.12)] flex items-center justify-center mt-0.5 mr-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-ink/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
+  <!-- Footer -->
+  <footer style="background: linear-gradient(135deg, var(--q-dark-end) 0%, var(--q-dark-start) 50%, #000000 100%); padding: 60px 0 32px 0; position: relative;">
+    <!-- Background Pattern -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at top right, rgba(57, 255, 20, 0.05) 0%, transparent 60%); pointer-events: none;"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; margin-bottom: 36px;">
+        
+        <!-- Company Info -->
+        <div>
+          <div class="logo-container" style="margin-bottom: 24px; font-size: 2rem;">
+            <span class="q-letter">
+              q
+              <div class="logo-edge-dot"></div>
             </span>
-            <div>
-              <h4 class="font-semibold text-ink">Predictive Budget Allocation</h4>
-              <p class="mt-1 text-sm text-gray-600">AI-driven recommendations for optimal spend across channels</p>
-            </div>
+            <span class="logo-text">unex</span>
           </div>
-
-          <div class="flex items-start">
-            <span class="h-5 w-5 rounded-full bg-[rgba(57,255,20,0.12)] flex items-center justify-center mt-0.5 mr-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-ink/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <div>
-              <h4 class="font-semibold text-ink">Creative Intelligence</h4>
-              <p class="mt-1 text-sm text-gray-600">Analyzes performance patterns to guide content creation</p>
-            </div>
-          </div>
-
-          <div class="flex items-start">
-            <span class="h-5 w-5 rounded-full bg-[rgba(57,255,20,0.12)] flex items-center justify-center mt-0.5 mr-3">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-ink/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-            </span>
-            <div>
-              <h4 class="font-semibold text-ink">ROAS Forecasting</h4>
-              <p class="mt-1 text-sm text-gray-600">Projects campaign performance with 92% accuracy</p>
-            </div>
+          <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 28px; max-width: 320px; font-size: 15px;">
+            AI-first marketing agency driving revenue through data-driven strategies. Based in Dubai, serving clients globally.
+          </p>
+          <div style="display: flex; gap: 20px; margin-bottom: 24px;">
+            <a href="#" style="width: 44px; height: 44px; background: rgba(57, 255, 20, 0.1); border: 1px solid rgba(57, 255, 20, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #39FF14; font-size: 18px; transition: all 0.3s ease; text-decoration: none;">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" style="width: 44px; height: 44px; background: rgba(57, 255, 20, 0.1); border: 1px solid rgba(57, 255, 20, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #39FF14; font-size: 18px; transition: all 0.3s ease; text-decoration: none;">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="width: 44px; height: 44px; background: rgba(57, 255, 20, 0.1); border: 1px solid rgba(57, 255, 20, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #39FF14; font-size: 18px; transition: all 0.3s ease; text-decoration: none;">
+              <i class="fab fa-youtube"></i>
+            </a>
           </div>
         </div>
 
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="platform.html" class="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-white font-semibold hover:opacity-90 transition-all">
-            Explore Qunex+ Platform
-          </a>
-          <a href="#contact" class="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 font-semibold hover:bg-gray-100 transition-colors">
-            Request Demo
-          </a>
-        </div>
-      </div>
-
-      <!-- Right demo card -->
-      <div class="lg:w-6/12 mt-10 lg:mt-0">
-        <div class="relative">
-          <!-- soft neon glow -->
-          <div class="absolute -inset-4 rounded-2xl blur-xl opacity-50"
-               style="background: radial-gradient(120px 120px at 80% 10%, rgba(57,255,20,0.22), transparent 70%);">
-          </div>
-
-          <div class="relative bg-white rounded-2xl p-6 border border-gray-200 overflow-hidden shadow-lg">
-            <div class="flex items-center justify-between mb-6">
-  <div class="flex items-center">
-    <span class="h-2 w-2 rounded-full bg-neon mr-2 animate-pulse"></span>
-    <span class="text-sm font-medium text-ink">Qunex+ Intelligence Dashboard</span>
-  </div>
-  <div class="inline-flex items-center rounded-full bg-[rgba(57,255,20,0.10)] px-2.5 py-1 text-xs font-medium text-ink">
-    <span class="h-2 w-2 rounded-full bg-neon mr-1"></span>
-    Live Demo
-  </div>
-</div>
-
-
-            <div class="bg-gray-100 rounded-lg p-4 mb-4">
-              <div class="flex justify-between items-center mb-4">
-                <div>
-                  <p class="text-xs text-gray-600">Predicted ROAS This Month</p>
-                  <p class="text-xl font-bold text-ink">4.8x</p>
-                </div>
-                <div class="text-right">
-                  <p class="text-xs text-gray-600">Confidence Score</p>
-                  <p class="text-xl font-bold text-gray-700">92%</p>
-                </div>
-              </div>
-              <div class="h-2 bg-gray-300 rounded-full overflow-hidden">
-                <div class="h-full bg-ink w-4/5"></div>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 mb-4">
-              <div class="bg-gray-100 rounded-lg p-3">
-                <p class="text-xs text-gray-600">Recommended Budget Shift</p>
-                <p class="text-lg font-bold text-ink">+$2,400 → TikTok</p>
-              </div>
-              <div class="bg-gray-100 rounded-lg p-3">
-                <p class="text-xs text-gray-600">Creative Fatigue Alert</p>
-                <p class="text-lg font-bold text-gray-700">Ad Set #12</p>
-              </div>
-            </div>
-
-            <div class="bg-gray-100 rounded-lg p-4">
-              <div class="flex justify-between items-center mb-2">
-                <p class="text-xs text-gray-600">Opportunities</p>
-                <span class="text-xs text-gray-700">3 New</span>
-              </div>
-              <ul class="text-sm text-gray-700 space-y-2">
-                <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-gray-500 mr-2"></span><span>Audience expansion: Lookalike 95%+ similarity</span></li>
-                <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-gray-500 mr-2"></span><span>Dayparting: Increase spend Wed–Fri 7–10PM</span></li>
-                <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-gray-500 mr-2"></span><span>Creative: Video under 15s performs 2.3x better</span></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-  <!-- APPROACH -->
-  <section id="approach" class="border-b border-black/5 py-20" aria-label="Approach">
-    <div class="container mx-auto px-5">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-extrabold">Our Process for Predictable Growth</h2>
-        <p class="mt-4 text-black/70">A systematic approach that delivers measurable results within your first 90 days.</p>
-      </div>
-      <div class="grid gap-8 md:grid-cols-3">
-        <div class="rounded-2xl border border-black/10 p-6 bg-white hover:shadow-md transition-shadow">
-          <div class="text-5xl font-bold text-neon/20 mb-4">01</div>
-          <h4 class="text-xl font-semibold">Discovery & Diagnostic</h4>
-          <p class="mt-3 text-black/70">We deep dive into your goals, constraints, unit economics, and current data infrastructure to identify gaps and opportunities.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/70">
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-neon mr-2"></span>Business goal alignment</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-neon mr-2"></span>Technical & data audit</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-neon mr-2"></span>Competitive landscape analysis</li>
+        <!-- Services -->
+        <div>
+          <h4 style="color: white; font-weight: 700; margin-bottom: 20px; font-size: 17px; position: relative;">
+            Services
+            <div style="width: 30px; height: 2px; background: #39FF14; margin-top: 8px;"></div>
+          </h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 12px;">
+              <a href="#services" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px; transition: all 0.2s ease; display: block; padding: 4px 0;">Paid Media</a>
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="#services" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px; transition: all 0.2s ease; display: block; padding: 4px 0;">Content Strategy</a>
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="#services" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px; transition: all 0.2s ease; display: block; padding: 4px 0;">Analytics & CRO</a>
+            </li>
           </ul>
         </div>
-        <div class="rounded-2xl border border-black/10 p-6 bg-white hover:shadow-md transition-shadow">
-          <div class="text-5xl font-bold text-neon/20 mb-4">02</div>
-          <h4 class="text-xl font-semibold">90-Day Growth Plan</h4>
-          <p class="mt-3 text-black/70">We create a detailed channel strategy, KPI framework, and testing roadmap focused on quick wins and long-term scaling.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/70">
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-neon mr-2"></span>Channel prioritization matrix</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-neon mr-2"></span>Testing hypothesis backlog</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-neon mr-2"></span>KPI tree & measurement plan</li>
+
+        <!-- Company -->
+        <div>
+          <h4 style="color: white; font-weight: 700; margin-bottom: 20px; font-size: 17px; position: relative;">
+            Company
+            <div style="width: 30px; height: 2px; background: #39FF14; margin-top: 8px;"></div>
+          </h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 12px;">
+              <a href="#approach" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px; transition: all 0.2s ease; display: block; padding: 4px 0;">Our Process</a>
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="platform.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px; transition: all 0.2s ease; display: block; padding: 4px 0;">qunex+ Platform</a>
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="#" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px; transition: all 0.2s ease; display: block; padding: 4px 0;">Case Studies</a>
+            </li>
           </ul>
         </div>
-        <div class="rounded-2xl border border-black/10 p-6 bg-white hover:shadow-md transition-shadow">
-          <div class="text-5xl font-bold text-neon/20 mb-4">03</div>
-          <h4 class="text-xl font-semibold">Execution & Optimization</h4>
-          <p class="mt-3 text-black/70">Weekly sprints, clear reporting, and continuous optimization based on performance data and market changes.</p>
-          <ul class="mt-4 space-y-2 text-sm text-black/70">
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-neon mr-2"></span>Weekly performance reviews</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-neon mr-2"></span>Hypothesis testing cadence</li>
-            <li class="flex items-center"><span class="h-1.5 w-1.5 rounded-full bg-neon mr-2"></span>Quarterly strategy refinement</li>
+
+        <!-- Support -->
+        <div>
+          <h4 style="color: white; font-weight: 700; margin-bottom: 20px; font-size: 17px; position: relative;">
+            Support
+            <div style="width: 30px; height: 2px; background: #39FF14; margin-top: 8px;"></div>
+          </h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 12px;">
+              <a href="#faq" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px; transition: all 0.2s ease; display: block; padding: 4px 0;">FAQ</a>
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="#" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px; transition: all 0.2s ease; display: block; padding: 4px 0;">Help Center</a>
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="#contact" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 15px; transition: all 0.2s ease; display: block; padding: 4px 0;">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="border-b border-black/5 py-20" aria-label="FAQ">
-    <div class="container mx-auto px-5">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-extrabold">Frequently Asked Questions</h2>
-        <p class="mt-4 text-black/70">Everything you need to know about working with us and our Qunex+ platform.</p>
-      </div>
-      <div class="max-w-3xl mx-auto">
-        <div class="divide-y divide-black/10 border border-black/10 rounded-2xl bg-white">
-          <details class="p-6 group" open>
-            <summary class="flex cursor-pointer items-center justify-between list-none">
-              <span class="text-lg font-semibold">Can we start without long contracts?</span>
-              <span class="text-black/50 group-open:hidden">+</span>
-              <span class="text-black/50 hidden group-open:block">−</span>
-            </summary>
-            <p class="mt-3 text-black/70">Yes—we begin with a standard 3-month kickoff period with clearly defined KPIs. We only extend our partnership if we're delivering measurable results and you're seeing value.</p>
-          </details>
-          <details class="p-6 group">
-            <summary class="flex cursor-pointer items-center justify-between list-none">
-              <span class="text-lg font-semibold">Do we get access to the Qunex+ platform?</span>
-              <span class="text-black/50 group-open:hidden">+</span>
-              <span class="text-black/50 hidden group-open:block">−</span>
-            </summary>
-            <p class="mt-3 text-black/70">Yes, Qunex+ access is included for all active clients. You'll get your own login to view real-time performance dashboards, insights, and recommendations.</p>
-          </details>
-          <details class="p-6 group">
-            <summary class="flex cursor-pointer items-center justify-between list-none">
-              <span class="text-lg font-semibold">How is Qunex+ different from other marketing tools?</span>
-              <span class="text-black/50 group-open:hidden">+</span>
-              <span class="text-black/50 hidden group-open:block">−</span>
-            </summary>
-            <p class="mt-3 text-black/70">Qunex+ forecasts performance and provides actionable recommendations—not just reports. It's built by performance marketers for performance teams.</p>
-          </details>
-          <details class="p-6 group">
-            <summary class="flex cursor-pointer items-center justify-between list-none">
-              <span class="text-lg font-semibold">What's your typical client engagement model?</span>
-              <span class="text-black/50 group-open:hidden">+</span>
-              <span class="text-black/50 hidden group-open:block">−</span>
-            </summary>
-            <p class="mt-3 text-black/70">We operate as an extension of your team with weekly syncs, shared Slack, and monthly strategy reviews. You'll speak directly with strategists.</p>
-          </details>
-          <details class="p-6 group">
-            <summary class="flex cursor-pointer items-center justify-between list-none">
-              <span class="text-lg font-semibold">Where are you based and what time zones do you support?</span>
-              <span class="text-black/50 group-open:hidden">+</span>
-              <span class="text-black/50 hidden group-open:block">−</span>
-            </summary>
-            <p class="mt-3 text-black/70">We're Dubai-based with global coverage across EST, GMT, and GST time zones.</p>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT CTA -->
-  <section id="contact" class="gradient-bg py-20" aria-label="Contact">
-    <div class="container mx-auto px-5">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-extrabold">Ready to Drive Measurable Growth?</h2>
-          <p class="mt-4 text-black/70">Schedule your free strategy session today. We'll analyze your current approach and provide actionable insights.</p>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-10">
-          <div class="lg:w-5/12">
-            <div class="bg-white rounded-2xl border border-black/10 p-6 shadow-md">
-              <h3 class="text-xl font-semibold">What to expect:</h3>
-              <ul class="mt-4 space-y-3">
-                <li class="flex items-start"><span class="h-5 w-5 rounded-full bg-neon/10 flex items-center justify-center mt-0.5 mr-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span><span>Competitive analysis of your space</span></li>
-                <li class="flex items-start"><span class="h-5 w-5 rounded-full bg-neon/10 flex items-center justify-center mt-0.5 mr-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin='round' stroke-width="2" d="M5 13l4 4L19 7"/></svg></span><span>Audit of your current marketing performance</span></li>
-                <li class="flex items-start"><span class="h-5 w-5 rounded-full bg-neon/10 flex items-center justify-center mt-0.5 mr-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span><span>Customized 90-day game plan</span></li>
-                <li class="flex items-start"><span class="h-5 w-5 rounded-full bg-neon/10 flex items-center justify-center mt-0.5 mr-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></span><span>Pricing tailored to your goals</span></li>
-              </ul>
-              <div class="mt-6 pt-4 border-t border-black/10">
-                <p class="text-sm text-black/60"><span class="font-semibold text-black">Next step:</span> If we're a good fit, we'll send a proposal within 24 hours.</p>
-              </div>
-            </div>
+      <!-- Bottom Bar -->
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="font-size: 15px; color: rgba(255, 255, 255, 0.8);">
+            © 2025 qunex. All rights reserved.
           </div>
-          <div class="lg:w-7/12">
-            <div class="rounded-2xl border border-black/10 bg-white p-6 md:p-8 shadow-md">
-              <form class="grid gap-4 sm:grid-cols-2" onsubmit="event.preventDefault(); alert('Thanks! We\\'ll be in touch within 24 hours.');" aria-label="Contact form">
-                <div>
-                  <label class="text-sm font-medium text-black/70">Name *</label>
-                  <input required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-neon" />
-                </div>
-                <div>
-                  <label class="text-sm font-medium text-black/70">Work email *</label>
-                  <input type="email" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-neon" />
-                </div>
-                <div>
-                  <label class="text-sm font-medium text-black/70">Company *</label>
-                  <input required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-neon" />
-                </div>
-                <div>
-                  <label class="text-sm font-medium text-black/70">Website *</label>
-                  <input type="url" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-neon" />
-                </div>
-                <div class="sm:col-span-2">
-                  <label class="text-sm font-medium text-black/70">Current monthly ad spend</label>
-                  <select class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-neon">
-                    <option>Select range</option>
-                    <option>Less than $5K</option>
-                    <option>$5K - $15K</option>
-                    <option>$15K - $30K</option>
-                    <option>$30K - $50K</option>
-                    <option>$50K+</option>
-                  </select>
-                </div>
-                <div class="sm:col-span-2">
-                  <label class="text-sm font-medium text-black/70">What are your primary goals? *</label>
-                  <textarea rows="3" required class="mt-1 w-full rounded-lg border border-black/10 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-neon" placeholder="Increasing ROAS, reducing CAC, scaling revenue, improving attribution..."></textarea>
-                </div>
-                <div class="sm:col-span-2">
-                  <button class="w-full inline-flex items-center justify-center rounded-full bg-black px-6 py-4 font-semibold text-white hover:opacity-90 transition-all hover:scale-[1.02] shadow-md">
-                    Request Free Strategy Session
-                  </button>
-                </div>
-                <div class="sm:col-span-2">
-                  <p class="text-xs text-black/50 text-center">We'll get back to you within 24 hours. No automated responses.</p>
-                </div>
-              </form>
-            </div>
+          <div style="display: flex; align-items: center; gap: 8px; background: rgba(57, 255, 20, 0.1); border: 1px solid rgba(57, 255, 20, 0.2); border-radius: 20px; padding: 6px 12px;">
+            <div style="width: 6px; height: 6px; background: #39FF14; border-radius: 50%;"></div>
+            <span style="font-size: 12px; color: rgba(255, 255, 255, 0.9); font-weight: 500;">Dubai, UAE</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 24px;">
+          <a href="#" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: color 0.2s;">Privacy Policy</a>
+          <a href="#" style="font-size: 14px; color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: color 0.2s;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chat Widget -->
+  <div class="chat-widget">
+    <button class="chat-toggle" id="chatToggle">
+      <i class="fas fa-comments"></i>
+    </button>
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <h3>qunex AI Assistant</h3>
+        <button class="chat-close" id="chatClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message">
+          <div class="message-bubble ai">
+            Hi there! I'm here to help answer questions about our marketing services. How can I assist you today?
           </div>
         </div>
       </div>
-      <div class="mt-16 pt-8 border-t border-black/10 text-center">
-        <div class="flex items-center justify-center">
-          <a href="#" class="flex items-center gap-2 group" aria-label="qunex home">
-            <div class="relative">
-              <span class="h-3 w-3 rounded-full bg-neon group-hover:animate-ping absolute opacity-75"></span>
-              <span class="h-3 w-3 rounded-full bg-neon relative z-10"></span>
-            </div>
-            <span class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-neon to-ink bg-clip-text text-transparent">qunex</span>
-          </a>
-        </div>
-        <p class="mt-4 text-xs text-black/50">© 2025 qunex. All rights reserved. <a href="#" class="text-black/70 hover:text-black">Privacy Policy</a> | <a href="#" class="text-black/70 hover:text-black">Terms of Service</a></p>
+      <div class="chat-input-container">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask about our services...">
+        <button class="chat-send" id="chatSend">
+          <i class="fas fa-paper-plane"></i>
+        </button>
       </div>
     </div>
-  </section>
+  </div>
 
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    // Initialize particle background
-    document.addEventListener('DOMContentLoaded', function() {
-      particlesJS('particles-js', {
-        particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#39FF14" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5, random: true },
-          size: { value: 3, random: true },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#39FF14",
-            opacity: 0.2,
-            width: 1
-          },
-          move: {
-            enable: true,
-            speed: 1,
-            direction: "none",
-            random: true,
-            straight: false,
-            out_mode: "out",
-            bounce: false
-          }
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: true, mode: "grab" },
-            onclick: { enable: true, mode: "push" },
-            resize: true
-          },
-          modes: {
-            grab: { distance: 140, line_linked: { opacity: 0.5 } },
-            push: { particles_nb: 4 }
-          }
-        },
-        retina_detect: true
+    // Enhanced navigation functionality
+    const nav = document.querySelector('.nav');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('open');
+      menuOverlay.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    }
+    
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    menuOverlay.addEventListener('click', toggleMobileMenu);
+    
+    // Close mobile menu when clicking on links
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('open')) {
+          toggleMobileMenu();
+        }
       });
     });
-
-    // Mobile menu
-    document.getElementById('menuBtn').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
-    });
-
-    // Single-open FAQ accordion
-    document.querySelectorAll('details').forEach((detail) => {
-      detail.addEventListener('toggle', () => {
-        if (detail.open) {
-          document.querySelectorAll('details').forEach((other) => {
-            if (other !== detail && other.open) other.open = false;
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerOffset = 100;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
           });
         }
       });
     });
 
-    // Smooth scroll (reduced motion aware)
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReduced) {
-      document.querySelectorAll('a[href^="#"]').forEach(a=>{
-        a.addEventListener('click', e=>{
-          const id = a.getAttribute('href').slice(1);
-          const el = document.getElementById(id);
-          if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
-        });
+    // Navigation scroll effect
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > 50) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+      
+      // Active nav link highlighting
+      const sections = document.querySelectorAll('section[id]');
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
       });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Counter animation for stats
+    function animateCounters() {
+      const counters = document.querySelectorAll('[data-counter]');
+      
+      counters.forEach(counter => {
+        const target = parseFloat(counter.dataset.counter);
+        const text = counter.textContent;
+        let current = 0;
+        const increment = target / 60;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          
+          if (text.includes('%')) {
+            counter.textContent = current.toFixed(0) + '%';
+          } else if (text.includes('+')) {
+            counter.textContent = Math.floor(current) + '+';
+          } else if (text.includes('H')) {
+            counter.textContent = Math.floor(current) + 'H';
+          } else {
+            counter.textContent = Math.floor(current);
+          }
+        }, 30);
+      });
+    }
+
+    // Trigger counter animation when hero section is visible
+    const heroSection = document.querySelector('.gradient-hero');
+    if (heroSection) {
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(animateCounters, 1000);
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      statsObserver.observe(heroSection);
+    }
+
+    // FAQ functionality
+    document.querySelectorAll('details').forEach((detail) => {
+      detail.addEventListener('toggle', () => {
+        const icon = detail.querySelector('.faq-icon');
+        if (detail.open) {
+          icon.style.transform = 'rotate(45deg)';
+          // Close other details
+          document.querySelectorAll('details').forEach((other) => {
+            if (other !== detail && other.open) {
+              other.open = false;
+              other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+            }
+          });
+        } else {
+          icon.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+
+    // Form handling
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const originalText = submitBtn.textContent;
+      
+      // Loading state
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i>Sending...';
+      submitBtn.disabled = true;
+      
+      // Simulate form submission
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="fas fa-check" style="margin-right: 8px;"></i>Message Sent!';
+        submitBtn.style.background = 'rgba(16, 185, 129, 0.9)';
+        
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = '';
+          submitBtn.disabled = false;
+          e.target.reset();
+        }, 2000);
+      }, 1500);
     }
 
     // Chat widget functionality
     const chatToggle = document.getElementById('chatToggle');
     const chatWindow = document.getElementById('chatWindow');
-    const closeChat = document.getElementById('closeChat');
+    const chatClose = document.getElementById('chatClose');
     const chatInput = document.getElementById('chatInput');
-    const sendMessage = document.getElementById('sendMessage');
+    const chatSend = document.getElementById('chatSend');
     const chatMessages = document.getElementById('chatMessages');
 
     chatToggle.addEventListener('click', () => {
-      chatWindow.classList.toggle('hidden');
+      chatWindow.classList.toggle('open');
     });
 
-    closeChat.addEventListener('click', () => {
-      chatWindow.classList.add('hidden');
+    chatClose.addEventListener('click', () => {
+      chatWindow.classList.remove('open');
     });
 
     function addMessage(text, isUser = false) {
       const messageDiv = document.createElement('div');
-      messageDiv.className = `mb-4 flex ${isUser ? 'justify-end' : ''}`;
+      messageDiv.className = `chat-message ${isUser ? 'user' : ''}`;
       
       const bubbleDiv = document.createElement('div');
-      bubbleDiv.className = isUser ? 
-        'bg-neon text-ink rounded-lg p-3 max-w-xs' : 
-        'bg-gray-100 rounded-lg p-3 max-w-xs';
+      bubbleDiv.className = `message-bubble ${isUser ? 'user' : 'ai'}`;
+      bubbleDiv.textContent = text;
       
-      const messageText = document.createElement('p');
-      messageText.className = 'text-sm';
-      messageText.textContent = text;
-      
-      bubbleDiv.appendChild(messageText);
       messageDiv.appendChild(bubbleDiv);
       chatMessages.appendChild(messageDiv);
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    sendMessage.addEventListener('click', () => {
+    function sendMessage() {
       const message = chatInput.value.trim();
       if (message) {
         addMessage(message, true);
         chatInput.value = '';
         
-        // Simulate AI response after a short delay
+        // Simulate AI response
         setTimeout(() => {
           const responses = [
-            "Our AI platform can help optimize your marketing campaigns for better ROI.",
-            "We specialize in data-driven marketing strategies powered by machine learning.",
-            "Qunex+ analyzes millions of data points to predict campaign performance.",
-            "We'd love to discuss how our AI approach can drive revenue for your business."
+            "Our AI-powered platform qunex+ can help optimize your marketing campaigns for better ROI.",
+            "We specialize in data-driven marketing strategies that drive revenue, not just traffic.",
+            "Our 90-day growth guarantee ensures measurable results for your business.",
+            "Would you like to schedule a free strategy session to discuss your marketing goals?"
           ];
           const randomResponse = responses[Math.floor(Math.random() * responses.length)];
           addMessage(randomResponse);
         }, 1000);
       }
-    });
+    }
 
+    chatSend.addEventListener('click', sendMessage);
     chatInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
-        sendMessage.click();
+        sendMessage();
       }
     });
 
-    // Animated counter for stats
-    function animateValue(id, start, end, duration) {
-      const obj = document.getElementById(id);
-      let startTimestamp = null;
-      const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        obj.innerHTML = Math.floor(progress * (end - start) + start);
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
-        }
-      };
-      window.requestAnimationFrame(step);
-    }
-
-    // Start counter animation when stats section is in view
+    // Intersection Observer for animations
+    const observeElements = document.querySelectorAll('.glass-card, .white-card, .system-item');
+    
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          animateValue('roiCounter', 0, 35, 2000);
-          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 100);
         }
       });
-    }, { threshold: 0.5 });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
 
-    observer.observe(document.querySelector('.stats-number'));
+    observeElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      observer.observe(el);
+    });
 
-    // Typewriter effect
-    document.addEventListener('DOMContentLoaded', function() {
-      const typewriterText = document.querySelector('.typewriter-text');
-      typewriterText.style.animation = 'typewriter 2s steps(11) forwards, blink 1s infinite';
+    // Button hover effects
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        if (!this.disabled) {
+          this.style.transform = 'translateY(-2px) scale(1.02)';
+        }
+      });
+      
+      button.addEventListener('mouseleave', function() {
+        if (!this.disabled) {
+          this.style.transform = '';
+        }
+      });
+    });
+
+    // Footer link hover effects
+    document.querySelectorAll('footer a').forEach(link => {
+      link.addEventListener('mouseenter', function() {
+        this.style.color = '#39FF14';
+      });
+      
+      link.addEventListener('mouseleave', function() {
+        this.style.color = '#9ca3af';
+      });
+    });
+
+
+    // Initialize everything when DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set initial FAQ icon state
+      document.querySelectorAll('.faq-icon').forEach(icon => {
+        const detail = icon.closest('details');
+        if (detail.open) {
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
     });
   </script>
 </body>
-
 </html>
-
-
+  
+  

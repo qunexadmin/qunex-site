@@ -8,20 +8,11 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MVN9ZTPV');</script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T3NHF199L0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T3NHF199L0');
-  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>qunex — Drive Revenue, Not Just Traffic | AI-First Marketing Agency</title>
-  <meta name="description" content="qunex is an AI-first marketing agency. We plan, create, and scale growth across channels with a minimal, measurable approach." />
-  <meta name="keywords" content="AI marketing agency Dubai, digital marketing, performance marketing, growth marketing, marketing automation" />
+  <meta name="description" content="AI-first marketing agency in Dubai helping brands drive qualified leads and revenue with data-driven strategy, full-funnel execution, and our qunex+ platform." />
   
   <!-- Open Graph -->
   <meta property="og:title" content="qunex — AI-first marketing that drives revenue" />
@@ -29,6 +20,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://qunex.tech/og-image.jpg" />
   <meta property="og:url" content="https://qunex.tech" />
+  <meta property="og:site_name" content="qunex" />
+  <link rel="canonical" href="https://qunex.tech/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="qunex — AI-first marketing that drives revenue" />
+  <meta name="twitter:description" content="AI-first marketing agency driving qualified leads and measurable growth. Powered by qunex+." />
+  <meta name="twitter:image" content="https://qunex.tech/og-image.jpg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -917,6 +915,29 @@
       border-radius: 3px;
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "qunex",
+    "url": "https://qunex.tech/",
+    "logo": "https://qunex.tech/favicon.svg",
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "qunex",
+    "url": "https://qunex.tech/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.google.com/search?q=site:qunex.tech+{search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -947,7 +968,7 @@
           <i class="fas fa-arrow-right" style="margin-left: 8px; font-size: 12px;"></i>
         </button>
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
           <i class="fas fa-bars"></i>
         </button>
       </div>
@@ -955,7 +976,7 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile menu">
     <a href="#services" class="nav-link">Services</a>
     <a href="platform.html" class="nav-link">Qunex+</a>
     <a href="#approach" class="nav-link">Approach</a>
@@ -1400,23 +1421,23 @@
         <div class="glass-card" id="contactForm">
           <form onsubmit="handleFormSubmit(event)">
             <div class="form-group">
-              <label class="form-label">Name</label>
-              <input type="text" class="form-input" placeholder="Your full name" required>
+              <label class="form-label" for="name">Name</label>
+              <input id="name" name="name" type="text" class="form-input" placeholder="Your full name" required>
             </div>
             
             <div class="form-group">
-              <label class="form-label">Work Email</label>
-              <input type="email" class="form-input" placeholder="contact@yourcompany.com" required>
+              <label class="form-label" for="email">Work Email</label>
+              <input id="email" name="email" type="email" class="form-input" placeholder="contact@yourcompany.com" required>
             </div>
             
             <div class="form-group">
-              <label class="form-label">Company</label>
-              <input type="text" class="form-input" placeholder="Your company name" required>
+              <label class="form-label" for="company">Company</label>
+              <input id="company" name="company" type="text" class="form-input" placeholder="Your company name" required>
             </div>
             
             <div class="form-group">
-              <label class="form-label">Current Monthly Ad Spend</label>
-              <select class="form-input" required style="color: white;">
+              <label class="form-label" for="adSpend">Current Monthly Ad Spend</label>
+              <select id="adSpend" name="adSpend" class="form-input" required style="color: white;">
                 <option value="" style="color: #000;">Select range</option>
                 <option value="<5k" style="color: #000;">Less than $5K</option>
                 <option value="5-15k" style="color: #000;">$5K - $15K</option>
@@ -1427,8 +1448,8 @@
             </div>
             
             <div class="form-group">
-              <label class="form-label">Primary Goals</label>
-              <textarea class="form-input" rows="3" placeholder="Increasing ROAS, reducing CAC, scaling revenue, improving attribution..." required style="resize: vertical; min-height: 80px;"></textarea>
+              <label class="form-label" for="goals">Primary Goals</label>
+              <textarea id="goals" name="goals" class="form-input" rows="3" placeholder="Increasing ROAS, reducing CAC, scaling revenue, improving attribution..." required style="resize: vertical; min-height: 80px;"></textarea>
             </div>
             
             <button type="submit" class="btn btn-secondary" style="width: 100%;" id="submitBtn">
@@ -1565,7 +1586,7 @@
           <i class="fas fa-times"></i>
         </button>
       </div>
-      <div class="chat-messages" id="chatMessages">
+      <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-relevant="additions">
         <div class="chat-message">
           <div class="message-bubble ai">
             Hi there! I'm here to help answer questions about our marketing services. How can I assist you today?
@@ -1594,6 +1615,9 @@
       mobileMenu.classList.toggle('open');
       menuOverlay.classList.toggle('open');
       document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+      if (mobileMenuBtn) {
+        mobileMenuBtn.setAttribute('aria-expanded', mobileMenu.classList.contains('open') ? 'true' : 'false');
+      }
     }
     
     mobileMenuBtn.addEventListener('click', toggleMobileMenu);
@@ -1866,5 +1890,3 @@
   </script>
 </body>
 </html>
-  
-  
